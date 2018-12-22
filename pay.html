@@ -86,13 +86,11 @@
       In Conclusion, that *** will pay.
     </p>
     
-    <link rel="stylesheet" href="https://www.paytabs.com/express/express.css">
+  <link rel="stylesheet" href="https://www.paytabs.com/express/express.css">
 <script src="https://www.paytabs.com/theme/express_checkout/js/jquery-1.11.1.min.js"></script>
 <script src="https://www.paytabs.com/express/express_checkout_v3.js"></script>
 <!-- Button Code for PayTabs Express Checkout -->
-<div class="PT_express_checkout">
-    
-    </div>
+<div class="PT_express_checkout"></div>
 <script type="text/javascript">
     Paytabs("#express_checkout").expresscheckout({
         settings:{
@@ -103,7 +101,54 @@
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
             order_id: 25,
-            url_redirect: "https://www.lamfirm.com"
+            url_redirect: "https://www.lamfirm.com",
+            display_billing_fields: 0,
+            display_shipping_fields: 0,
+            display_customer_info: 0,
+            language: "en",
+            redirect_on_reject: 0,
+            style:{
+                css: "custom",
+                linktocss: "https://www.lamfirm.com/css/style.css",
+            },
+            is_iframe:{
+                load: "onbodyload",
+                show: 0,
+            },
+
+        },
+        customer_info:{
+            first_name: "John",
+            last_name: "Smith",
+            phone_number: "5486253",
+            country_code: "973",
+            email_address: "john@test.com"            
+        },
+        billing_address:{
+            full_address: "Manama, Bahrain",
+            city: "Manama",
+            state: "Manama",
+            country: "BHR",
+            postal_code: "00973"
+        },
+        shipping_address:{
+            shipping_first_name: "John",
+            shipping_last_name: "Smith",
+            full_address_shipping: "Manama, Bahrain",
+            city_shipping: "Manama",
+            state_shipping: "Manama",
+            country_shipping: "BHR",
+            postal_code_shipping: "00973"
+        },
+        checkout_button:{
+            width: 150,
+            height: 30,
+            img_url: "https://imgur.com/lbHvlCV.png"
+        },
+        pay_button:{
+            width: 10,
+            height: 30,
+            img_url: "https://imgur.com/BYOJHOg.png"
         }
     });
 </script>
