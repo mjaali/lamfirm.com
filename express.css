@@ -1,7 +1,7 @@
 .popup-wrap
 {
     position: relative;
-    border-radius: 7px !important;
+    border-radius: 0px !important;
     overflow: hidden;
 }
 #paytabs_express {
@@ -12,7 +12,7 @@
     position: absolute;
     right: 0;
     top: 2%;
-    width: 400px;
+    width: 340px;
     z-index: 10000;
 }
 /* This is for the positioning of the Close Link */
