@@ -40,7 +40,7 @@
     color:#fff;
     text-transform:uppercase;
     display:block;
-    background-image: url(../images/checkout.png) !important;
+    background-image: url(https://www.lamfirm.com/ordernow.png) !important;
     background-repeat: no-repeat;
     width:150px; height:30px;
     cursor:pointer;
@@ -142,19 +142,19 @@
 }
 #ar_button
 {
-    background-image: url(../images/checkout_ar.png);
+    background-image: url(https://www.lamfirm.com/ordernow.png);
 }
 #en_button
 {
-    background-image: url(../images/checkout.png);
+    background-image: url(https://www.lamfirm.com/ordernow.png);
 }
 #ar_agnipay_button
 {
-    background-image: url(../images/buynow_ar.png);
+    background-image: url(https://www.lamfirm.com/ordernow.png);
 }
 #en_agnipay_button
 {
-    background-image: url(../images/buynow.png);
+    background-image: url(https://www.lamfirm.com/ordernow.png);
 }
 #PT_overlay{
     position:fixed; top:0; left:0; background:rgba(0,0,0,0.7); z-index:9996; width:500px; height:500px; display:block;  
