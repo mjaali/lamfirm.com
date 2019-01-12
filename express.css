@@ -63,7 +63,7 @@
     width: 11px; height: 11px; position: absolute; z-index: 1000; top: 7px; right: 6px; cursor: pointer;
 }
 #overlay{
-    position:fixed; top:0; left:0; background:rgba(0,0,0,0.7); z-index:9996; width:500px; height:500px; display:block;  
+    position:fixed; top:0; left:0; background:rgba(0,0,0,0.7); z-index:9996; width:500px; height:10px; display:block;  
 }
 
 
@@ -97,7 +97,7 @@
 }
 
 #overlay2{
-    position:fixed; top:0; left:0; background:rgba(0,0,0,0.7); z-index:9996; width:500px; height:500px; display:block;  
+    position:fixed; top:0; left:0; background:rgba(0,0,0,0.7); z-index:9996; width:500px; height:10px; display:block;  
 }
 
 #paytabs_express_v2 {
