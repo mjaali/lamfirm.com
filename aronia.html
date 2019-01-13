@@ -73,6 +73,16 @@ img.emoji {
 padding-top:0px; width:142px; height:70px;
   }
   
+  .column-m {
+    width:100%;
+    padding-right:13%;
+}
+ 
+  .row-m:after {
+  content: "";
+}
+  
+  
 }
 @media only screen and (min-width: 700px) {
   /* For desktop: */
@@ -81,7 +91,7 @@ width:100%; height:550px;
   }
   
    .des-6 {
-      font-size:20px;  padding-left: 20px;  padding-right: 20px; padding-top: 100px;
+      font-size:20px;  padding-left: 10px;  padding-right: 20px; padding-top: 100px;
   }
      .des-7 {
 padding-top:0px; width:203px; height:100px;
@@ -90,12 +100,12 @@ padding-top:0px; width:203px; height:100px;
   box-sizing: border-box;
 }
 
-.column {
+.column-des {
   float: left;
   width: 50%;
 }
 
-.row:after {
+.row-des:after {
   content: "";
   display: table;
   clear: both;
@@ -222,15 +232,15 @@ strong{
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
             order_id: 25,
-            url_redirect: "https://www.lamfirm.com/thanku/",
+            url_redirect: "https://www.lamfirm.com/thanku",
             display_billing_fields: 0,
             display_shipping_fields: 0,
             display_customer_info: 0,
             language: "en",
-            redirect_on_reject: 1,
+            redirect_on_reject: 0,
             style:{
                 css: "custom",
-                linktocss: "https://lamfirm.com/paytabs.css",
+                linktocss: "http://lamfirm.com/paytabs.css",
             },
             is_iframe:{
                 load: "onbodyload",
@@ -244,7 +254,7 @@ strong{
             country_code: "",
             email_address: ""            
         },
-	        billing_address:{
+        billing_address:{
             full_address: "Manama, Bahrain",
             city: "Manama",
             state: "Manama",
@@ -252,9 +262,9 @@ strong{
             postal_code: "00973"
         },
         shipping_address:{
-            shipping_first_name: "First Name",
-            shipping_last_name: "Last Name",
-            full_address_shipping: "",
+            shipping_first_name: "John",
+            shipping_last_name: "Smith",
+            full_address_shipping: "Manama, Bahrain",
             city_shipping: "Manama",
             state_shipping: "Manama",
             country_shipping: "BHR",
@@ -360,14 +370,14 @@ strong{
     </div>
 
                            <div class="section">                           
-                  <div class="row" style="background-color:#ffffff;">
-  <div class="column">
-                  <iframe class="des-5 m-5" src="https://www.youtube.com/embed/2Je1Fp85Lp4?start=0&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&controls=0" frameborder="0">                 
+                  <div class="row-m row-des" style="background-color:#ffffff;">
+  <div class="column-m column-des">
+                  <iframe class="des-5 m-5" src="https://www.youtube.com/embed/2Je1Fp85Lp4?start=0&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white&controls=1" frameborder="0">                 
                   </iframe>
       </div>
                     
                     
-  <div class="column">
+  <div class="column-des column-m">
      <div class="des-6 m-6"><p><strong>The aronia berry contains</strong> more antioxidants than blueberries, cranberries, elderberries, and raspberries.<br><br><strong>Numerous studies have linked aronia berries to potential health benefits such as:<br></strong>- Helping to fight cardiovascular disease.<br>- Normalizing blood pressure.<br>- Diabetes prevention.<br>- Help urinary tract health.<br>- Weight control.<br>- Anti-carcinogenic effect.<br><br><strong>... and many more.</strong>
        </p></div>
     <center><img class="des-7 m-7"src="https://www.lamfirm.com/SFDAAPP.png" ></center>
@@ -453,15 +463,15 @@ strong{
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
             order_id: 25,
-            url_redirect: "https://www.lamfirm.com/thanku/",
+            url_redirect: "https://www.lamfirm.com/thanku",
             display_billing_fields: 0,
             display_shipping_fields: 0,
             display_customer_info: 0,
             language: "en",
-            redirect_on_reject: 1,
+            redirect_on_reject: 0,
             style:{
                 css: "custom",
-                linktocss: "https://lamfirm.com/paytabs.css",
+                linktocss: "http://lamfirm.com/paytabs.css",
             },
             is_iframe:{
                 load: "onbodyload",
@@ -475,7 +485,7 @@ strong{
             country_code: "",
             email_address: ""            
         },
-	    billing_address:{
+        billing_address:{
             full_address: "Manama, Bahrain",
             city: "Manama",
             state: "Manama",
@@ -483,9 +493,9 @@ strong{
             postal_code: "00973"
         },
         shipping_address:{
-            shipping_first_name: "First Name",
-            shipping_last_name: "Last Name",
-            full_address_shipping: "",
+            shipping_first_name: "John",
+            shipping_last_name: "Smith",
+            full_address_shipping: "Manama, Bahrain",
             city_shipping: "Manama",
             state_shipping: "Manama",
             country_shipping: "BHR",
