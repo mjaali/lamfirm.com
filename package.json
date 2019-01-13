@@ -1,0 +1,23 @@
+{
+  "name": "backbonejs-todomvc",
+  "version": "0.0.1",
+  "description": "Backbone.js TodoMVC Example",
+  "dependencies": {
+    "express": "^4.16.3",
+    "backbone": "^1.3.3",
+    "backbone.localstorage": "^2.0.2",
+    "jquery": "^3.3.1",
+    "todomvc-app-css": "^2.1.0",
+    "todomvc-common": "^1.0.4",
+    "underscore": "^1.8.3"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "backbonejs"
+  ],
+  "license": "MIT"
+}
