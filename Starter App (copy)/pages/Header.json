@@ -1,0 +1,445 @@
+{
+  "class": "Panel",
+  "key": "wvywJAWY0iL6Uw9XftfVH2kpq5AM5igP",
+  "permission": {
+    "name": "canRead",
+    "type": "compoundEveryone"
+  },
+  "propList": [
+    {
+      "k": "styleMap",
+      "v": {
+        "name": "styleMap",
+        "properties": [
+          {
+            "name": "padding-left",
+            "value": "16px"
+          },
+          {
+            "name": "padding-right",
+            "value": "16px"
+          }
+        ],
+        "type": "PropertyMap[styleMap]"
+      }
+    },
+    {
+      "k": "width",
+      "v": 1064
+    },
+    {
+      "k": "height",
+      "v": 64
+    },
+    {
+      "k": "name",
+      "v": "Header"
+    },
+    {
+      "k": "isCustomWidget",
+      "v": true
+    },
+    {
+      "k": "top",
+      "v": 4
+    },
+    {
+      "k": "left",
+      "v": 4
+    },
+    {
+      "k": "variant",
+      "v": "Primary"
+    },
+    {
+      "k": "layout",
+      "v": "horizontal"
+    },
+    {
+      "k": "children",
+      "v": {
+        "list": [
+          {
+            "class": "SimpleButton",
+            "key": "0_1687349669",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [{
+                    "name": "margin-right",
+                    "value": "16px"
+                  }],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "width",
+                "v": 92
+              },
+              {
+                "k": "height",
+                "v": 36
+              },
+              {
+                "k": "name",
+                "v": "MenuButton"
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "top",
+                "v": 0
+              },
+              {
+                "k": "autoWidth",
+                "v": true
+              },
+              {
+                "k": "autoHeight",
+                "v": true
+              },
+              {
+                "k": "variant",
+                "v": "IconDark"
+              },
+              {
+                "k": "text",
+                "v": "menu"
+              },
+              {
+                "k": "action",
+                "v": "app.popups.Menu.visible \u003d true;"
+              }
+            ],
+            "type": "ComponentInfo"
+          },
+          {
+            "class": "SimpleLabel",
+            "key": "0_824018714",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [{
+                    "name": "margin-right",
+                    "value": "16px"
+                  }],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "width",
+                "v": 0
+              },
+              {
+                "k": "height",
+                "v": 20
+              },
+              {
+                "k": "name",
+                "v": "PageName"
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "top",
+                "v": 0
+              },
+              {
+                "k": "autoWidth",
+                "v": true
+              },
+              {
+                "k": "autoHeight",
+                "v": true
+              },
+              {
+                "k": "bindings",
+                "v": {
+                  "list": [{
+                    "sourceExpression": "text",
+                    "targetExpression": "@currentPage.displayName",
+                    "targetLiteralExpression": "@currentPage.displayName",
+                    "type": "BindingInfo"
+                  }],
+                  "type": "List[BindingInfo]"
+                }
+              },
+              {
+                "k": "variant",
+                "v": "Title"
+              },
+              {
+                "k": "styles",
+                "v": {
+                  "list": ["hide-600"],
+                  "type": "List[String]"
+                }
+              }
+            ],
+            "type": "ComponentInfo"
+          },
+          {
+            "class": "Panel",
+            "key": "0_347404710",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "width",
+                "v": 400
+              },
+              {
+                "k": "height",
+                "v": 200
+              },
+              {
+                "k": "layout",
+                "v": "horizontal"
+              },
+              {
+                "k": "name",
+                "v": "SearchBoxContainer"
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "top",
+                "v": 0
+              },
+              {
+                "k": "autoWidth",
+                "v": true
+              },
+              {
+                "k": "autoHeight",
+                "v": true
+              },
+              {
+                "k": "align",
+                "v": "stretch"
+              },
+              {
+                "k": "grow",
+                "v": 1
+              },
+              {
+                "k": "children",
+                "v": {
+                  "list": [],
+                  "type": "List[ComponentInfo]"
+                }
+              },
+              {
+                "k": "variant",
+                "v": "Transparent"
+              },
+              {
+                "k": "alignChildren",
+                "v": "center"
+              },
+              {
+                "k": "justify",
+                "v": "center"
+              },
+              {
+                "k": "minWidth",
+                "v": 230
+              }
+            ],
+            "type": "ComponentInfo"
+          },
+          {
+            "class": "SimpleLabel",
+            "key": "0_1602559361",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [{
+                    "name": "margin-left",
+                    "value": "16px"
+                  }],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "width",
+                "v": 100
+              },
+              {
+                "k": "height",
+                "v": 20
+              },
+              {
+                "k": "name",
+                "v": "EmailLabel"
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "top",
+                "v": 0
+              },
+              {
+                "k": "autoWidth",
+                "v": true
+              },
+              {
+                "k": "autoHeight",
+                "v": true
+              },
+              {
+                "k": "text",
+                "v": "john.doe@example.com"
+              },
+              {
+                "k": "styles",
+                "v": {
+                  "list": ["hide-800"],
+                  "type": "List[String]"
+                }
+              }
+            ],
+            "type": "ComponentInfo"
+          },
+          {
+            "class": "SimpleLabel",
+            "key": "2_899187383",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [
+                    {
+                      "name": "padding-top",
+                      "value": "6px"
+                    },
+                    {
+                      "name": "margin-left",
+                      "value": "16px"
+                    }
+                  ],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "width",
+                "v": 36
+              },
+              {
+                "k": "height",
+                "v": 36
+              },
+              {
+                "k": "name",
+                "v": "HeaderAvatarIconLabel"
+              },
+              {
+                "k": "top",
+                "v": 0
+              },
+              {
+                "k": "autoWidth",
+                "v": false
+              },
+              {
+                "k": "autoHeight",
+                "v": false
+              },
+              {
+                "k": "variant",
+                "v": "Icon"
+              },
+              {
+                "k": "text",
+                "v": "person"
+              },
+              {
+                "k": "constrain_left",
+                "v": true
+              },
+              {
+                "k": "constrain_right",
+                "v": false
+              },
+              {
+                "k": "constrain_width",
+                "v": true
+              },
+              {
+                "k": "constrain_minWidth",
+                "v": false
+              },
+              {
+                "k": "constrain_maxWidth",
+                "v": false
+              },
+              {
+                "k": "constrain_top",
+                "v": true
+              },
+              {
+                "k": "constrain_bottom",
+                "v": false
+              },
+              {
+                "k": "constrain_height",
+                "v": true
+              },
+              {
+                "k": "constrain_minHeight",
+                "v": false
+              },
+              {
+                "k": "constrain_maxHeight",
+                "v": false
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "styles",
+                "v": {
+                  "list": ["hide-480"],
+                  "type": "List[String]"
+                }
+              }
+            ],
+            "type": "ComponentInfo"
+          }
+        ],
+        "type": "List[ComponentInfo]"
+      }
+    },
+    {
+      "k": "alignChildren",
+      "v": "center"
+    },
+    {
+      "k": "pageCss",
+      "v": ".app-Header-HeaderAvatarIconLabel {\n  font-size: 30px;\n  background-color: rgba(255, 255, 255, 0.5);\n  border-radius: 50%;\n}"
+    }
+  ],
+  "type": "ComponentInfo"
+}

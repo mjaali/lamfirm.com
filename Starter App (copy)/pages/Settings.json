@@ -1,0 +1,447 @@
+{
+  "class": "Panel",
+  "key": "n044foS6J2mojE5s4vmPnuQratbcwwh5",
+  "permission": {
+    "name": "canRead",
+    "permissions": [
+      {"type": "nobody"},
+      {
+        "groupKeys": ["Admins"],
+        "type": "groups"
+      }
+    ],
+    "type": "compound"
+  },
+  "propList": [
+    {
+      "k": "styleMap",
+      "v": {
+        "name": "styleMap",
+        "properties": [],
+        "type": "PropertyMap[styleMap]"
+      }
+    },
+    {
+      "k": "width",
+      "v": 960
+    },
+    {
+      "k": "height",
+      "v": 960
+    },
+    {
+      "k": "name",
+      "v": "Settings"
+    },
+    {
+      "k": "variant",
+      "v": "Background"
+    },
+    {
+      "k": "top",
+      "v": 4
+    },
+    {
+      "k": "left",
+      "v": 4
+    },
+    {
+      "k": "children",
+      "v": {
+        "list": [
+          {
+            "class": "CustomComponent_wvywJAWY0iL6Uw9XftfVH2kpq5AM5igP",
+            "key": "0_142104999",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "customWidgetKey",
+                "v": {
+                  "appKey": "wvywJAWY0iL6Uw9XftfVH2kpq5AM5igP",
+                  "type": "AppChildKey"
+                }
+              },
+              {
+                "k": "width",
+                "v": 800
+              },
+              {
+                "k": "height",
+                "v": 64
+              },
+              {
+                "k": "name",
+                "v": "Header"
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "top",
+                "v": 0
+              },
+              {
+                "k": "right",
+                "v": 0
+              },
+              {
+                "k": "bottom",
+                "v": 726
+              },
+              {
+                "k": "autoWidth",
+                "v": false
+              },
+              {
+                "k": "constrain_right",
+                "v": true
+              },
+              {
+                "k": "constrain_width",
+                "v": false
+              }
+            ],
+            "type": "ComponentInfo"
+          },
+          {
+            "class": "Panel",
+            "key": "0_1969460502",
+            "propList": [
+              {
+                "k": "styleMap",
+                "v": {
+                  "name": "styleMap",
+                  "properties": [
+                    {
+                      "name": "padding-top",
+                      "value": "24px"
+                    },
+                    {
+                      "name": "padding-bottom",
+                      "value": "24px"
+                    },
+                    {
+                      "name": "padding-left",
+                      "value": "24px"
+                    },
+                    {
+                      "name": "padding-right",
+                      "value": "24px"
+                    }
+                  ],
+                  "type": "PropertyMap[styleMap]"
+                }
+              },
+              {
+                "k": "width",
+                "v": 960
+              },
+              {
+                "k": "height",
+                "v": 896
+              },
+              {
+                "k": "layout",
+                "v": "vertical"
+              },
+              {
+                "k": "name",
+                "v": "Container"
+              },
+              {
+                "k": "left",
+                "v": 0
+              },
+              {
+                "k": "top",
+                "v": 64
+              },
+              {
+                "k": "right",
+                "v": 0
+              },
+              {
+                "k": "bottom",
+                "v": 0
+              },
+              {
+                "k": "autoWidth",
+                "v": false
+              },
+              {
+                "k": "constrain_right",
+                "v": true
+              },
+              {
+                "k": "constrain_width",
+                "v": false
+              },
+              {
+                "k": "autoHeight",
+                "v": false
+              },
+              {
+                "k": "constrain_bottom",
+                "v": true
+              },
+              {
+                "k": "constrain_height",
+                "v": false
+              },
+              {
+                "k": "variant",
+                "v": "Transparent"
+              },
+              {
+                "k": "constrain_left",
+                "v": true
+              },
+              {
+                "k": "constrain_minWidth",
+                "v": false
+              },
+              {
+                "k": "constrain_maxWidth",
+                "v": false
+              },
+              {
+                "k": "constrain_top",
+                "v": true
+              },
+              {
+                "k": "constrain_minHeight",
+                "v": false
+              },
+              {
+                "k": "constrain_maxHeight",
+                "v": false
+              },
+              {
+                "k": "children",
+                "v": {
+                  "list": [{
+                    "class": "Panel",
+                    "key": "0_1897906454",
+                    "propList": [
+                      {
+                        "k": "styleMap",
+                        "v": {
+                          "name": "styleMap",
+                          "properties": [
+                            {
+                              "name": "padding-top",
+                              "value": "24px"
+                            },
+                            {
+                              "name": "padding-bottom",
+                              "value": "24px"
+                            },
+                            {
+                              "name": "padding-left",
+                              "value": "24px"
+                            },
+                            {
+                              "name": "padding-right",
+                              "value": "24px"
+                            }
+                          ],
+                          "type": "PropertyMap[styleMap]"
+                        }
+                      },
+                      {
+                        "k": "width",
+                        "v": 700
+                      },
+                      {
+                        "k": "height",
+                        "v": 250
+                      },
+                      {
+                        "k": "layout",
+                        "v": "vertical"
+                      },
+                      {
+                        "k": "name",
+                        "v": "Content"
+                      },
+                      {
+                        "k": "left",
+                        "v": 0
+                      },
+                      {
+                        "k": "top",
+                        "v": 0
+                      },
+                      {
+                        "k": "autoWidth",
+                        "v": false
+                      },
+                      {
+                        "k": "align",
+                        "v": "center"
+                      },
+                      {
+                        "k": "autoHeight",
+                        "v": true
+                      },
+                      {
+                        "k": "children",
+                        "v": {
+                          "list": [
+                            {
+                              "class": "SimpleLabel",
+                              "key": "0_352354763",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 100
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 20
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "Title"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": true
+                                },
+                                {
+                                  "k": "text",
+                                  "v": "Admins only"
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "Title"
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            },
+                            {
+                              "class": "SimpleLabel",
+                              "key": "0_436854199",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [{
+                                      "name": "margin-top",
+                                      "value": "16px"
+                                    }],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 100
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 20
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "Text"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": true
+                                },
+                                {
+                                  "k": "text",
+                                  "v": "By setting the security of a page to \"Admins Only\", only admins can view the page and see it in the menu."
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            }
+                          ],
+                          "type": "List[ComponentInfo]"
+                        }
+                      },
+                      {
+                        "k": "minHeight",
+                        "v": 250
+                      },
+                      {
+                        "k": "variant",
+                        "v": "Paper"
+                      },
+                      {
+                        "k": "minWidth",
+                        "v": 0
+                      },
+                      {
+                        "k": "maxWidth",
+                        "v": 700
+                      },
+                      {
+                        "k": "grow",
+                        "v": 0
+                      }
+                    ],
+                    "type": "ComponentInfo"
+                  }],
+                  "type": "List[ComponentInfo]"
+                }
+              },
+              {
+                "k": "alignChildren",
+                "v": "start"
+              },
+              {
+                "k": "justify",
+                "v": "start"
+              }
+            ],
+            "type": "ComponentInfo"
+          }
+        ],
+        "type": "List[ComponentInfo]"
+      }
+    }
+  ],
+  "type": "ComponentInfo"
+}

@@ -1,0 +1,1095 @@
+{
+  "class": "PopupOverlay",
+  "key": "HafLmSJ8S4zaHo7Z8s0bZsw2bWKgLsy8",
+  "permission": {
+    "name": "canRead",
+    "type": "compoundEveryone"
+  },
+  "propList": [
+    {
+      "k": "styleMap",
+      "v": {
+        "name": "styleMap",
+        "properties": [],
+        "type": "PropertyMap[styleMap]"
+      }
+    },
+    {
+      "k": "children",
+      "v": {
+        "list": [{
+          "class": "PopupContent",
+          "key": "0_1716233511",
+          "propList": [
+            {
+              "k": "styleMap",
+              "v": {
+                "name": "styleMap",
+                "properties": [],
+                "type": "PropertyMap[styleMap]"
+              }
+            },
+            {
+              "k": "width",
+              "v": 320
+            },
+            {
+              "k": "height",
+              "v": 200
+            },
+            {
+              "k": "name",
+              "v": "Content"
+            },
+            {
+              "k": "autoHeight",
+              "v": true
+            },
+            {
+              "k": "layout",
+              "v": "vertical"
+            },
+            {
+              "k": "variant",
+              "v": "Menu"
+            },
+            {
+              "k": "align",
+              "v": "stretch"
+            },
+            {
+              "k": "children",
+              "v": {
+                "list": [
+                  {
+                    "class": "Panel",
+                    "key": "0_130827254",
+                    "propList": [
+                      {
+                        "k": "styleMap",
+                        "v": {
+                          "name": "styleMap",
+                          "properties": [
+                            {
+                              "name": "padding-top",
+                              "value": "16px"
+                            },
+                            {
+                              "name": "padding-bottom",
+                              "value": "16px"
+                            },
+                            {
+                              "name": "padding-left",
+                              "value": "16px"
+                            },
+                            {
+                              "name": "padding-right",
+                              "value": "16px"
+                            }
+                          ],
+                          "type": "PropertyMap[styleMap]"
+                        }
+                      },
+                      {
+                        "k": "width",
+                        "v": 320
+                      },
+                      {
+                        "k": "height",
+                        "v": 184
+                      },
+                      {
+                        "k": "layout",
+                        "v": "vertical"
+                      },
+                      {
+                        "k": "name",
+                        "v": "MenuHeader"
+                      },
+                      {
+                        "k": "left",
+                        "v": 0
+                      },
+                      {
+                        "k": "top",
+                        "v": 0
+                      },
+                      {
+                        "k": "autoWidth",
+                        "v": true
+                      },
+                      {
+                        "k": "align",
+                        "v": "stretch"
+                      },
+                      {
+                        "k": "autoHeight",
+                        "v": false
+                      },
+                      {
+                        "k": "variant",
+                        "v": "Primary"
+                      },
+                      {
+                        "k": "children",
+                        "v": {
+                          "list": [
+                            {
+                              "class": "Panel",
+                              "key": "1_1142381975",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 400
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 35
+                                },
+                                {
+                                  "k": "layout",
+                                  "v": "horizontal"
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "AppNameContainer"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "align",
+                                  "v": "stretch"
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": false
+                                },
+                                {
+                                  "k": "children",
+                                  "v": {
+                                    "list": [
+                                      {
+                                        "class": "SimpleLabel",
+                                        "key": "2_264555138",
+                                        "propList": [
+                                          {
+                                            "k": "styleMap",
+                                            "v": {
+                                              "name": "styleMap",
+                                              "properties": [],
+                                              "type": "PropertyMap[styleMap]"
+                                            }
+                                          },
+                                          {
+                                            "k": "width",
+                                            "v": 100
+                                          },
+                                          {
+                                            "k": "height",
+                                            "v": 20
+                                          },
+                                          {
+                                            "k": "name",
+                                            "v": "AppName"
+                                          },
+                                          {
+                                            "k": "left",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "top",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "autoWidth",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "autoHeight",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "text",
+                                            "v": "Starter App"
+                                          },
+                                          {
+                                            "k": "variant",
+                                            "v": "Headline"
+                                          },
+                                          {
+                                            "k": "styles",
+                                            "v": {
+                                              "list": [],
+                                              "type": "List[String]"
+                                            }
+                                          },
+                                          {
+                                            "k": "align",
+                                            "v": "stretch"
+                                          },
+                                          {
+                                            "k": "grow",
+                                            "v": 1
+                                          }
+                                        ],
+                                        "type": "ComponentInfo"
+                                      },
+                                      {
+                                        "class": "SimpleButton",
+                                        "key": "3_1117867967",
+                                        "propList": [
+                                          {
+                                            "k": "styleMap",
+                                            "v": {
+                                              "name": "styleMap",
+                                              "properties": [],
+                                              "type": "PropertyMap[styleMap]"
+                                            }
+                                          },
+                                          {
+                                            "k": "width",
+                                            "v": 92
+                                          },
+                                          {
+                                            "k": "height",
+                                            "v": 36
+                                          },
+                                          {
+                                            "k": "name",
+                                            "v": "CloseMenu"
+                                          },
+                                          {
+                                            "k": "left",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "top",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "autoWidth",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "autoHeight",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "variant",
+                                            "v": "IconDark"
+                                          },
+                                          {
+                                            "k": "text",
+                                            "v": "close"
+                                          },
+                                          {
+                                            "k": "action",
+                                            "v": "widget.root.visible \u003d false;"
+                                          }
+                                        ],
+                                        "type": "ComponentInfo"
+                                      }
+                                    ],
+                                    "type": "List[ComponentInfo]"
+                                  }
+                                },
+                                {
+                                  "k": "justify",
+                                  "v": "spaceBetween"
+                                },
+                                {
+                                  "k": "alignChildren",
+                                  "v": "center"
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "Transparent"
+                                },
+                                {
+                                  "k": "grow",
+                                  "v": 0
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            },
+                            {
+                              "class": "SimpleLabel",
+                              "key": "4_1213955564",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [
+                                      {
+                                        "name": "margin-top",
+                                        "value": "8px"
+                                      },
+                                      {
+                                        "name": "padding-top",
+                                        "value": "8px"
+                                      }
+                                    ],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 48
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 48
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "AvatarIconLabel"
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": false
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": false
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "Icon"
+                                },
+                                {
+                                  "k": "text",
+                                  "v": "person"
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            },
+                            {
+                              "class": "SimpleLabel",
+                              "key": "5_1613305825",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [{
+                                      "name": "margin-top",
+                                      "value": "16px"
+                                    }],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 100
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 20
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "FullName"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": true
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "Subhead"
+                                },
+                                {
+                                  "k": "text",
+                                  "v": "John Doe"
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            },
+                            {
+                              "class": "SimpleLabel",
+                              "key": "6_310947753",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 100
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 20
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "Email"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": true
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "Menu"
+                                },
+                                {
+                                  "k": "text",
+                                  "v": "john.doe@example.com"
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            }
+                          ],
+                          "type": "List[ComponentInfo]"
+                        }
+                      },
+                      {
+                        "k": "constrain_left",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_right",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_width",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_minWidth",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_maxWidth",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_top",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_bottom",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_height",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_minHeight",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_maxHeight",
+                        "v": false
+                      }
+                    ],
+                    "type": "ComponentInfo"
+                  },
+                  {
+                    "class": "Panel",
+                    "key": "7_1932593336",
+                    "propList": [
+                      {
+                        "k": "styleMap",
+                        "v": {
+                          "name": "styleMap",
+                          "properties": [{
+                            "name": "margin-top",
+                            "value": "16px"
+                          }],
+                          "type": "PropertyMap[styleMap]"
+                        }
+                      },
+                      {
+                        "k": "width",
+                        "v": 320
+                      },
+                      {
+                        "k": "height",
+                        "v": 96
+                      },
+                      {
+                        "k": "layout",
+                        "v": "vertical"
+                      },
+                      {
+                        "k": "name",
+                        "v": "ItemsList"
+                      },
+                      {
+                        "k": "left",
+                        "v": 0
+                      },
+                      {
+                        "k": "top",
+                        "v": 0
+                      },
+                      {
+                        "k": "autoWidth",
+                        "v": true
+                      },
+                      {
+                        "k": "align",
+                        "v": "stretch"
+                      },
+                      {
+                        "k": "autoHeight",
+                        "v": true
+                      },
+                      {
+                        "k": "variant",
+                        "v": "Transparent"
+                      },
+                      {
+                        "k": "children",
+                        "v": {
+                          "list": [
+                            {
+                              "class": "Panel",
+                              "key": "8_335816829",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [
+                                      {
+                                        "name": "padding-left",
+                                        "value": "16px"
+                                      },
+                                      {
+                                        "name": "padding-right",
+                                        "value": "16px"
+                                      }
+                                    ],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 400
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 48
+                                },
+                                {
+                                  "k": "layout",
+                                  "v": "horizontal"
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "PageMenuItem"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "align",
+                                  "v": "stretch"
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": false
+                                },
+                                {
+                                  "k": "children",
+                                  "v": {
+                                    "list": [
+                                      {
+                                        "class": "SimpleLabel",
+                                        "key": "9_1999790897",
+                                        "propList": [
+                                          {
+                                            "k": "styleMap",
+                                            "v": {
+                                              "name": "styleMap",
+                                              "properties": [{
+                                                "name": "margin-right",
+                                                "value": "32px"
+                                              }],
+                                              "type": "PropertyMap[styleMap]"
+                                            }
+                                          },
+                                          {
+                                            "k": "width",
+                                            "v": 100
+                                          },
+                                          {
+                                            "k": "height",
+                                            "v": 20
+                                          },
+                                          {
+                                            "k": "name",
+                                            "v": "PageIcon"
+                                          },
+                                          {
+                                            "k": "left",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "top",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "autoWidth",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "autoHeight",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "variant",
+                                            "v": "Icon"
+                                          },
+                                          {
+                                            "k": "text",
+                                            "v": "dashboard"
+                                          }
+                                        ],
+                                        "type": "ComponentInfo"
+                                      },
+                                      {
+                                        "class": "Anchor",
+                                        "key": "10_1254227595",
+                                        "propList": [
+                                          {
+                                            "k": "styleMap",
+                                            "v": {
+                                              "name": "styleMap",
+                                              "properties": [],
+                                              "type": "PropertyMap[styleMap]"
+                                            }
+                                          },
+                                          {
+                                            "k": "width",
+                                            "v": 100
+                                          },
+                                          {
+                                            "k": "height",
+                                            "v": 20
+                                          },
+                                          {
+                                            "k": "name",
+                                            "v": "PageLink"
+                                          },
+                                          {
+                                            "k": "left",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "top",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "autoWidth",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "autoHeight",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "text",
+                                            "v": "Page"
+                                          },
+                                          {
+                                            "k": "bindings",
+                                            "v": {
+                                              "list": [],
+                                              "type": "List[BindingInfo]"
+                                            }
+                                          },
+                                          {
+                                            "k": "href",
+                                            "v": ""
+                                          }
+                                        ],
+                                        "type": "ComponentInfo"
+                                      }
+                                    ],
+                                    "type": "List[ComponentInfo]"
+                                  }
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "MenuListItem"
+                                },
+                                {
+                                  "k": "alignChildren",
+                                  "v": "center"
+                                },
+                                {
+                                  "k": "action",
+                                  "v": "app.showPage(app.pages.Page);"
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            },
+                            {
+                              "class": "Panel",
+                              "key": "11_1961558555",
+                              "propList": [
+                                {
+                                  "k": "styleMap",
+                                  "v": {
+                                    "name": "styleMap",
+                                    "properties": [
+                                      {
+                                        "name": "padding-left",
+                                        "value": "16px"
+                                      },
+                                      {
+                                        "name": "padding-right",
+                                        "value": "16px"
+                                      }
+                                    ],
+                                    "type": "PropertyMap[styleMap]"
+                                  }
+                                },
+                                {
+                                  "k": "width",
+                                  "v": 400
+                                },
+                                {
+                                  "k": "height",
+                                  "v": 48
+                                },
+                                {
+                                  "k": "layout",
+                                  "v": "horizontal"
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "SettingsMenuItem"
+                                },
+                                {
+                                  "k": "left",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "top",
+                                  "v": 0
+                                },
+                                {
+                                  "k": "autoWidth",
+                                  "v": true
+                                },
+                                {
+                                  "k": "align",
+                                  "v": "stretch"
+                                },
+                                {
+                                  "k": "autoHeight",
+                                  "v": false
+                                },
+                                {
+                                  "k": "children",
+                                  "v": {
+                                    "list": [
+                                      {
+                                        "class": "SimpleLabel",
+                                        "key": "12_1421774813",
+                                        "propList": [
+                                          {
+                                            "k": "styleMap",
+                                            "v": {
+                                              "name": "styleMap",
+                                              "properties": [{
+                                                "name": "margin-right",
+                                                "value": "32px"
+                                              }],
+                                              "type": "PropertyMap[styleMap]"
+                                            }
+                                          },
+                                          {
+                                            "k": "width",
+                                            "v": 100
+                                          },
+                                          {
+                                            "k": "height",
+                                            "v": 20
+                                          },
+                                          {
+                                            "k": "name",
+                                            "v": "SettingsIcon"
+                                          },
+                                          {
+                                            "k": "left",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "top",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "autoWidth",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "autoHeight",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "text",
+                                            "v": "settings"
+                                          },
+                                          {
+                                            "k": "variant",
+                                            "v": "Icon"
+                                          }
+                                        ],
+                                        "type": "ComponentInfo"
+                                      },
+                                      {
+                                        "class": "Anchor",
+                                        "key": "13_2121747084",
+                                        "propList": [
+                                          {
+                                            "k": "styleMap",
+                                            "v": {
+                                              "name": "styleMap",
+                                              "properties": [],
+                                              "type": "PropertyMap[styleMap]"
+                                            }
+                                          },
+                                          {
+                                            "k": "width",
+                                            "v": 100
+                                          },
+                                          {
+                                            "k": "height",
+                                            "v": 20
+                                          },
+                                          {
+                                            "k": "name",
+                                            "v": "SettingsLink"
+                                          },
+                                          {
+                                            "k": "left",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "top",
+                                            "v": 0
+                                          },
+                                          {
+                                            "k": "autoWidth",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "autoHeight",
+                                            "v": true
+                                          },
+                                          {
+                                            "k": "text",
+                                            "v": "Settings"
+                                          },
+                                          {
+                                            "k": "bindings",
+                                            "v": {
+                                              "list": [],
+                                              "type": "List[BindingInfo]"
+                                            }
+                                          },
+                                          {
+                                            "k": "href",
+                                            "v": ""
+                                          }
+                                        ],
+                                        "type": "ComponentInfo"
+                                      }
+                                    ],
+                                    "type": "List[ComponentInfo]"
+                                  }
+                                },
+                                {
+                                  "k": "variant",
+                                  "v": "MenuListItem"
+                                },
+                                {
+                                  "k": "alignChildren",
+                                  "v": "center"
+                                },
+                                {
+                                  "k": "action",
+                                  "v": "app.showPage(app.pages.Settings);"
+                                },
+                                {
+                                  "k": "bindings",
+                                  "v": {
+                                    "list": [{
+                                      "sourceExpression": "visible",
+                                      "targetExpression": "(@user.roles).indexOf(\u0027Admins\u0027) !\u003d\u003d -1",
+                                      "targetLiteralExpression": "(@user.roles).indexOf(\u0027Admins\u0027) !\u003d\u003d -1",
+                                      "type": "BindingInfo"
+                                    }],
+                                    "type": "List[BindingInfo]"
+                                  }
+                                }
+                              ],
+                              "type": "ComponentInfo"
+                            }
+                          ],
+                          "type": "List[ComponentInfo]"
+                        }
+                      },
+                      {
+                        "k": "constrain_left",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_right",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_width",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_minWidth",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_maxWidth",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_top",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_bottom",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_height",
+                        "v": true
+                      },
+                      {
+                        "k": "constrain_minHeight",
+                        "v": false
+                      },
+                      {
+                        "k": "constrain_maxHeight",
+                        "v": false
+                      }
+                    ],
+                    "type": "ComponentInfo"
+                  }
+                ],
+                "type": "List[ComponentInfo]"
+              }
+            }
+          ],
+          "type": "ComponentInfo"
+        }],
+        "type": "List[ComponentInfo]"
+      }
+    },
+    {
+      "k": "name",
+      "v": "Menu"
+    },
+    {
+      "k": "horizontal",
+      "v": "left"
+    },
+    {
+      "k": "hasGlass",
+      "v": true
+    },
+    {
+      "k": "clickOutsideToClose",
+      "v": true
+    },
+    {
+      "k": "animation",
+      "v": "fromLeft"
+    },
+    {
+      "k": "top",
+      "v": 4
+    },
+    {
+      "k": "left",
+      "v": 4
+    },
+    {
+      "k": "height",
+      "v": 960
+    },
+    {
+      "k": "width",
+      "v": 960
+    },
+    {
+      "k": "pageCss",
+      "v": "/* Menu */\n.app-Menu-AvatarIconLabel {\n  font-size: 36px;\n  background-color: rgba(255, 255, 255, 0.5);\n  border-radius: 50%;\n}\n\n.app-Panel--MenuListItem:hover {\n  cursor: pointer;\n  background-color: rgba(0, 0, 0, 0.08);\n}\n\n.app-Panel--MenuListItem .app-Label {\n  color: rgba(0, 0, 0, .54)\n}\n\n.app-Panel--MenuListItem .app-Link {\n  color: rgba(0, 0, 0, 0.87);\n  font-size: 14px;\n}\n\n@media (max-width: 480px) {\n  .app-Menu-Content {\n    width: 280px !important;\n  }\n}"
+    }
+  ],
+  "type": "ComponentInfo"
+}
