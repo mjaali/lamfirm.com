@@ -339,15 +339,12 @@ span.price {
 <div class="PT_express_checkout" style="padding-bottom:20%; padding-right:0%;">
             </div>
 <script type="text/javascript">
-
-  $qty= document.getElementById('qty').value;
-
-      
+     
     Paytabs("#express_checkout").expresscheckout({
         settings:{
             secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
             merchant_id: "10033720",
-            amount: (($qty*150)+45)*1.05,
+            amount: ((document.getElementById('qty').value*150)+45)*1.05,
             currency: "SAR",
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
