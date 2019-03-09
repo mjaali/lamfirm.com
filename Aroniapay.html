@@ -344,7 +344,7 @@ span.price {
         settings:{
             secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
             merchant_id: "10033720",
-            amount: ((document.getElementById('qty').value*150)+45)*1.05,
+            amount: document.getElementById('grand_total').value,
             currency: "SAR",
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
@@ -732,7 +732,7 @@ var revapi1,
       $product_price.innerHTML = $qty*150 +" SR";
       $shp.innerHTML = "45 SR";
       $vat.innerHTML = (($qty*150)+45)*0.05 +" SR";
-      $grand_total.innerHTML = (($qty*150)+45)*1.05 +" SR";
+      $grand_total.innerHTML = (($qty*150)+45)*1.05;
 
   
       
