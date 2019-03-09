@@ -227,7 +227,92 @@ span.price {
          
                                           
                                             <td>
-                                              <select id="qty" onChange="updateqty()">
+                                              <select id="qty" onChange="updateqty();
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+        
+    Paytabs("#express_checkout").expresscheckout({
+        settings:{
+            secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
+            merchant_id: "10033720",
+            amount: ((document.getElementById('qty').value*150)+45)*1.05,
+            currency: "SAR",
+            title: "Test Express Checkout Transaction",
+            product_names: "Product1,Product2,Product3",
+            order_id: 25,
+            url_redirect: "https://www.lamfirm.com/thanku",
+            display_billing_fields: 0,
+            display_shipping_fields: 0,
+            display_customer_info: 0,
+            language: "en",
+            redirect_on_reject: 0,
+            style:{
+                css: "custom",
+                linktocss: "http://lamfirm.com/paytabs.css",
+            },
+            is_iframe:{
+                load: "onbodyload",
+                show: 0,
+            },
+        },
+        customer_info:{
+            first_name: "",
+            last_name: "",
+            phone_number: "",
+            country_code: "",
+            email_address: ""            
+        },
+        billing_address:{
+            full_address: "Manama, Bahrain",
+            city: "Manama",
+            state: "Manama",
+            country: "BHR",
+            postal_code: "00973"
+        },
+        shipping_address:{
+            shipping_first_name: "John",
+            shipping_last_name: "Smith",
+            full_address_shipping: "Manama, Bahrain",
+            city_shipping: "Manama",
+            state_shipping: "Manama",
+            country_shipping: "BHR",
+            postal_code_shipping: "00973"
+        },
+        checkout_button:{
+            width: 150,
+            height: 30,
+            img_url: "https://imgur.com/lbHvlCV.png"
+        },
+        pay_button:{
+            width: 100,
+            height: 30,
+            img_url: "https://imgur.com/BYOJHOg.png"
+        }
+    });
+                                                                   
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         ">
 <option value="1" selected="selected">1</option>
 <option value="2"  >2</option>
 <option value="3" >3</option>
@@ -344,7 +429,7 @@ span.price {
         settings:{
             secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
             merchant_id: "10033720",
-            amount: ((document.getElementById('grand_total').value*1)+0)*1,
+            amount: ((document.getElementById('qty').value*150)+45)*1.05,
             currency: "SAR",
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
@@ -732,7 +817,7 @@ var revapi1,
       $product_price.innerHTML = $qty*150 +" SR";
       $shp.innerHTML = "45 SR";
       $vat.innerHTML = (($qty*150)+45)*0.05 +" SR";
-      $grand_total.innerHTML = (($qty*150)+45)*1.05;
+      $grand_total.innerHTML = (($qty*150)+45)*1.05 +" SR";
 
   
       
