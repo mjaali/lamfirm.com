@@ -280,12 +280,12 @@ span.price {
                                           </td>
          
                                           
-                                            <td>
-                                              <select id="qty" onChange="updateqty(); paytabsupdate();">
+<td>
+<select id="qty" onChange="updatepay();">
 <option value="1" selected="selected">1</option>
 <option value="2"  >2</option>
 <option value="3" >3</option>
-<option value="4" selected="selected" >4</option>
+<option value="4" >4</option>
 <option value="5" >5</option>
 <option value="6">6</option>
 <option value="7">7</option>
@@ -303,7 +303,17 @@ span.price {
                                            
                                          <tr>
                                             <td> Shipping Fees</td>
-                                            <td></td>
+                                            <td>
+<select id="shpcon" onChange="updatepay();">
+<option value="SAU" selected="selected">Saudi Arabia</option>
+<option value="BHR"  >Bahrain</option>
+<option value="ARE">United Arab Emirates</option>
+<option value="KWT" >Kuwait</option>
+<option value="OMN" >Oman</option>
+<option value="QAT">Qatar</option>
+                                        
+</select></td>
+
                                             <td id="shp"> SR 0.00</td>
                                         </tr>
                                            
@@ -361,8 +371,8 @@ span.price {
             display_billing_fields: 0,
             display_shipping_fields: 1,
             display_customer_info: 1,
-            language: "ar",
-            redirect_on_reject: 1,
+            language: "en",
+            redirect_on_reject: 0,
             style:{
                 css: "custom",
                 linktocss: "http://lamfirm.com/paytabs.css",
@@ -700,23 +710,45 @@ var revapi1,
 					</script>
     <script>
       
-      
+          var shpcost="35";
       $product_price= document.getElementById('product_price'),
       $shp= document.getElementById('shp'),
+      $shpcon = document.getElementById('shpcon').value,
       $vat= document.getElementById('vat'),
       $grand_total= document.getElementById('grand_total');
       $qty= document.getElementById('qty').value;
 
       
+  if($shpcon !="SAU"){
+if($qty == 1){shpcost ="169"}
+else if($qty == 2){shpcost ="214"}
+else if($qty == 3){shpcost ="266"}
+else if($qty == 4){shpcost ="312"}
+else if($qty == 5){shpcost ="358"}
+else if($qty == 6){shpcost ="402"}
+else if($qty == 7){shpcost ="446"}
+else if($qty == 8){shpcost ="491"}
+else if($qty == 9){shpcost ="535"}
+else if($qty == 10){shpcost ="579"}
+else if($qty == 11){shpcost ="1014"}
+else if($qty == 12){shpcost ="1091"}
+else if($qty == 13){shpcost ="1168"}
+else if($qty == 14){shpcost ="1245"}
+else if($qty == 15){shpcost ="1322"}
+  } else {$shpcost = "35"};
+          
       
+        
+      $shp.innerHTML = shpcost+" SR";
+      
+              var total_product =   $qty*150;
+              var total_vat = (Number(total_product)+Number(shpcost))*0.05;
+              var total_grand = (Number(total_product)+Number(shpcost))*1.05;
+        
+      $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
+      $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
+      $grand_total.innerHTML = (Math.round(total_grand * 10 ) / 10) +" SR";
 
-      
-      $product_price.innerHTML = $qty*150 +" SR";
-      $shp.innerHTML = "45 SR";
-      $vat.innerHTML = (($qty*150)+45)*0.05 +" SR";
-      $grand_total.innerHTML = (($qty*150)+45)*1.05 +" SR";
-
-      
       
       
       
@@ -725,39 +757,56 @@ var revapi1,
     
      <script>
       
-      function updateqty(){
+      function updatepay(){
       
-       $product_price= document.getElementById('product_price'),
+            var shpcost="35";
+      $product_price= document.getElementById('product_price'),
       $shp= document.getElementById('shp'),
+      $shpcon = document.getElementById('shpcon').value,
       $vat= document.getElementById('vat'),
       $grand_total= document.getElementById('grand_total');
       $qty= document.getElementById('qty').value;
 
       
+  if($shpcon !="SAU"){
+if($qty == 1){shpcost ="169"}
+else if($qty == 2){shpcost ="214"}
+else if($qty == 3){shpcost ="266"}
+else if($qty == 4){shpcost ="312"}
+else if($qty == 5){shpcost ="358"}
+else if($qty == 6){shpcost ="402"}
+else if($qty == 7){shpcost ="446"}
+else if($qty == 8){shpcost ="491"}
+else if($qty == 9){shpcost ="535"}
+else if($qty == 10){shpcost ="579"}
+else if($qty == 11){shpcost ="1014"}
+else if($qty == 12){shpcost ="1091"}
+else if($qty == 13){shpcost ="1168"}
+else if($qty == 14){shpcost ="1245"}
+else if($qty == 15){shpcost ="1322"}
+  } else {$shpcost = "35"};
+          
       
-
+        
+      $shp.innerHTML = shpcost+" SR";
       
-      $product_price.innerHTML = $qty*150 +" SR";
-      $shp.innerHTML = "45 SR";
-      $vat.innerHTML = (($qty*150)+45)*0.05 +" SR";
-      $grand_total.innerHTML = (($qty*150)+45)*1.05 +" SR";
+              var total_product =   $qty*150;
+              var total_vat = (Number(total_product)+Number(shpcost))*0.05;
+              var total_grand = (Number(total_product)+Number(shpcost))*1.05;
+        
+      $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
+      $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
+      $grand_total.innerHTML = (Math.round(total_grand * 10 ) / 10) +" SR";
 
   
+  
       
-       }
-      
-      
-    </script>
-    
-      <script>
-      
-      function paytabsupdate(){
-        
+
           Paytabs("#express_checkout").expresscheckout({
         settings:{
             secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
             merchant_id: "10033720",
-            amount: ((document.getElementById('qty').value*150)+45)*1.05,
+            amount: Math.round(total_grand * 10 ) / 10,
             currency: "SAR",
             title: "Test Express Checkout Transaction",
             product_names: "Product1,Product2,Product3",
@@ -797,7 +846,7 @@ var revapi1,
             full_address_shipping: "Manama, Bahrain",
             city_shipping: "Manama",
             state_shipping: "Manama",
-            country_shipping: "BHR",
+            country_shipping: $shpcon,
             postal_code_shipping: "00973"
         },
         checkout_button:{
