@@ -300,7 +300,8 @@ span.price {
 </select></td>
                                             <td id="product_price"> SR 0.00</td>
                                         </tr>
-                                           
+                                                                               
+
                                          <tr>
                                             <td> Shipping Fees</td>
                                             <td>
@@ -310,9 +311,12 @@ span.price {
 <option value="ARE">United Arab Emirates</option>
 <option value="KWT" >Kuwait</option>
 <option value="OMN" >Oman</option>
-<option value="QAT">Qatar</option>
+<!option value="QAT">Qatar<!/option>
                                         
 </select></td>
+                                           
+                      
+
 
                                             <td id="shp"> SR 0.00</td>
                                         </tr>
@@ -321,13 +325,14 @@ span.price {
                                             <td> VAT 5%</td>
                                             <td></td>
                                             <td id="vat"> SR 0.00</td>
+                                             
                                         </tr>
 
   
 
                                         <tr>
                                             <td><strong> Total Price</strong></td>
-                                            <td></td>
+                                            <td><input type="text" name="city" id="city" /></td>
                                             <td id="grand_total"> SR 0.00</td>
                                         </tr>
 
@@ -339,7 +344,7 @@ span.price {
           
         </div>
 
-        <input type="submit" value="Confirm تأكيد" class="btn" style="float:right;">
+        <!input type="submit" value="Confirm تأكيد" class="btn" style="float:right;">
       </form>
     </div>
   </div>
@@ -356,67 +361,7 @@ span.price {
 <!-- Button Code for PayTabs Express Checkout -->
       
 
-<script type="text/javascript">
-     
-    Paytabs("#express_checkout").expresscheckout({
-        settings:{
-            secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
-            merchant_id: "10033720",
-            amount: ((document.getElementById('qty').value*150)+45)*1.05,
-            currency: "SAR",
-            title: "Test Express Checkout Transaction",
-            product_names: "Product1,Product2,Product3",
-            order_id: 25,
-            url_redirect: "https://www.lamfirm.com/thanku",
-            display_billing_fields: 0,
-            display_shipping_fields: 1,
-            display_customer_info: 1,
-            language: "en",
-            redirect_on_reject: 0,
-            style:{
-                css: "custom",
-                linktocss: "http://lamfirm.com/paytabs.css",
-            },
-            is_iframe:{
-                load: "onbodyload",
-                show: 0,
-            },
-        },
-        customer_info:{
-            first_name: "",
-            last_name: "",
-            phone_number: "",
-            country_code: "",
-            email_address: ""            
-        },
-        billing_address:{
-            full_address: "Manama, Bahrain",
-            city: "Manama",
-            state: "Manama",
-            country: "BHR",
-            postal_code: "00973"
-        },
-        shipping_address:{
-            shipping_first_name: "",
-            shipping_last_name: "",
-            full_address_shipping: "",
-            city_shipping: "",
-            state_shipping: "",
-            country_shipping: "",
-            postal_code_shipping: ""
-        },
-        checkout_button:{
-            width: 150,
-            height: 30,
-            img_url: "https://imgur.com/lbHvlCV.png"
-        },
-        pay_button:{
-            width: 100,
-            height: 30,
-            img_url: "https://imgur.com/BYOJHOg.png"
-        }
-    });
-</script>
+
                  
   </section>
 
@@ -710,62 +655,15 @@ var revapi1,
 					</script>
     <script>
       
-          var shpcost="35";
-      $product_price= document.getElementById('product_price'),
-      $shp= document.getElementById('shp'),
-      $shpcon = document.getElementById('shpcon').value,
-      $vat= document.getElementById('vat'),
-      $grand_total= document.getElementById('grand_total');
-      $qty= document.getElementById('qty').value;
-
-      
-  if($shpcon !="SAU"){
-if($qty == 1){shpcost ="169"}
-else if($qty == 2){shpcost ="214"}
-else if($qty == 3){shpcost ="266"}
-else if($qty == 4){shpcost ="312"}
-else if($qty == 5){shpcost ="358"}
-else if($qty == 6){shpcost ="402"}
-else if($qty == 7){shpcost ="446"}
-else if($qty == 8){shpcost ="491"}
-else if($qty == 9){shpcost ="535"}
-else if($qty == 10){shpcost ="579"}
-else if($qty == 11){shpcost ="1014"}
-else if($qty == 12){shpcost ="1091"}
-else if($qty == 13){shpcost ="1168"}
-else if($qty == 14){shpcost ="1245"}
-else if($qty == 15){shpcost ="1322"}
-  } else {$shpcost = "35"};
-          
-      
-        
-      $shp.innerHTML = shpcost+" SR";
-      
-              var total_product =   $qty*150;
-              var total_vat = (Number(total_product)+Number(shpcost))*0.05;
-              var total_grand = (Number(total_product)+Number(shpcost))*1.05;
-        
-      $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
-      $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
-      $grand_total.innerHTML = (Math.round(total_grand * 10 ) / 10) +" SR";
-
-      
-      
-      
-      
-    </script>
-    
-     <script>
-      
-      function updatepay(){
       
             var shpcost="35";
       $product_price= document.getElementById('product_price'),
       $shp= document.getElementById('shp'),
       $shpcon = document.getElementById('shpcon').value,
       $vat= document.getElementById('vat'),
-      $grand_total= document.getElementById('grand_total');
-      $qty= document.getElementById('qty').value;
+      $grand_total= document.getElementById('grand_total'),
+      $qty= document.getElementById('qty').value,
+      $city= document.getElementById('city').value;
 
       
   if($shpcon !="SAU"){
@@ -793,6 +691,9 @@ else if($qty == 15){shpcost ="1322"}
               var total_product =   $qty*150;
               var total_vat = (Number(total_product)+Number(shpcost))*0.05;
               var total_grand = (Number(total_product)+Number(shpcost))*1.05;
+          //    var shipcon = $shipcon;      
+          //    var city = $city;
+        
         
       $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
       $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
@@ -813,7 +714,7 @@ else if($qty == 15){shpcost ="1322"}
             order_id: 25,
             url_redirect: "https://www.lamfirm.com/thanku",
             display_billing_fields: 0,
-            display_shipping_fields: 0,
+            display_shipping_fields: 1,
             display_customer_info: 0,
             language: "en",
             redirect_on_reject: 0,
@@ -843,9 +744,124 @@ else if($qty == 15){shpcost ="1322"}
         shipping_address:{
             shipping_first_name: "John",
             shipping_last_name: "Smith",
-            full_address_shipping: "Manama, Bahrain",
-            city_shipping: "Manama",
-            state_shipping: "Manama",
+            full_address_shipping: $city,
+            city_shipping: $city,
+            state_shipping: "",
+            country_shipping: $shpcon,
+            postal_code_shipping: "00973"
+        },
+        checkout_button:{
+            width: 150,
+            height: 30,
+            img_url: "https://imgur.com/lbHvlCV.png"
+        },
+        pay_button:{
+            width: 100,
+            height: 30,
+            img_url: "https://imgur.com/BYOJHOg.png"
+        }
+    });
+      
+      
+      
+      
+    </script>
+    
+     <script>
+      
+      function updatepay(){
+      
+            var shpcost="35";
+      $product_price= document.getElementById('product_price'),
+      $shp= document.getElementById('shp'),
+      $shpcon = document.getElementById('shpcon').value,
+      $vat= document.getElementById('vat'),
+      $grand_total= document.getElementById('grand_total'),
+      $qty= document.getElementById('qty').value,
+      $city= document.getElementById('city').value;
+
+      
+  if($shpcon !="SAU"){
+if($qty == 1){shpcost ="169"}
+else if($qty == 2){shpcost ="214"}
+else if($qty == 3){shpcost ="266"}
+else if($qty == 4){shpcost ="312"}
+else if($qty == 5){shpcost ="358"}
+else if($qty == 6){shpcost ="402"}
+else if($qty == 7){shpcost ="446"}
+else if($qty == 8){shpcost ="491"}
+else if($qty == 9){shpcost ="535"}
+else if($qty == 10){shpcost ="579"}
+else if($qty == 11){shpcost ="1014"}
+else if($qty == 12){shpcost ="1091"}
+else if($qty == 13){shpcost ="1168"}
+else if($qty == 14){shpcost ="1245"}
+else if($qty == 15){shpcost ="1322"}
+  } else {$shpcost = "35"};
+          
+      
+        
+      $shp.innerHTML = shpcost+" SR";
+      
+              var total_product =   $qty*150;
+              var total_vat = (Number(total_product)+Number(shpcost))*0.05;
+              var total_grand = (Number(total_product)+Number(shpcost))*1.05;
+          //    var shipcon = $shipcon;      
+          //    var city = $city;
+        
+        
+      $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
+      $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
+      $grand_total.innerHTML = (Math.round(total_grand * 10 ) / 10) +" SR";
+
+  
+  
+      
+
+          Paytabs("#express_checkout").expresscheckout({
+        settings:{
+            secret_key: "UEYjk4tja8ZTidMOzmTQNt8W6uKNeNb9satNeW6o56inj4cTr5JfzRcFmWsBKEKdOd02a6rfdJCxOPqfVavu2H9oECZogJC4XC67",
+            merchant_id: "10033720",
+            amount: Math.round(total_grand * 10 ) / 10,
+            currency: "SAR",
+            title: "Test Express Checkout Transaction",
+            product_names: "Product1,Product2,Product3",
+            order_id: 25,
+            url_redirect: "https://www.lamfirm.com/thanku",
+            display_billing_fields: 0,
+            display_shipping_fields: 1,
+            display_customer_info: 0,
+            language: "en",
+            redirect_on_reject: 0,
+            style:{
+                css: "custom",
+                linktocss: "http://lamfirm.com/paytabs.css",
+            },
+            is_iframe:{
+                load: "onbodyload",
+                show: 0,
+            },
+        },
+        customer_info:{
+            first_name: "",
+            last_name: "",
+            phone_number: "",
+            country_code: "",
+            email_address: ""            
+        },
+        billing_address:{
+            full_address: "Manama, Bahrain",
+            city: "Manama",
+            state: "Manama",
+            country: "BHR",
+            postal_code: "00973"
+        },
+        shipping_address:{
+            shipping_first_name: "John",
+            shipping_last_name: "Smith",
+            full_address_shipping: $city,
+            city_shipping: $city,
+            state_shipping: "",
             country_shipping: $shpcon,
             postal_code_shipping: "00973"
         },
