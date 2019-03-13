@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -492,7 +493,7 @@ button:hover{
          
                                           
 <td>
-<select id="qty" onChange="updatepay();">
+<select id="number" onChange="updatepay();">
 <option value="1" selected="selected">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -509,22 +510,22 @@ button:hover{
 <option value="14">14</option>                                              
 <option value="15">15</option>                                             
 </select></td>
-                                            <td id="product_price"> SR 0.00</td>
+                                            <td id="players_number"> SR 0.00</td>
                                         </tr>
                                            
                                          <tr>
                                             <td> Tournament:</td>
                                             <td>
-<select id="shpcon" onChange="updatepay();">
-<option value="SAU" selected="selected">Tournament 1</option>
-<option value="BHR"  >Tournament 2</option>
-<option value="ARE">Tournament 3</option>
-<option value="KWT" >Tournament 4</option>
-<option value="OMN" >Tournament 5</option>
+<select id="tournament" onChange="updatepay();">
+<option value="T1" selected="selected">Tournament 1</option>
+<option value="T2"  >Tournament 2</option>
+<option value="T3">Tournament 3</option>
+<option value="T4" >Tournament 4</option>
+<option value="T5" >Tournament 5</option>
                                         
 </select></td>
 
-                                            <td id="shp"> SR 0.00</td>
+                                            <td></td>
                                         </tr>
                                            
                                         <tr>
@@ -1202,7 +1203,7 @@ button:hover{
 <script type='text/javascript' src='https://clixgaming.com/wp-includes/js/wp-embed.min.js?ver=5.0'></script>
 <script type='text/javascript' src='https://clixgaming.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.0.1'></script>
 <script type='text/javascript' src='https://clixgaming.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.2.4'></script>
-<script type='text/javascript'>
+<script type='text/javascript'></script>
   
      		<script>
 					var htmlDivCss = ' #rev_slider_1_1_wrapper .tp-loader.spinner2{ background-color: #FFFFFF !important; } ';
@@ -1218,42 +1219,19 @@ button:hover{
 					</script>
     <script>
       
-           var shpcost="35";
-      $product_price= document.getElementById('product_price'),
-      $shp= document.getElementById('shp'),
-      $shpcon = document.getElementById('shpcon').value,
+  
+      $players_number= document.getElementById('players_number'),
+      $tournament = document.getElementById('tournament').value,
       $vat= document.getElementById('vat'),
       $grand_total= document.getElementById('grand_total');
-      $qty= document.getElementById('qty').value;
+      $number= document.getElementById('number').value;
 
-      
-  if($shpcon !="SAU"){
-if($qty == 1){shpcost ="169"}
-else if($qty == 2){shpcost ="214"}
-else if($qty == 3){shpcost ="266"}
-else if($qty == 4){shpcost ="312"}
-else if($qty == 5){shpcost ="358"}
-else if($qty == 6){shpcost ="402"}
-else if($qty == 7){shpcost ="446"}
-else if($qty == 8){shpcost ="491"}
-else if($qty == 9){shpcost ="535"}
-else if($qty == 10){shpcost ="579"}
-else if($qty == 11){shpcost ="1014"}
-else if($qty == 12){shpcost ="1091"}
-else if($qty == 13){shpcost ="1168"}
-else if($qty == 14){shpcost ="1245"}
-else if($qty == 15){shpcost ="1322"}
-  } else {$shpcost = "35"};
-          
-      
+ 
+              var total_product =  $number*50;
+              var total_vat = (Number(total_product))*0.05;
+              var total_grand = (Number(total_product))*1.05;
         
-      $shp.innerHTML = shpcost+" SR";
-      
-              var total_product =   $qty*150;
-              var total_vat = (Number(total_product)+Number(shpcost))*0.05;
-              var total_grand = (Number(total_product)+Number(shpcost))*1.05;
-        
-      $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
+      $players_number.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
       $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
       $grand_total.innerHTML = (Math.round(total_grand * 10 ) / 10) +" SR";
 
@@ -1268,7 +1246,7 @@ else if($qty == 15){shpcost ="1322"}
             amount: Math.round(total_grand * 10 ) / 10,
             currency: "SAR",
             title: "Test Express Checkout Transaction",
-            product_names: "Product1,Product2,Product3",
+            product_names: "Tournament Pay Page",
             order_id: 25,
             url_redirect: "https://www.lamfirm.com/thanku",
             display_billing_fields: 0,
@@ -1305,7 +1283,7 @@ else if($qty == 15){shpcost ="1322"}
             full_address_shipping: "Manama, Bahrain",
             city_shipping: "Manama",
             state_shipping: "Manama",
-            country_shipping: $shpcon,
+            country_shipping: "",
             postal_code_shipping: "00973"
         },
         checkout_button:{
@@ -1329,42 +1307,20 @@ else if($qty == 15){shpcost ="1322"}
       
       function updatepay(){
       
-            var shpcost="35";
-      $product_price= document.getElementById('product_price'),
-      $shp= document.getElementById('shp'),
-      $shpcon = document.getElementById('shpcon').value,
+      
+    
+      $players_number= document.getElementById('players_number'),
+      $tournament = document.getElementById('tournament').value,
       $vat= document.getElementById('vat'),
       $grand_total= document.getElementById('grand_total');
-      $qty= document.getElementById('qty').value;
+      $number= document.getElementById('number').value;
 
-      
-  if($shpcon !="SAU"){
-if($qty == 1){shpcost ="169"}
-else if($qty == 2){shpcost ="214"}
-else if($qty == 3){shpcost ="266"}
-else if($qty == 4){shpcost ="312"}
-else if($qty == 5){shpcost ="358"}
-else if($qty == 6){shpcost ="402"}
-else if($qty == 7){shpcost ="446"}
-else if($qty == 8){shpcost ="491"}
-else if($qty == 9){shpcost ="535"}
-else if($qty == 10){shpcost ="579"}
-else if($qty == 11){shpcost ="1014"}
-else if($qty == 12){shpcost ="1091"}
-else if($qty == 13){shpcost ="1168"}
-else if($qty == 14){shpcost ="1245"}
-else if($qty == 15){shpcost ="1322"}
-  } else {$shpcost = "35"};
-          
-      
+ 
+              var total_product =  $number*50;
+              var total_vat = (Number(total_product))*0.05;
+              var total_grand = (Number(total_product))*1.05;
         
-      $shp.innerHTML = shpcost+" SR";
-      
-              var total_product =   $qty*150;
-              var total_vat = (Number(total_product)+Number(shpcost))*0.05;
-              var total_grand = (Number(total_product)+Number(shpcost))*1.05;
-        
-      $product_price.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
+      $players_number.innerHTML = (Math.round(total_product* 10 ) / 10) +" SR";
       $vat.innerHTML = (Math.round(total_vat * 10 ) / 10) +" SR";
       $grand_total.innerHTML = (Math.round(total_grand * 10 ) / 10) +" SR";
 
@@ -1379,7 +1335,7 @@ else if($qty == 15){shpcost ="1322"}
             amount: Math.round(total_grand * 10 ) / 10,
             currency: "SAR",
             title: "Test Express Checkout Transaction",
-            product_names: "Product1,Product2,Product3",
+            product_names: "Tournament Pay Page",
             order_id: 25,
             url_redirect: "https://www.lamfirm.com/thanku",
             display_billing_fields: 0,
@@ -1416,7 +1372,7 @@ else if($qty == 15){shpcost ="1322"}
             full_address_shipping: "Manama, Bahrain",
             city_shipping: "Manama",
             state_shipping: "Manama",
-            country_shipping: $shpcon,
+            country_shipping: "",
             postal_code_shipping: "00973"
         },
         checkout_button:{
@@ -1438,7 +1394,6 @@ else if($qty == 15){shpcost ="1322"}
 /* <![CDATA[ */
 var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/clixgaming.com\/wp-admin\/admin-ajax.php","nonce":"d6b5afc178","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
 /* ]]> */
-</script>
 <script type='text/javascript' src='https://clixgaming.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.2.4'></script>
 <script type='text/javascript' src='https://clixgaming.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
 <script type='text/javascript' src='https://clixgaming.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.4.1'></script>
