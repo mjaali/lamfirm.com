@@ -632,7 +632,29 @@ style=font-family:;
   <noscript>
     <link rel="stylesheet" type="text/css" href="https://d2b2t64apeuv0x.cloudfront.net/assets/css/noscript.css"/>
   </noscript>
+        <script>
 
+        
+            var request = require('request');
+
+request.post('https://textbelt.com/text', {
+  form: {
+    phone: '966540558078',
+    message: 'Hello world',
+    key: 'textbelt',
+  },
+}, function(err, httpResponse, body) {
+  if (err) {
+    console.error('Error:', err);
+    return;
+  }
+  console.log(JSON.parse(body));
+})
+            
+            
+        </script>
+        
+        
   <script>
     var loadDeferredStyles = function() {
       var addStylesNode = document.getElementById("deferred-styles");
