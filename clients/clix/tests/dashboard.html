@@ -1,0 +1,2679 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head> 
+
+
+
+ 
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0,minimum-scale=1.0" />
+
+
+<link href='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/db_layout2.b44d3164ab92661c1712d5656031161a.css' rel='stylesheet' media='all' type='text/css'/>
+   
+<title>Zoho Analytics : Clix Tournament - Clix Tournament Dashboard</title> 
+<meta name="description" content="">   
+
+    
+    <meta prefix="og: http://ogp.me/ns#" property="og:type"          content="website" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:title"         content="Zoho Analytics" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:description"   content="Visualize your business data now with more colorful, animated, attractive, and immersive charts." />
+    <meta prefix="og: http://ogp.me/ns#" property="og:image"         content="https://css.zohostatic.com/db/v2_zr/themes/common/images/link-preview.a7a6e5da0ad9a0e542db59a4810eac54.jpg" />
+
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Zoho Analytics" />
+    <meta name="twitter:description" content="Visualize your business data now with more colorful, animated, attractive, and immersive charts." />
+    <meta name="twitter:image" content="https://css.zohostatic.com/db/v2_zr/themes/common/images/link-preview.a7a6e5da0ad9a0e542db59a4810eac54.jpg" />
+
+</head>
+<body class="zcrmplus-cmstyles">
+    
+    <svg style="display:none">
+        <!-- CLOSE ICON -->
+        <symbol id="close-icon" viewBox="0 0 48 48"> 
+            <path class="cls-1" d="M9,13l4-4L25,21,37,9l3,4L28,25,40,37l-3,3L25,28,13,40,9,37,21,25Z"></path> 
+        </symbol>
+
+        <!-- DOT ICON -->
+        <symbol id="dot-icon" viewBox="0 0 48 48"> 
+            <circle cx="24.5" cy="24.5" r="17.5"></circle>
+        </symbol>
+    </svg>
+    
+<div id="ZDBMainBox" style="overflow:hidden; border:0px none;"  >
+
+    
+
+<form name="ZAExportCSVForm" method="POST" action="/zaexport/Analysis.csv" style="display:none;">
+<input type="hidden" name="ZADO" value="">
+</form>
+
+
+
+
+
+
+
+
+<div style="display:none">
+
+
+
+<div id='zdbHeightDiv'></div>
+<div id='zdbWidthDiv'></div>
+<div id='freezeIcon' class='zdbFreezeIcon' onclick='ZDBGridMenu.unfreezeColumn(this, event);'  tip ='Unfreeze'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>&nbsp;</div>
+<div id='linkIcon' zdbName='linkIcon'  onclick='ZDBEvents.gotoLink(this, event);'
+  onmouseover='ZDBEvents.highlightLink(this, event,true);' onmouseout='ZDBEvents.highlightLink(this,event,false)' style="display:none;">&nbsp;</div>
+<div id='highlightDIV' class='highlightDIV'></div>
+<div id='zdbMoveMsg' class='zdbMoveDIV'></div>
+<div id='zdbMoveIndicator' class='zdbMoveIndicator'></div>
+<div id='resizeDIV' class='zdbResizeDIV'></div>
+<div id='popupDIV' class='popupDIV'></div>
+<div id='tfDIV' style='visibility:hidden; position:absolute; padding:0px; margin:0px; border:0px; float:left'>
+<input type='text' id='textFField' style='border:1px inset black;'>
+</div>
+<div id="ZDBRESPONSEHOLDER" style="display:none"></div>
+<div style="visibility:hidden;overflow:hidden;position:absolute;width:1px;height:1px" id="gridTmpHolder">
+</div>
+<div style='display:none;'>
+  
+        <iframe name="ZDBEXPORTIFRAME" src="/framework/html/blank.html"></iframe>
+  
+
+<form id="ZDBExportIfrForm" name="HIDDENEXPORTFORM" method="POST" needsstate="false" useiframe="true"></form>
+ 
+
+
+
+
+<div id='zdbCellDIV' zdbname='datacellDIV' style='overflow-x:hidden;white-space:wrap;display:none;'></div>
+<div class='inputField dummyDIV' id='zdbDummyDIV'>To measure the input field width</div>
+<div class='dataCell dummyDIV' id='zdbDummyCell'>To measure the cell height</div>
+<div id='zdbRHTd' style='display:none'></div>
+<div id="zdbRowDiv" zdbname="zdbRowDiv"></div>
+<div style='display:none'>
+  <span id='zdbDataSpan' zdbname='dataspan'></span>
+  <DIV>
+      <DIV id='zdbRowHeadCell' class='zdbRowHead' zdbname='rowheadcell'></DIV>
+      <DIV id='zdbDataCell' class="zdbDataCell" zdbname='datacell'>
+        <div id="summaryValue" style='display:block;height:20px;' class="zdbColHeadArea zdbColHeadRenameIcon " onclick="return ZDBPivotView.summaryLabelEdit(this,event);"></div>
+      </DIV>
+      <DIV id='zdbFilterHeadCell' class="filterHead" zdbname='filterheadcell'></DIV>
+      <DIV id='zdbFilterOptionCell' class='filterCell' zdbname='filterCell'>&nbsp;</DIV>
+      <DIV id='zdbFilterCell' class='filterCell' zdbname='filterCell'><input type='text' class='filterInput' onfocus='ZDBFilterAux.setInputFocus(this);' onblur='ZDBFilterAux.setInputBlur(this);' onkeydown='ZDBEvents.handleFilterEnter(this,event);'></DIV>
+  </DIV>
+  <DIV>
+      <DIV id='zdbFillerHCell' class="zdbFillerHDataCell"></DIV>
+      <DIV id='zdbFillerVCell' class="zdbFillerVDataCell"></DIV>
+      <DIV id='zdbFillerDCell' class="zdbFillerDataCell"></DIV>
+  </DIV>
+    
+    <div zdbname='colheadcell' id='zdbColHeadCell' class='zdbColHead'>
+        <div class="zdbColHeadArea zdbColHeadCheck" HIDDEN="true"></div>
+        <div class="zdbColHeadArea zdbColHeadType">
+          <svg class="colHeadSvgs" xmlns:xlink="http://www.w3.org/2000/svg"><use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="ZR-text"></use></svg>
+		</div>
+        <div class="zdbColHeadArea zdbColHeadRenameIcon" onclick="return ZDBPivotView.renamepivotcolumn(this,event);"></div>
+        <div class='zdbColHeadArea zdbColHeadDisplay' ondblclick="return ZDBPivotView.renamepivotcolumn(this,event);"></div>
+        <div class="zdbColHeadArea zdbColHeadIcon" onclick="ZDBSorting.sortIconClicked(this, event);"></div>
+    </div>
+    
+</div>
+
+<div id="ZDBGRIDTPL" elname="gArea" class='zdbGArea'
+    onclick="return ZDBEvents.onGridMouseClickCapture(event);"
+    ondblclick="return ZDBEvents.onGridMouseDblClickCapture(event);"
+    onmousedown="return ZDBEvents.onGridMouseDown(event);"
+    onmousemove="return ZDBEvents.onGridMouseMove(event);"
+    onmouseover="return ZDBEvents.onGridMouseOver(event);"
+    onmouseout="return ZDBEvents.onGridMouseOut(event);"
+    onmouseleave="return ZDBEvents.onGridMouseLeave(this,event);"
+    onmousewheel="return ZDBGridScroll.onMouseWheel(event);"
+    oncontextmenu='return false;'
+    >
+    <div elname="dashScroll" class="dashScrollFreeze">
+    
+    <div elname="zrRowCountComp" class="zrRowCountComp">
+    	<ul>
+    		<li class="rowCountMinMaxComp" onclick="ZDBGridScroll.minMaxRowCountComp(this);">
+    			<a elname="zrRowCountMinMax"  tip ='Minimize'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' 
+    			 class="rowCountMin" default="true">
+    			</a>
+    		</li>
+    		<li>
+    			<div class="showNavigComp" elname="zrNavigComp">
+    						<a elname="zrGotoFirst"  tip ='Goto First Record'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' onclick="ZDBGridScroll.navigateEl(this,0,event)" class="zrNavFirst">
+    						         <svg class=zrNavSvg>
+       			 					<use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-NavArrow"></use>
+								</svg>
+    						</a>
+    						<a elname="totalRecordsDiv" class="zrRowCount">
+    						</a>
+    						<a elname="zrGotoLast" tip='Goto Last Record' onmouseout="ZDBToolTip.hide(this,event);" onmousemove="ZDBToolTip.show(this,event,'SCASE');" onclick="ZDBGridScroll.navigateEl(this,3,event)" class="zrNavLast">
+    						    		<svg class=zrNavSvg>
+       			 					<use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-NavArrow"></use>
+								</svg>
+    						</a>
+   				</div>
+    		</li>
+   		</ul>    
+    </div>
+    
+    <div elname='gLeftArea' class='zdbGLeftArea'>
+      <div elname="tcArea" class="zdbTcArea"><div elName="tcAreaRowDiv" class="zdbDataRowDiv" refElName="tcArea"></div></div>
+      <div elname="fhArea1" class="zdbFhArea1"  keyDefault=1>
+        <div elname="fhArea1RowDiv1" class="zdbDataRowDiv"></div>
+        <div elname="fhArea1RowDiv2" class="zdbDataRowDiv"></div>
+      </div>
+        <div elname="fhArea3" keyDefault=1> 
+          <div elname="fclose" class="zdbFhArea3" id="ZDBSheetFilterCloseBtn" onclick="ZDBEvents.onFilterAreaButtonClick(this, 'close');">
+          	<span class="iconbg ZRSCloseIcon" style="margin:1px 0 0 4px;"></span>
+          </div>
+        </div>
+        <div elname="rhArea" class="zdbRhArea">
+          <div elname='leftFocus' class='zdbFocusDIV'></div>
+          <div elname="leftSelect" class="zdbSelect" zdbName='selectOut'><div zdbName='selectIn'></div></div>
+          <div elname="leftDropDownIcon" class="iconitem selDropDownBtn" style='display:none;' onmousedown="return ZDBEvents.showDropDownList(this,event);"></div>
+        </div>        
+    </div>
+    <div elname='gRightArea' class='zdbGRightArea'>
+        <div elname="chArea" class="zdbChArea"><div elName="chAreaRowDiv" class="zdbDataRowDiv" refElName="chArea"></div></div>
+        <div elname="fArea1" class="zdbFArea1"  keyDefault=1>
+                <div elname="fArea1RowDiv1" class="zdbDataRowDiv"></div>
+                <div elname="fArea1RowDiv2" class="zdbDataRowDiv"></div>
+        </div>
+        <div elname='fArea3' class="zdbFArea3">
+          <div elname='filterBtnArea'>
+              <input qaid="ZDBSheetFilterHideBtn" type='button' elname='filteHideButton' value='Hide' class='filterButton'  onclick='ZDBEvents.onFilterAreaButtonClick(this, "hide");'/>
+              <input id="ZDBSHEETFILTERAPPLYBTN" qaid="ZDBSheetFilterBtn" type='button' elname='filterButton' value='Apply' class='filterButton'  onclick='ZDBEvents.onFilterAreaButtonClick(this, "apply");'>
+              <input qaid="ZDBSheetFilterClearBtn" type='button' value='Clear' class='filterButton' onclick='ZDBEvents.onFilterAreaButtonClick(this, "clear");'>
+              <input id="ZDBSHEETFILTERSAVENEWBTN" DELETEORDELETEALLNEEDED="true" qaid="ZDBSheetFilterSaveBtn" type='button' elname='filterSaveButton' value='Save (New*)' class='filterButton filterNoMargin' 
+                     onclick="ZDBLoadJsAlone.loadSnippet(this);" lazyLoad="true" lzOper="APPENDTODOC" func="ZDBEvents.onFilterAreaButtonClick" 
+                     lzUrl="/ZDBFilterSave.cc" mode='save' lzName="FILTER_SAVE_DLG"  style='display:none'> 
+              <a qaid="ZDBSheetFilterDropBtn" elname='filterSaveDropButton' class='filterButton tNQT'  style='display:none' onclick='ZDBEvents.onFilterAreaButtonClick(this, "submenu", event);'> 
+              			<span class="downArrow"></span>
+              </a>
+              <input type='button' elname='filterDeleteButton' id="ZDBSheetFilterDeleteBtn" value='Delete Rows' class='filterButton'  onclick='ZDBEvents.onFilterAreaButtonClick(this, "delete");'>
+              <span elname='filterHintDIV' keepText=true class="filterHintDIV"></span>
+              <span elname='filterExampleDIV' keepText=true class="filterExampleDIV" style="padding-left:3px;"></span>
+          </div>
+        </div>
+        <div elname='dArea'
+             
+             class='zdbDArea' onscroll="return ZDBGridScroll.onGridScroll(event);">   
+          <div elname='rightFocus' class='zdbFocusDIV' onmousedown='ZDBEvents.onFocusElClick(this, event);'></div> 
+          <div elname="rightSelect" class="zdbSelect" zdbName='selectOut'><div zdbName='selectIn'></div></div>
+          <div elname="rightDropDownIcon" class="iconitem selDropDownBtn" style='display:none;' onmousedown="return ZDBEvents.showDropDownList(this,event);"></div>
+        </div>
+    </div>
+    <div class='showHideIcon' id="ZDBShowHideBtn" style="margin-top:4px;" showInEmbed=true elname='showHide' 
+    onclick="ZDBListColumnChooser.showColumnChooser(this, event);"   tip ='Show/Hide/Reorder Column(s)'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+         <svg class="showHideSvg">
+        	<use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#DT-dataTypeHide"></use>
+		</svg>
+		</div>
+    <div elname="rhScrollIndicator" class="dbRowHead" style="height:15px;display:none">&nbsp;</div>
+    <div elname="scrollIndicator" class="navigationbg zdbScrollBtn" keeptext="true">Press "Page Down" or Click the page scroll to load rows Incrementally -&gt;</div>
+  <input onkeydown='return ZDBKeyEvents.onKeyDown(event);' 
+        onkeypress='return ZDBKeyEvents.onKeyPress(event);'
+        onblur='return ZDBKeyEvents.onBlur(event);' elname='keyHandler' class='zdbKeyHandler'/>
+<div class='zdbMODIV' elname='moDiv'></div>
+<svg xmlns:xlink="http://www.w3.org/2000/svg" style="height:0px;width:0px;">
+	<defs elname="patternSvgs"></defs>
+</svg>
+</div>            
+</div>
+
+
+
+<select 
+    onkeydown = "return ZDBEditors.onListKeyDown(this,event);"
+    onkeypress = "return ZDBEditors.onListKeyPress(this,event);"
+    onchange = "return ZDBEditors.onListItemChange(this,event);"
+    onblur = "return ZDBEditors.onListBlur(this, event);"
+    id='listField' class='zdbInputField zdbListField'>
+  <option value='true'>Yes</option>
+  <option value='false'>No</option>
+</select>
+<select style='display:none' id='zdbListHolder'><option id='emptyOption' value=""></option></select>
+<textarea
+    onkeydown = "return ZDBEditors.onTextAreaKeyDown(this,event);"
+    onkeypress = "return ZDBEditors.onEditorKeyPress(this,event);"
+    onkeyup = "ZDBEditors.onEditorKeyUp(this,event);"
+    onblur = "return ZDBEditors.onEditorBlur(this,event);"
+    type='text' class = "zdbInputField" autocomplete='off' id='multiLineInput'></textarea>
+<input 
+    onkeydown = "return ZDBEditors.onEditorKeyDown(this,event);"
+    onkeypress = "return ZDBEditors.onEditorKeyPress(this,event);"
+    onkeyup = "ZDBEditors.onEditorKeyUp(this,event);"
+    onblur = "return ZDBEditors.onEditorBlur(this,event);"
+    type='text'     class = "zdbInputField" autocomplete='off' id='singleLineCharInput'/>
+<input 
+    onfocus="this.style.display='block';"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBEvents.inputSave(this, event);'
+    type='text' class='zdbInputField colzdbInputField' id='colHeadEdit' />
+<input style="display:none;height:19px;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBTabHandler.resetTabContent(this);'
+    type='text' class='zdbInputField tabzdbInputField' id='tabEdit' />
+<input class='viewTitle ellipsis' onkeyup='ZDBTabHandler.viewNameEditOnKeyUp(this,event)' onblur='return ZDBTabHandler.viewTitleOnblur(this);' onkeydown="ZDBNavigation.InlineEditOnKeyDown(this,event);" type='text' id='viewName_Edit' />
+<input style="display:none;height:23px;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBTabHandler.resetTabContent(this);'
+    type='text' class='viewTitle titleEdit titleEditable' id='titleEdit' />
+<input style="display:none;height:20px;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBTabHandler.resetdescInline(this);'
+    type='text' class='viewTitle descEdit titleEditable' id='descEdit' />
+<input style="display:none;height:23px;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBTabHandler.resetTitleInline(this);'
+    type='text' class='viewTitle titleEdit titleEditable' id='titleEditChart' />
+<input style="display:none;height:20px;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBTabHandler.resetdescInlineChart(this);'
+    type='text' class='viewTitle descEdit titleEditable' id='descEditChart' />
+<input style="display:block;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBPivotView.hideInputElement();'
+    type='text' class='zdbInputField' id='pvtColumnNameEdit' />
+<input style="display:block;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBImport.hideInputElement(this);'
+    type='text' class='scratchsearchfield' id='importPreviewColumnNameEdit' />
+<input style="display:block;"
+    onkeydown="return ZDBEvents.inputKeyDown(this, event);"
+    onblur='return ZDBSplit.hideInputElement(this);'
+    type='text' class='scratchsearchfield' id='splitPreviewColumnNameEdit' />
+<input 
+        onfocus = "ZDBEditors.onDateFocus(this, event);"
+        onkeydown = "ZDBEditors.onEditorKeyDown(this,event);"
+        onkeypress = "ZDBEditors.onEditorKeyPress(this,event);"
+        onblur = "ZDBEditors.onDateBlur(this,event);"
+        type='text' class = "zdbInputField" autocomplete='off' id='dateInput'/>
+    <div style='width:20px;display:none;' id='dateButton'>
+    <input type="button" class="calendar" style="background-color:transparent;"
+        onmousedown = "return ZDBEditors.onDateButtonMouseDown(this,event);"
+        align='left' />
+</div>
+<div class="iconitem selDropDownBtn" style='display:none;' onmouseup="return ZDBEditors.onDropDownBtnPress(false);" onmousedown="return ZDBEditors.onDropDownBtnPress(true);" id='LCDropDown'></div>
+<input type='text' class = "zdbInputField" autocomplete='off' id='filterInput'/>
+<div  class='colHeadChecked' onclick='return setCheck(this, event);' id='importCheck' title='Do you want to include this column for importing? Yes/No'  checked=true>&nbsp;</div>
+
+</div>
+
+
+<div  id="ZDBDUMMYGRID" class="zdbDIVDummyGrid">
+  <table style="width:100%;height:100%;border:0px;" cellpadding="0" cellspacing="0">
+    <tr height="22px">
+      <td width="23px">
+        <div style='height:100%;width:100%;position:relative;' class="zdbRowHead"></div>
+      </td>
+      <td height="23px">
+        <div style='height:100%;width:100%;background-repeat:repeat-x;position:relative;' class="zdbFillerColHead">&nbsp;</div>
+      </td>
+    </tr>
+    <tr height="2000px">
+      <td height="100%">
+        <div style='height:100%;width:100%;position:relative;' class="zdbRhFillerRow">&nbsp;</div>
+      </td>
+      <td height="100%"><div style='height:100%;width:100%;position:relative;' class="zdbFillerDataCell">
+		<svg style="height: 100%;width: 100%;display: block;"><rect height="100%" width="100%" style="fill: url(#ZR-both);"></rect>
+		</svg>
+		</div></td>
+    </tr>
+  </table>
+</div>
+
+
+ <div  id="ZDBDUMMYGRAPH" style="width:100%;height:100%;border:0px;overflow:hidden;background-color:white">
+</div>
+
+
+<div  id="ZDBBLANKVIEW" class="zdbDIVDummyGrid">
+</div>
+
+
+
+<div id="ZDBInlineOptsDiv" class="inlineBorder greytexture" style="width:100%; height: 100%;" onkeydown="ZDBInlineDialog.keyCloseEvent(event);" dialogholder="true" dlgtype="inline">
+<div  inlinediv="mainDialogDiv" style="width:auto; height: 100%; overflow: auto; position: relative;">
+    <div elname="modelDlg" style="display: none;height:inherit"></div>
+    <div elname="dlg" class="mainFixedContr" >
+        <div elname="dlgHeader" class="greytexture" style="width: 100%;  z-index: 5;">
+                    <div class="leftContr" elname="dlgBackComp">
+                        <div style="margin:25px 0px 0px 0px;">
+                        <div class="settingsBack" style="float:right;" elname="dlgBack"></div>
+                        </div>
+                    </div>
+                    <div class="rightContr">
+                        <div class="hdrBg inlineDlgTitle">
+                        	<span elname="dlgTitle"></span>
+                        	
+			            	<a class="fRight" target="_blank" rel="noreferrer" elname="dlgHelp" style="display:none;">
+			            		<span class="fLeft QHelpIcon" tip="Help" style="margin: -1px 0px 0px -55px; transform: translateY(10px);" elname="dlgHelpIcon" onmouseout="ZDBToolTip.hide();" onmousemove="ZDBToolTip.show(this,event);"></span>
+			        		</a>
+			        		
+            			</div>
+                    </div>
+        </div>
+                    <div style="padding-top: 70px;"></div>
+        <div elname="dlgBody" isDialog="true"></div>
+    </div>
+</div>                 
+</div>
+<div id="ZDBInlineERDGDIV" class="inlineBorder greytexture" style="width:100%; height: 100%;" onkeydown="ZDBInlineDialog.keyCloseEvent(event);" dialogholder="true" dlgtype="inline">
+<div  inlinediv="mainDialogDiv" style="width:auto; height: 100%; overflow: auto; position: relative;">
+    <div elname="modelDlg" style="display: none;"></div>
+    <div elname="dlg" class="mainFixedContr" style="width:100%;" >
+        <div elname="dlgHeader" style="width:inline;z-index: 5;padding:15px;overflow:hidden;">
+                    <div elname="dlgBackComp" style="display:inline;float:left">
+                        <div class="settingsBack" elname="dlgBack"></div>
+                    </div>
+<div style="width: 310px;height:40px;display:inline;float:right;">
+
+<div class="ERDGInfo">
+    <div class="ERDGInfoBullet" style="background-color:rgb(4,195,102); box-shadow:0 0 0 1px rgb(4,195,102);"></div> 
+    <div class="ERDGInfoText">Parent Node</div>
+    <div class="ERDGInfoBullet" style="background-color:rgb(56,197,210); box-shadow:0 0 0 1px rgb(56,197,210);"></div>
+    <div class="ERDGInfoText">Current Node</div>
+    <div class="ERDGInfoBullet" style="background-color:rgb(254,187,32); box-shadow:0 0 0 1px rgb(254,187,32);"></div>
+    <div class="ERDGInfoText">Child Node</div>
+</div>
+<div class="ERDGIns font9">&nbsp;Please move mouse pointer to any table below to know its relations</div>
+
+</div>
+
+<div style="overflow:hidden">
+<div  elname="dlgTitle" class="font18" style="color: #175494;font-weight: bold;line-height: 21px;overflow:hidden !important;text-overflow: ellipsis;white-space: nowrap;width: 500px;">
+</div>
+<div  elname="dlgDesc" class="font12" style="color: #000000;line-height: 20px; overflow: hidden !important;text-overflow: ellipsis;white-space: nowrap;width: 600px;">
+</div>
+</div>
+
+        </div>
+        <div elname="dlgBody" isDialog="true"></div>
+    </div>
+</div>                 
+</div>
+
+<div id="ZDBInlineQTDependencyList" class="inlineBorder greytexture" style="width:100%; height: 100%;" onkeydown="ZDBInlineDialog.keyCloseEvent(event);" dialogholder="true" dlgtype="inline">
+<div  inlinediv="mainDialogDiv" style="width:auto; height: 100%; overflow: auto; position: relative;">
+    <div elname="dlg" class="mainFixedContr" style="width:100%;" >
+        <div elname="dlgHeader" style="width:inline;z-index: 5;padding:15px;overflow:hidden;">
+                 <div elname="dlgBackComp" style="display:inline;float:left">
+                        <div class="settingsBack" elname="dlgBack"></div>
+                    </div>
+
+
+<div style="overflow:hidden">
+<div  elname="dlgTitle" class="font18" style="color: #175494;font-weight: bold;line-height: 21px;overflow:hidden !important;text-overflow: ellipsis;white-space: nowrap;width: 500px;">
+</div>
+<div  elname="dlgDesc" class="font12" style="color: #000000;line-height: 20px; overflow: hidden !important;text-overflow: ellipsis;white-space: nowrap;width: 600px;">
+</div>
+</div>
+
+        </div>
+        <div elname="dlgBody" isDialog="true"></div>
+    </div>
+</div>  
+</div>
+
+
+<div  id="ZDBIPHONEBLANKVIEW" class="zdbDIVDummyGrid">
+
+</div>
+
+<div id = "ZDBIPHONEDASHDIV" class='zdbdviewmode' elname='mainContent' style='position:relative;' OnScroll='ZDBDashboardUF.checkNScrollUFList(this,event);' isMobile = "true">
+
+</div>
+
+
+
+<div isDashBoardDiv="true" class="dashChild" id="ZDBDummyDashChild"
+     elname="dlgMain" showtitle="true" configid='-1'  useasfilter="true"  showVMfilter="false" collapseLegend="true" applyDashVMFilter="true" enableAllUserFilters="true" tlColmnMapping="null" desc="false" desclength="false" sbox="false" expenable="false" vud="true" isViewShared="true" style="position:relative">    
+    <div class="dashChildTitleDesc"  elname="dashboardTitleDesc">
+        <div class="dashChildTitleArea" elname="dashChildTitleArea">
+            <div class="dashboardTitleFont" elname="dlgTitle">Title</div>
+            <div class="dashboardDescFont" elname="dlgDesc">Description</div>
+        </div>
+        <div>
+        	<div class='dashviewoptions' elname='dashViewOptions'>
+		        <div class='dashviewoptionsrow'>
+		            <div class='dashviewoptionsct' onclick='DashUtils.showChartTypes(this, event)' tip='Change Chart type' onmouseenter='ZDBToolTip.show(this,event);' onmouseleave='ZDBToolTip.hide(this,event);'>
+		                <div class="dashioSvg changecharttypeSvg" onmouseover="ZDBUtil.addRemoveHovClass(event,'svgIcons',null,true,true)" onmouseout="ZDBUtil.addRemoveHovClass(event,'svgIcons',null,false,true)">
+							<svg class="svgIconsCommonCls">
+						         <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-chartChooser"></use>
+						    </svg>
+						</div>
+		            </div>
+		            
+		            <div class='dashviewoptionscell openInTab' onclick='DashUtils.openViewInTab(this, event)' tip='Open in new tab' onmouseenter='ZDBToolTip.show(this,event);' onmouseleave='ZDBToolTip.hide(this,event);'>
+		                <div class='dashioSvg' onmouseover="ZDBUtil.addRemoveHovClass(event,'svgIcons',null,true,true)" onmouseout="ZDBUtil.addRemoveHovClass(event,'svgIcons',null,false,true)">
+			            	<svg class="svgIconsCommonCls">
+						         <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-openNewTab"></use>
+						    </svg>
+           				</div>
+		            </div>
+		             <div elname="dashVM_moreOptions" class='dashviewoptionscell moreOptions' onclick='DashUtils.showMoreOptions(this, event)' tip='More Options' onmouseenter='ZDBToolTip.show(this,event);' onmouseleave='ZDBToolTip.hide(this,event);'>
+			            <div class='dashioSvg dashviewmoreoptions' onmouseover="ZDBUtil.addRemoveHovClass(event,'svgIcons',null,true,true)" onmouseout="ZDBUtil.addRemoveHovClass(event,'svgIcons',null,false,true)">
+			            	<svg class="svgIconsCommonCls">
+						         <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-more"></use>
+						    </svg>
+			            </div>
+			        </div>
+		        </div>
+		    </div>
+        </div>
+    </div>
+    <div class="dashChildPar" elname="dashChildPar">
+        <div style="width: 100%;height:22px;" elname="tableCompHolder" class="dashChildTableSearchBox">
+
+            <div elname="dlgSBox" style="float:left;">
+                <ul class="ZRSUl" style="margin-bottom:3px !important;">
+                    <li>
+                        <a elname="SearchBoxEl" disableChild="true">
+                            <div class="ZRSSearchField">
+                                <div id="ZDBSearchButton" class="ZRSSearchIcon" elname="ZRSSearchIcon" onmousedown="ZDBSearchUtil.clearSearch(this, ZDBDashboardAPI.clearSearch, event);"></div>
+                                <input class="font11" elname="ZRSSearchInput" value='Search' tipValue="Search" 
+                                       searchempty="false" tipShown="true" 
+                                       onblur ="ZDBSearchUtil.handleBlur(this);" onfocus='ZDBSearchUtil.handleFocus(this);' 
+                                       onkeyup="return ZDBDashboardAPI.searchInTable(this, event);" size="15">
+                            </div>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="height:400px;" class="dashDivBody" elname="dlgBody"></div>
+
+        
+
+
+
+<div id="" classprefix="zdb" class="zdbLoaded" style="top: 50%; left: 50%; height: auto;margin-top:-15px;margin-left:-80px;background-color:transparent;" elname="loadingDiv">
+	<div style="float: left;"><span class="bubbleLoad bubble1"></span><span class="bubbleLoad bubble2"></span><span class="bubbleLoad bubble3"></span><span class="bubbleLoad bubble4"></span></div>
+	<div elname="textEl" style="display:none;vertical-align: middle;white-space: nowrap">Loading... </div>
+</div>
+
+    </div>
+</div>
+
+</div>
+  
+
+
+
+<div id="ZDBEXPDIV" style="border-top:0px;display:none;position:relative;height:100%;" class="bgwhite-stroke4brown" >
+	<table  id="ExpListBody" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  		<tbody id="ZDBEXPTBODY">
+  			
+  				
+
+
+<tr id="ZDBEXPHEADERROW">
+  <td>
+    <div class="fLeft" elname="toolbarLeftPor">
+        <div id="ZDBEXDBNAME" class="viewTitle ellipsis" onmouseover="ZDBNavigation.enableDisableInput();">
+      <input type="text" id="setDBName" class="viewTitle ellipsis setEditable" onkeydown="ZDBNavigation.InlineEditOnKeyDown(this,event);" origValue="Clix Tournament" value="Clix Tournament" />
+        </div>
+        <div class="fLeft">
+              <ul>
+              <li class="fLeft">
+                  <a id="ZDBEXPLORERREFRESH_TITEM" style="margin-top: 3px;" class=" tRefreshIcon marginRight"  tip ='Refresh'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                      <svg class="svgIcons">
+                            <use xlink:href="#ZR-refresh"></use>
+                      </svg>
+                  </a>
+                  </li>
+                    
+              </ul>
+        </div> 
+        <div id="ZDBEXDBDESC" class="viewDesc ellipsis" title=""></div>
+        </div> 
+    </div>
+
+                      
+    <div class="ZRSCopyDB fLeft" style="display:none"></div> 
+    <div class="ZRSCopyDB fLeft" style="display:none"></div> 
+    
+    <div class="fRight" elname="toolbarRightPor">
+        <ul>
+        <li>
+        
+        </li>
+        </ul>
+      </div>
+      
+    <div>
+        
+        
+        
+    </div>
+    </td>
+</tr>
+<tr id="ZDBEXPHEADERROW_2">
+    <td style="padding: 3px 0px 10px 0px;">
+        <div class="fLeft">
+        <ul>
+            <li class="fLeft">
+                <a id="ZDBEXPLORERSHARE_TITEM" class = "newBtn" onclick="ZDBMenu.showExploreSharePopup(this, event);"  isLoginReq="true">
+                    <span>Share</span>
+                    <span class="downArrow"></span>
+                </a> 
+                <a id="ZDBEXPLORERDELETE_TITEM" class = "newBtn" onclick="ZDBNavigation.deleteSelViews();" style="display:none" isLoginReq="true">
+                    <span>Delete</span>
+                </a>
+            </li>
+            <li id="ZRNewLayoutSearch" class="fLeft">
+                <div class="navSearchOptions" elname="searchOptions" style="display: none; position: absolute;">
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'Dashboard')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-dashboardDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-dashboard"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon Dashboard deselectedViewType"></span>-->
+                        </div>
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'AnalysisView')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-chartDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-chart"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon AnalysisView deselectedViewType" onclick="ZDBExpViewHandler.filterViews(this, 'AnalysisView')"></span>-->
+                        </div>
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'Pivot')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-pivotDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-pivot"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon Pivot deselectedViewType" onclick="ZDBExpViewHandler.filterViews(this, 'Pivot')"></span>-->
+                        </div>
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'SummaryView')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-summaryDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-summary"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon SummaryView deselectedViewType" onclick="ZDBExpViewHandler.filterViews(this, 'SummaryView')"></span>-->
+                        </div>
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'Report')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-tabularDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-tabular"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon Report deselectedViewType" onclick="ZDBExpViewHandler.filterViews(this, 'Report')"></span>-->
+                        </div>
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'QueryTable')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-queryDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-query"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon QueryTable deselectedViewType" onclick="ZDBExpViewHandler.filterViews(this, 'QueryTable')"></span>-->
+                        </div>
+                        <div class="navFilter deselected" onclick="ZDBExpViewHandler.filterViews(this, 'Table')">
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-tableDefault"></use>
+                            </svg>
+                            <svg class='svgIcons'>
+                                <use xlink:href="#ZR-table"></use>
+                            </svg>
+                            <!--<span class="searchTypeIcon Table deselectedViewType" onclick="ZDBExpViewHandler.filterViews(this, 'Table')"></span>-->
+                         </div>
+                </div>
+            </li>
+            <li class="fLeft">
+                <a class="expToolbarIcons" style="height: 31px;" elname="favFilter" id="ZRFavFilter" tip="My favorites" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);" onclick="ZDBExpViewHandler.favouriteFilter(this,event);">
+                    <svg class="svgIcons smallIcons" style="padding-top:1px; stroke-width: 2px; width: 20px; height: 18px;">
+                        <use class="gr" xlink:href="#ZR-fav"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="fLeft">
+                <div class="viewsSelected" >
+                    <a class="noOfViewsSelected"></a>
+                    <span onclick="ZDBExpViewHandler.filterSelectedViews(this);">view(s) selected </span> -
+                    <span onclick="ZDBExpViewHandler.clearFilteredSelViews(this);" isLoginReq="true">Clear All</span>
+                </div>
+            </li>
+        </ul>
+        </div>
+    
+        <div class="fRight" style="margin-right: 5px;">
+        <ul>
+                
+                <li class="expToolbarIcons" tip="Sort" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);" onclick="ZDBNavigation.sortByOpts(this, event);">
+                    <svg class="svgIcons smallIcons" style="margin-left: 2px; margin-top: 1px;">
+                        <use class="gr" xlink:href="#ZR-sort" ></use>
+                    </svg>
+                </li>
+                <li class="expToolbarIcons" style="margin-left: 5px;" id="ZRExpViewByOptn" tip="View by" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);" onclick="ZDBNavigation.showViewByOpts(this, event,true);">
+                            <svg class="svgIcons smallIcons" style="margin-left: 2px;">
+                        <use class="gr"></use>
+                    </svg>
+                </li>
+                <li class="expToolbarIcons noMarginRight noBorderRadiusRight" style="margin-left: 5px;" elname = "listIcon" tip="List view" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);" onclick="ZDBNavigation.viewLayoutSwitch(this, false);">
+                    <svg class="svgIcons smallIcons" style="height: 18px; margin-left: 2px;">
+                        <use class="gr" xlink:href="#ZR-listView"></use>
+                    </svg>
+                </li>
+                <li class="expToolbarIcons noMargin noBorderRadiusLeft noBorderLeft" elname = "gridIcon" tip="Grid view" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);" onclick="ZDBNavigation.viewLayoutSwitch(this, true);">
+                     <svg class="svgIcons smallIcons" style="height: 18px; width: 14px; margin-left: 3px;">
+                        <use class="gr" xlink:href="#ZR-cardView"></use>
+                    </svg>
+                </li>
+        </ul>
+        </div>
+    </td>
+</tr>
+
+<tr id="ZRCreateNimportOpt">
+    <td>
+        <div class="createRAddDlgHolder">
+        
+            <div class="fLeft">
+            <svg class="svgIcons import-logo">
+                <use xlink:href="#ZR-productLogo"></use>
+            </svg></div>
+          
+            <div class="createRAdddlg">
+                <div class="createRAddDlgHeader">Import or Add Data</div>
+                <div class="createRAddDlgDesc">Import your data from any of your sources or add them directly. Get started creating cool reports & dashboard in a wiz... Your data will be stored in entities called tables</div>
+                <div class="ZRSGreenButton font15" style="display: inline-block;width: auto;" onclick="ZDBCreateViewAPI.showCreateNewTblDlg(false);">Import Data / Create New Table</div>
+            </div>
+        </div>
+    </td>
+</tr>
+<tr id="ZRRDBLinkTables">
+    <td>
+        <div id="RDBEmptyDBMsg" class="ZDBExplorerMsg">All linked tables are deleted. Please click the below button to link tables.    
+            <input type="button" class="ZRSButton" value="Link Tables" lzname="CREATE_RDB_DLG" func="RDBPage.showCreateRDB" lzjs="ZRRemoteDB" lazyload="true" fromExplorer=true/>
+        </div>
+    </td>
+</tr>
+<tr id="RDBConnectErr_Exp">
+	<td>
+	<div class="ZDBExplorerMsg">Sorry, we could not connect to your Redshift database. Please verify your connection details.
+            <input type="button" class="ZRSButton" value='Edit Connection' onclick='ZDBCreateViewAPI.showRDBConDlg(true);'/>
+    </div>
+	</td>
+</tr>
+
+  			
+			<tr id="ZDBVIEWLISTS">
+    			<td colspan="2">
+      				<div id="ZDBVIEWLISTDIV" style="overFlow-x:hidden;overFlow-y:auto;padding-left: 0px; padding-right: 0px;position:relative;">
+      				
+                        <ul class="newExpHeader">
+                            <li class="explorerHeader" id="ZDBExplorerHeader">
+                                <div id="ZRSelectAllNew" isChecked="false" class="all" onclick="ZDBNavigation.toggleSelectionAll_new(this, ZDBClientUI.ISCARDLAYOUT ? 'viewCard' : 'ZDBViewListEl');">
+                                    <svg class="svgIcons" elname="svgTag">
+                                        <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-tick" elname="useTag"></use>
+                                    </svg>
+                                </div>
+                                <div class="selectAllText" style="margin-left: 5px;">Select All</div>
+                                <div class="expViewHeader">
+                                    <span id="ZDBExpAllIcon" class="expExpandIcon" elname="expIcon" tip="Expand All" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);" onclick="ZDBNavigation.expandOrMinimizeAllViews($('ZDBEXPVIEW'),null,this);">
+                                       <svg class="svgIcons" style="width: 14px;">
+                                            <use class="gr" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-folderOpen"></use>
+                                       </svg>
+                                    </span>
+                                    <span style="padding-left: 10px;">Views</span>
+                                    <div  class="sortIcon" onclick="ZDBExpViewHandler.sortNavigList(this, 'viewName');"></div>
+                                </div>
+                                <div class="expDescHeader">
+                                    <span>Description</span>
+                                    <div  class="sortIcon" onclick="ZDBExpViewHandler.sortNavigList(this, 'desc');"></div>
+                                </div>
+                                <div class="expFilterByHeader">
+                                    <span>Last modified</span>
+                                    <div  class="sortIcon" onclick="ZDBExpViewHandler.sortNavigList(this, 'modifiedTime');"></div>
+                                </div>
+                            </li>
+                            <li class="headerSeparator"></li>
+					</ul>
+            		<div id="ZDBEXPVIEW"></div>
+                    <div id="explorerFilterSpace" class="expFilterSpace" onmouseover="ZDBExpViewHandler.trigerHighLightFn(event);" onclick= "ZDBExpViewHandler.trigerFoldOpenCloseFn(event);" onmouseout="ZDBExpViewHandler.trigerDeHighLightFn(event);" onchange="ZDBExpViewHandler.onViewSelect(event);" ></div>
+            		
+          			</div>
+   			 </td>
+   		</tr>
+  </tbody>
+</table>
+<div id="ZDBExpCardBody"></div>
+</div>
+
+<ul border="0" cellpadding="0" cellspacing="0" style="display:none;">
+	<li class="autogenheader" newreportstr="true" style="display:none;" id="ZDBAutoGenHead">Auto Generated Reports:</li>
+</ul>
+
+
+<div style='display:none' id="ZDBHead" style="position: static;" crmplus-action="alwaysVisibilityHidden">
+
+    
+    
+    
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         
+    <div style="height:auto; width:auto;" id="ZDBHEADER">
+    <div id="ZDBSampleDiv" style="position:absolute; top:-2000px; left:-2000px; width:200px; height:200px; background:#FFF000; overflow:scroll;">
+    <div style="height:500px; width:500px; background:#000FFF;">
+    </div>
+    </div>
+    
+    
+    </div>
+   
+    
+<div id="ZDBDialogTemplate" isDialog="true" class="newUiDlg dlgContainer" style="display:none">
+    <div elname="ZRDlgShadow">
+  <div class="dlgBorder font12" elname="dlgTable" onMouseDown="ZDBDialogUtil.setFocusDialog(this);">
+    <div class="dlgTitleBar" elname="dlgTitleBar">
+    <span elname="ArrowBefore"></span>
+    <span elname="ArrowAfter"></span>
+      <div>
+        <div class="dlgTitle font14 fLeft ellipsis" elname="dlgTitle"></div>
+        <span class='fLeft QHelpIcon' style="display:none;margin:1px 0 0 5px;" elname="dlgDesc" onmouseout="ZDBToolTip.hide();" onmousemove="ZDBToolTip.show(this,event);"></span>
+      </div>
+    <div>
+        <div class="dlgTitle font14 fLeft ellipsis" elname="dlgTitle"></div>
+        <a class="fRight" target="_blank" rel="noreferrer" href="" elname="dlgHelp" >
+            <span class='fLeft QHelpIcon' tip="Help" style="display:none;margin:-1px 0 0 -55px;"  elname="dlgHelpIcon" onmouseout="ZDBToolTip.hide();" onmousemove="ZDBToolTip.show(this,event);"></span>
+        </a>
+         <a class="fRight" target="_blank" rel="noreferrer" onclick="" elname="dlgVideo"><span  tip="Help Video" style="display:none;"  elname="dlgVideoIcon" onmouseout="ZDBToolTip.hide();" onmousemove="ZDBToolTip.show(this,event);"></span></a>
+      </div>
+      <div class="fRight" style="display:inline;">
+        <span class="iconbg ZRSMinIcon" style="display:none;margin-left:10px;" elname="minBtn" onclick='ZDBDialogUtil.minMaxDlg("min");'></span>
+        <span class="iconbg ZRSMaxIcon" style="display:none;margin-left:10px;" elname="maxBtn" onclick='ZDBDialogUtil.minMaxDlg("max");'></span>
+        <span class="iconbg closeDlg" style="margin-left:10px;" elname="closeBtn" onclick='ZDBDialogUtil.closeDialog(this, event);'></span>
+      </div>
+      <div style="clear:both" ></div>
+    </div>  
+        <div style="display:none" class="dlgSeparator" elname="dlgSeparator"></div>
+    <div class="dlgBody" style="position:relative;" elname="dlgBody">
+      <div elname="dlgBodyDIV"> </div>
+      <div elname="corner" class="resizeDlg" style="display:none;postion: absolute; z-index: 1000;  bottom: 0px; right: 0px; cursor: se-resize;" onMouseDown="ZDBDialogUtil.attachResizeEvt(this, 'ALL', event);"></div>           
+    </div>
+    <div elname="resizeEls" style="display:none;">
+      <div elname="resizeLR" style="position:absolute;top:0px;right:-5px;width:10px;cursor:e-resize;z-index:1000" onMouseDown="ZDBDialogUtil.attachResizeEvt(this, 'LR', event);">&nbsp;</div>
+      <div elname="resizeTB" style="font-size:0px;position: absolute;bottom: 0px; left: 0px; height:5px;cursor:n-resize;z-index:1000;" onMouseDown="ZDBDialogUtil.attachResizeEvt(this, 'TB', event);">&nbsp;</div>
+      <div elname="vLine" style="display:none;background-color:black;position:absolute;z-index:6;"></div>
+      <div elname="hLine" style="display:none;background-color:black;position:absolute;z-index:6;"><!-- --></div>      
+    </div>
+  </div>
+</div>
+  <div elname="dummyDivForShadow" style="height:20px;"></div>
+</div>
+
+<div style="display:none" id="ZDBDialogHiddenDiv"></div>
+
+    <div style="display:none" id="ZDBAjaxResponseStore"></div>
+    
+
+<div  style='display:none; position:absolute; top:600; left:200; z-index:9999'>
+    <div id='ZDBALERT' height="122px">
+        <div class="dlgBodyContent">
+            <div style="white-space: normal;vertical-align: middle;padding-bottom: 0px;" class="tableCell" elname="iconHolder">
+                <div id='ZDBALERTICON' class="alert iconbg"></div>
+                <div style="padding-right: 20px;" elname="svgHolder" class="hideelement">
+                    <svg class="alertSvg failure">
+                        <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-alertpopup" elname="useTag"></use>
+                    </svg>
+                    <svg class="alertSvg success">
+                        <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-success" elname="useTag"></use>
+                    </svg>
+                </div>
+            </div>
+            <div style="white-space: normal;vertical-align: middle;padding-bottom: 0px;" class="tableCell">
+                <div class="font14 contentTitle" elname="contentTitle" style="padding-bottom: 8px"></div>
+                <div align="left" class="ZDBalertfont" elname="dlgBody" id='ZDBMSG'></div>
+            </div>
+        </div>
+        <div class="dlgBtnRow">
+            <div id="ZDBERRORTR" >
+              <input type="button" class="buttonCompBoxBg okbtnsize" value="OK" name="button2" onclick='ZDBAlertAPI.onOptionClick("OK");'  qaid='ZDBAlertOkBtn' id="ZDBAlertErrorOkBtn">
+            </div>
+            <div id="ZDBSAVETR">
+                <input type="button"  style="margin-right: 5px;" class="buttonCompBoxBg okbtnsize" value="Yes" name="button2"  onclick='ZDBAlertAPI.onOptionClick("YES");' qaid="ZDBAlertOkBtn">
+                <input type="button"  style="margin-right: 5px;" class="buttonCompBoxBg okbtnsize" value="No" name="button2"  onclick='ZDBAlertAPI.onOptionClick("NO");'>
+                <input type="button"  class="buttonCompBoxBg" value="Cancel" name="button2" onclick='ZDBAlertAPI.onOptionClick("CANCEL");'>
+            </div>
+            <div align="center" id="ZDBYESNOTR">
+                <input type="button" style="width:57px;margin-right: 5px;" class="buttonCompBoxBg" value="Yes" id="ZDBAlertYESButton" qaid="ZDBAlertYESButton" name="button2"  onclick='ZDBAlertAPI.onOptionClick("YES");'>
+                <input type="button" style="width:57px;" class="buttonCompBoxBg" value="No" id="ZDBAlertNoButton" qaid="ZDBAlertNoButton" name="button2"   onclick='ZDBAlertAPI.onOptionClick("NO");'>
+            </div>
+            <div align="center" id="ZDBREFRESHNOTR">
+                <input type="button" style="margin-right: 5px;"   class="buttonCompBoxBg" value="Refresh" id="ZDBAlertRefreshButton" qaid="ZDBAlertYESButton" name="button2"  onclick='ZDBAlertAPI.onOptionClick("REFRESH");'>
+                <input type="button"  class="buttonCompBoxBg" value="Cancel" id="ZDBAlertCancelButton" qaid="ZDBAlertNoButton" name="button2"   onclick='ZDBAlertAPI.onOptionClick("CANCEL");'>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+<!--Info_Dlg_Start-->
+<div id="ZDBInfoDlg" isDialog="true" style="display:none; position:absolute; left:0; top:0; overflow:none; cursor:default;" >
+  <table elname="dlgTable" style="width:550px" onMouseDown="ZDBDialogUtil.setFocusDialog(this);" border="0" cellpadding="0"  cellspacing="0" class="dlgBorder">
+    <tr elname="dlgTitleBar" class="dlgTitleBar" onMouseDown="ZDBDialogUtil.dragDialog(this,event);">
+      <td height="24" valign="middle" nowrap="nowrap" style="padding-left:5px;width:520px;height:30px;"><strong><span elname="dlgIcon" style='width:20px; display:none'></span><span elname="dlgTitle" class="dlgTitle font14 fLeft ellipsis">Dialog Title</span></strong></td> 
+      <td align="right">
+			<span class="iconbg closeDlg" onclick='ZDBDialogUtil.closeDialog(this,event);' onMouseDown="ZDBUtil.stopEventBubble(event);" alt="">&nbsp;</span>   
+	  </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="left" valign="top" style="padding-bottom:5px;" elname="dlgBody">
+			<div elname="dlgBodyDIV">
+			
+			</div></td>
+    </tr>
+  </table>
+</div>
+<!--Info_Dlg_End-->
+
+    
+<div id="ZDBMsgDiv" style="position:absolute; z-index:1000000;top:0px; display:none;">
+<div class="ZRSNotification">
+<div class="tableCell">
+		<div id="msgicon" class="ZRSNotifyIcon"></div>
+		</div>
+		<div class="ZRSNotifyMessage font12 tableCell paddingFive"></div>
+		<div class="tableCell" style="vertical-align:top;">
+		<div class="ZRSSearchClearIcon" onclick="ZDBMsgBox.hideError('navcontent');"></div>
+		</div>
+</div>
+</div>
+
+    
+
+
+
+<div id="ZDBMainLoader" classprefix="zdb" class="zdbLoaded" style="top: 50%; left: 50%; height: auto;margin-top:-15px;margin-left:-80px;background-color:transparent;" elname="loadingDiv">
+	<div style="float: left;"><span class="bubbleLoad bubble1"></span><span class="bubbleLoad bubble2"></span><span class="bubbleLoad bubble3"></span><span class="bubbleLoad bubble4"></span></div>
+	<div elname="textEl" style="display:none;vertical-align: middle;white-space: nowrap">Loading... </div>
+</div>
+
+
+
+
+<div id="ZDBSecondaryLoader" classprefix="zdb" class="zdbLoaded" style="top: 50%; left: 50%; height: auto;margin-top:-15px;margin-left:-80px;background-color:transparent;" elname="loadingDiv">
+	<div style="float: left;"><span class="bubbleLoad bubble1"></span><span class="bubbleLoad bubble2"></span><span class="bubbleLoad bubble3"></span><span class="bubbleLoad bubble4"></span></div>
+	<div elname="textEl" style="display:none;vertical-align: middle;white-space: nowrap">Loading... </div>
+</div>
+
+    
+    
+    
+<div id="ZDBTOOLTIP_DIV" style="display:none;top:-100px;left:-100px;position:absolute;z-index:20000;" onclick="ZDBToolTip.hideTip();">
+<div id="ZDBTOOLTIP_INNER_DIV" class="tipDiv" >
+  
+</div>
+</div>
+
+<div style="display:none;">
+<table id="ZDBTOOLTIP_TABLE" cellspacing=0 cellpadding=0 border=0>
+    <tr elname="tipTitleHolder"><td><span class="tipTitle" elname="tipTitle"></span><span elname="tipShortCut" class="tipShortCut"></span></td></tr>
+    <tr><td class="tipDesc" elname="tipDesc1"></td></tr>
+    <tr><td class="tipDesc2" elname="tipDesc2"></td></tr>
+    <tr><td class="tipExample" elname="tipExample"></td></tr>
+</table>
+</div>
+
+<div style="display:none;">
+<table id="ZDB_HEADER_TOOLTIP" cellspacing=0 cellpadding=0 border=0>
+    <tr><td><span class="tipTitle" elname="tipTitle"></span></td></tr>
+</table>
+</div>
+
+
+<div class="detDiv" style="display:none;" id="ZDBViewDet" onmouseover="ZDBToolTip.hideTip()">
+   <table id="ZDBViewDetTbl" class="font12" cellspacing=0 cellpadding=0 border=0 style="color:#2C2A2A;line-height:1.3em;">
+      <tr>
+         <td><b>Created By: </b></td><td>&nbsp;&nbsp;&nbsp;</td><td elname="createby">&nbsp;</td> 
+      <tr>
+      <tr>
+         <td><b>Data Modified By: </b></td><td>&nbsp;&nbsp;&nbsp;</td><td elname="lastDataMod">&nbsp;</td>  
+      <tr>
+      <tr>
+         <td><b>Design Modified By:</b></td> <td>&nbsp;&nbsp;&nbsp;</td><td elname="lastDesignMod">&nbsp;</td>  
+      </tr>
+      <tr>
+         <td><b>Shared by: </b></td> <td>&nbsp;&nbsp;&nbsp;</td><td elname="sharedby">&nbsp;</td> 
+      </tr>
+   </table>
+</div>
+
+<div id="ZRSToolTip" onclick="ZDBToolTip.hide();" style="display:none;">
+<div id="ZRSTipPointer" elname="tipPointer">
+<div id="ZRSHeaderContainer" elname="tipHeaderContainer">
+<span id="ZRSToolTipHeader" elname="tipHeader"></span>
+<span id="ZRSToolTipExp" elname="tipLink"></span>
+</div>
+<div id="ZRSToolTipContent" elname="tipContent" class="ZRSWordWrap">
+</div>
+<span id="ZRSToolTipHeader2" style="display: inline-block;" elname="tipHeader2"></span>
+<div id="ZRSToolTipContent2" elname="tipContent2" class="ZRSWordWrap">
+</div>
+<div id="ZRSToolTipExample" elname="tipExample" class="ZRSWordWrap">
+</div>
+</div>
+</div>
+      
+<div id="ZRSToolTipError" onclick="ZDBToolTip.hide();" style="display:none;">
+<div style="display: block; content:' '; position: absolute; width: 10px; height: 10px; transform: rotate(-45deg); background-color: white; top: -5px; left: 48%; border-width: 1px 1px medium medium; border-style: solid solid none none; border-color: red; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none;z-index: 2"></div>
+<div id="ZRSTipPointerError" elname="tipPointerError">
+<div id="ZRSHeaderContainerError" elname="tipHeaderContainerError">
+<span id="ZRSToolTipHeaderError" elname="tipHeaderError"></span>
+<span id="ZRSToolTipExpError" elname="tipLinkError"></span>
+</div>
+<div id="ZRSToolTipContentError" elname="tipContentError" class="ZRSWordWrap">
+</div>
+<div id="ZRSToolTipContent2Error" elname="tipContent2Error" class="ZRSWordWrap">
+</div>
+<div id="ZRSToolTipExampleError" elname="tipExampleError" class="ZRSWordWrap">
+</div>
+</div>
+</div>
+
+    <div style="display:none;">
+    <svg id="ZDBSVGRoot" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"> 
+    </svg>
+    </div>
+    <div id="ZDBSVGCONTAINER" style="position:absolute; top:0; left:0; z-index:500; background:none;"></div>
+    <div id="ZDBSQLhelpIcon" class="ZDBSQLHelpIcon" onclick="ZDBSQLFuncHelp.showHelpDIV(this)"></div>
+    
+
+
+
+
+<div style="width:550px; display:none;" id="ZBBPlanLimitAlertDlg">
+<table width="100%" border="0">
+  <tr>
+    <td valign="top" class="zdbAutoReportsIcon">&nbsp;</td>
+    <td valign="top" class="zdbAutoReportsFont" align="left">
+      <div style="position:relative">
+        <span class="zdbAutoReportstextBehind" style="position:absolute; left:0px; top:0px;">
+        Your plan has been downgraded to Free Plan.We recommend <br/>you to review and manage your plan by visiting the <br/>Subscription page.
+	</span>
+        <span class="zdbAutoReportstextAbove" style="position:absolute; left:-1px; top:-1px;">
+        Your plan has been downgraded to Free Plan.We recommend <br />you to review and manage your plan by visiting the <br /><a href="/ZDBPricing.cc?SHOWPAGE=CurrentPlanDetails&STRUCT=true&ZDBACTION=USERPLANDETAILS">Subscription page.</a>    
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr align="center" class="">
+    <td height="5" valign="bottom" colspan="2">
+      <input type="button" class="buttonCompBoxBg" onclick="ZDBDialogUtil.closeDialog();" value="OK"/>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+</div>
+
+<div id="ZDBBody" style="overflow:hidden; clear: both;">
+
+<div id="ZRGarbage" style="display:none;">
+<div id="ZDBShowHideNavigIconContainer"  width="2" style='display:none'></div>
+</div>
+<div id="ZDBSampleDivForDataSheet" style="position:absolute; top:-2000px; left:-2000px; width:200px; height:200px; background:#FFF000; overflow:scroll;">
+<div style="height:500px; width:500px; background:#000FFF;">
+</div>
+</div>
+
+
+
+
+<table elname="expTemplateTbl" width="100%" border="0" cellspacing="0" cellpadding="0" style="">
+    <tr id="ZRDataSheetView" style="display:none;" class="singleViewLayout" portal="false">   
+        
+        <td id="ZRSingleLayoutNavTD" class="ZRIconAndDescMode navbar-colors" style="display:none; vertical-align: top;">
+            <div id="ZRSingleLayoutNav">
+                <div id="ZRIconAndDescModeNav">
+                    <ul style="position:relative;">
+                        <li class="singleLayoutComp createNewNav navbar-create-new-colors" optType="createnew" ><a>    
+                            <span>        
+                                <svg class="navbar-create-new-icon">
+                                <use class="or" xlink:href="#ZR-createNew"></use>
+                                </svg>
+                            </span>
+                            <span class='ellipsis createText' onmouseover="ZDBToolTip.checkLengthAndShow(this, event)" onmouseout="ZDBToolTip.hide(this);" tip='Create'>Create</span></a></li>
+                        <li class="singleLayoutComp explorerNav" style="cursor:pointer;" optType="explorer">
+                            <a>
+                                <svg class="navMenuIcon navbar-icon">
+                                <use class="gr" xlink:href="#ZR-explorer"></use>
+                                </svg>
+                                <span>Explorer</span>
+                            </a>
+                        </li>
+                        <li class="singleLayoutComp dashboardNav" optType="dashboards" style="display: none;">
+                            <a>
+                                <svg class="navMenuIcon navbar-icon">
+                                <use class="gr" xlink:href="#ZR-dashboards"></use>
+                                </svg>
+                                <span>Dashboards</span>
+                            </a>
+                        </li>
+                        <li class="singleLayoutComp reportNav" optType="reports" style="display: none;">
+                            <a>
+                                <svg class="navMenuIcon navbar-icon">
+                                <use class="gr" xlink:href="#ZR-reports"></use>
+                                </svg>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+                        <li class="singleLayoutComp dataNav" optType="data" style="display: none;">
+                            <a>
+                                <svg class="navMenuIcon navbar-icon">
+                                <use class="gr" xlink:href="#ZR-data"></use>
+                                </svg>
+                                <span>Data</span>
+                            </a>
+                        </li>
+                        
+                         
+                        <li class="singleLayoutComp modelNav" optType="ZiaView">
+                            <a>
+                                <svg class="navMenuIcon navbar-icon">
+                                <use class="gr" xlink:href="#ZR-zia"></use>
+                                </svg>
+                                <span>Ask Zia</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <ul class="positionBottom" elname="footerElements">
+                        
+                        
+                        
+                        <li class="singleLayoutComp moreNav" optType="more" style="cursor:pointer;display: none;">
+                            <a>
+                                <svg class="navMenuIcon navbar-icon">
+                                <use class="gr" xlink:href="#ZR-pathMore"></use>
+                                </svg>
+                                <span>More</span>
+                            </a>
+                        </li>
+                        <li class="singleLayoutComp togglePanel"  style="cursor:pointer;">
+                            <a>
+                                <div class="navShownLeft">
+                                    <div id="ZR_NavigationToggle" class="navHideOption">
+                                        <svg class="navMenuIcon navbar-icon">
+                                        <use id = 'ToggleIcon' class="gr" xlink:href="#ZR-collapse"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="ZRIconModeNav">
+                    <ul style="position:relative;">
+                        <li class="singleLayoutComp createNewNav navbar-create-new-colors" optType="createnew" tip='Create'>
+                            <svg class="iconMode navbar-create-new-icon">
+                            <use class="gr" xlink:href="#ZR-createNew"></use>
+                            </svg>
+                        </li>
+                        <li class="singleLayoutComp explorerNav" optType="explorer" tip='Explorer'>
+                            <svg class="iconMode navbar-icon">
+                            <use class="gr" xlink:href="#ZR-explorer"></use>
+                            </svg>
+                        </li>
+                        <li class="singleLayoutComp dashboardNav" optType="dashboards" tip='Dashboards'>
+                            <svg class="iconMode navbar-icon">
+                            <use class="gr" xlink:href="#ZR-dashboards"></use>
+                            </svg>
+                        </li>
+                        <li class="singleLayoutComp reportNav" optType="reports" tip='Reports'>
+                            <svg class="iconMode navbar-icon">
+                            <use class="gr" xlink:href="#ZR-reports"></use>
+                            </svg>
+                        </li>
+                        <li class="singleLayoutComp dataNav" optType="data" tip='Data'>            
+                            <svg class="iconMode navbar-icon">
+                            <use class="gr" xlink:href="#ZR-data"></use>
+                            </svg>
+                        </li>
+                        
+                    </ul>
+                    <ul class="positionBottom" elname="footerElements">
+                        
+                        <li class="singleLayoutComp settingsNav" optType="ZiaView" tip='Ask Zia'>            
+                            <svg class="iconMode navbar-icon">
+                                <use class="gr" xlink:href="#ZR-zia"></use>
+                            </svg>
+                        </li>
+                        
+                        
+                        <li class="singleLayoutComp trashNav" optType="trash" tip='Trash'>
+                            <svg class="iconMode navbar-icon">
+                            <use class="gr" xlink:href="#ZR-trash"></use>
+                            </svg></li>
+                        <li class="minMaxopt" style="height:25px; border-top: 1px solid #e6e6e6;" style="cursor:pointer;" onclick="ZDBNavigation.minimizeLayout(this, false);" elname="minmax"><div class="ZRMinMax"></div></li>
+                    </ul>
+                </div>
+                <div class="ZRSNavMenu ZRSMenu shadowAdded" id="ZRNavigationViewListComponent" elname="ZRLeftNavMenu">
+                    <div elname="ZRSNavViewListSearchComp">
+                        <div class="NavViewListSearchBox" dontclose='true'>
+                            <div class="ZRSSearchIcon" elname="ZRSSearchIcon"></div>
+                            <input defaulttip='Search Views' elname="ZRSSearchInput" class="searchEl" name="textfield" autocomplete='off' tipvalue='Search Views' searchempty="true" value='Search Views' tipshown="true" >
+                        </div>
+                        <div class="navSearchOptions" elname="searchOptions">
+                            <span class="dataNavList">
+                                <div class="navFilter deselected" type="Table" state="false" onmousedown="ZDBNavigation.setSearchType(this, 'Table', event);">
+                                    <!--<span class="searchTypeIcon Table deselectedViewType"></span>-->
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-tableDefault"></use>
+                                    </svg>
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-table"></use>
+                                    </svg>
+                                 </div>
+                                <div class="navFilter deselected" type="QueryTable" state="false" onmousedown="ZDBNavigation.setSearchType(this, 'QueryTable', event);">
+                                    <!--<span class="searchTypeIcon QueryTable deselectedViewType"></span>-->
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-queryDefault"></use>
+                                    </svg>
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-query"></use>
+                                    </svg>
+                                </div>
+                            </span>
+                            <span class="reportsNavList">
+                                <div class="navFilter deselected" type="AnalysisView" state="false" onmousedown="ZDBNavigation.setSearchType(this, 'AnalysisView', event);">
+                                    <!--<span class="searchTypeIcon AnalysisView deselectedViewType"></span>-->
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-chartDefault"></use>
+                                    </svg>
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-chart"></use>
+                                    </svg>
+                                </div>
+                                <div class="navFilter deselected" type="Pivot" state="false" onmousedown="ZDBNavigation.setSearchType(this, 'Pivot', event);">
+                                    <!--<span class="searchTypeIcon Pivot deselectedViewType"></span>-->
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-pivotDefault"></use>
+                                    </svg>
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-pivot"></use>
+                                    </svg>
+                                </div>
+                                <div class="navFilter deselected" type="SummaryView" state="false" onmousedown="ZDBNavigation.setSearchType(this, 'SummaryView', event);">
+                                    <!--<span class="searchTypeIcon SummaryView deselectedViewType"></span>-->
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-summaryDefault"></use>
+                                    </svg>
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-summary"></use>
+                                    </svg>
+                                </div>
+                                <div class="navFilter deselected" type="Report" state="false" onmousedown="ZDBNavigation.setSearchType(this, 'Report', event);">
+                                    <!--<span class="searchTypeIcon Report deselectedViewType"></span>-->
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-tabularDefault"></use>
+                                    </svg>
+                                    <svg class='svgIcons'>
+                                        <use xlink:href="#ZR-tabular"></use>
+                                    </svg>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div elname="ZRNavigationViewList">
+                        <div class="ZDBNavExplorer"></div>
+                        <ul class="ZDBNavData"></ul>
+                        <ul class="ZDBNavReports"></ul>
+                        <ul class="ZDBNavDashboards"></ul>
+                        
+                        <ul class="ZDBNavCreateNew">
+                            
+                            <li permcheck="report">
+                                <a class="ZRSMenuSeparator"></a>
+                            </li>
+                            <li permcheck="report">
+                                <a class="ZACreateNewLabel fBold font15">Create New Report / Dashboard</a>
+                            </li>                            
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="chart" permcheck="report">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div>
+                                        <svg class="svgIcons"><use xlink:href="#ZR-chart"></use></svg>
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Chart View</div>
+                                        <div class="ZACreateNewDesc">Chart View allows you to create a graphical view using different types of charts.</div>
+                                    </div>
+                                </div>
+                            </li>                            
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="pivot" permcheck="report">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div>
+                                        <svg class="svgIcons"><use xlink:href="#ZR-pivot"></use></svg>
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Pivot View</div>
+                                        <div class="ZACreateNewDesc">Pivot View allows you to view data summarized in a grid both in horizontal and vertical columns.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="summary" permcheck="report">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div>
+                                        <svg class="svgIcons"><use xlink:href="#ZR-summary"></use></svg>
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Summary View</div>
+                                        <div class="ZACreateNewDesc">Summary View allows you to view data with grouping and data summaries.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="tabular" permcheck="report">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div>
+                                        <svg class="svgIcons"><use xlink:href="#ZR-tabular"></use></svg>
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Tabular View</div>
+                                        <div class="ZACreateNewDesc">Tabular View provides you a way to list your values in a simple tabular format.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="dashboard">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div>
+                                        <svg class="svgIcons"><use xlink:href="#ZR-dashboard"></use></svg>
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Dashboard</div>
+                                        <div class="ZACreateNewDesc">Dashboard allows you to combine multiple reports in a single page for a quick overview</div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li permcheck="similar">
+                                <a class="ZRSMenuSeparator"></a>
+                            </li>
+                            <li permcheck="similar">
+                                <a class="ZACreateNewLabel fBold font15">Auto Generate Reports</a>
+                            </li>
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="similartable" permcheck="similar">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div class="zdbIcon ZALSimilarTbl">
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Similar to Another Table</div>
+                                        <div class="ZACreateNewDesc">Will generate reports for the selected table, similar to what is available for another table in this workspace.</div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            
+
+                                                        
+                            <li class="ZRSMenuItem ZDBExpNewReport" type="ZiaView" permcheck="zia">
+                                <div class="ZACreateNewItem dFlex">
+                                    <div>
+                                        <svg class="svgIcons" style='color:#1a6eb6;'>
+                                            <use class="gr" xlink:href="#ZR-zia"></use>
+                                        </svg>
+                                    </div>
+                                    <div style="margin-left: 15px;">
+                                        <div class="ZACreateNewTitle fBold">Ask Zia</div>
+                                        <div class="ZACreateNewDesc">Ask questions on your data and get reports generated auto-magically!!</div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+                    <ul id="ZAModelElTemp" style="display:none;">
+                        <li class="ZRSMenuSeparator" style="position: absolute; bottom:35px;"></li>
+                        <li class="ZRSMenuItem" style="position: absolute; bottom:0px; height:40px;" onclick="ZDBNavigation.showERDiagram(this, event);" optType="model" erdgtype="database">
+                            <span style="display:inline-block;height: 25px;width: 20px;padding: 0 15px;"><svg class="svgIcons" style="height: 40px;width: 25px;"><use xlink:href="#ZR-modelDiagram"></use></svg></span>
+                            <span>Model Diagram</span>
+                        </li>    
+                    </ul>
+                    <div elname="noviews">No views present !</div>
+                </div>
+            </div>
+            
+        </td> 
+            
+        <td id="SideHoverBar" class="sideHoverBar" style="display:none;" onmousemove="ZDBNavigation.popOutNavigationLeftPanel(this)"></td>
+        <td width="*" valign="top" style="padding:0px;margin:0px;">
+            <div style="display:inline-block; float:left; position:relative; width:0; height:0;">
+                <div onclick="ZDBNavigation.showOrHide(this);" ishidden="false" class="hideNavigation" style="visibility: visible; display:none;" id="ZDBShowHideNavigIcon"></div>
+            </div>  
+            
+            <table id="ZDBMAINEL" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+                <tr style='display:none'>
+                    <td style="padding-top:0; display: none;">
+                        <table width="100%" height="100%"  holderParent="true" id="TABSHOLDERPARENT" class="max" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td id="ZR_LeftIconSpace" style="width:20px; position:relative; white-space: nowrap;">
+                                            <div id="ZR_UnHideNavPanel" isLeftNavItem="true" class="navHideOpt">
+                                                <div  class="navIcon" ishidden="false" style=" "></div>
+
+                                            </div>
+                                            <div id="ZR_MinMaxIcon" class="iconNormal" onMouseOver="this.className = 'iconHover'" onMouseOut="this.className = 'iconNormal'"  onclick="ZDBNavigation.minMaxLayout(this);" layoutMode="normal">&nbsp;
+                                            </div>
+                                            <div id="ZR_LeftTabNavArrow" class="ico ZR_LeftTabNavArrow"  style="width:20px; height:22px; margin:0px; padding:0px; display:none">
+                                                <div class="leftTabShadow"></div></div>
+                                </td>
+                                    
+                            </tr>
+                        </table>            
+                    </td>
+                </tr>
+                <tr>
+                    
+                        <td  id="ZRFieldListTD" valign="top" isLeftNavItem="true"></td>
+                        <td  id="ZDBNavigationBarTD" style="display:none;" valign="top" isLeftNavItem="true">
+                            <div style="width:250px; height:0; background: red; visibility:hidden; display: none;"></div>
+                            
+
+
+
+
+
+
+
+
+
+
+<table id="ZDBNAVIGTABLE" class="navPanel" width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+        <tr >
+            <td id="ZDBNAVIGTD">
+
+                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        
+            <td colspan="3" class="navSearch" align="left" style="padding-bottom:0px;background-color:white;padding-top:0px;">
+            <div class="viewslistbg fieldslistbgnew" title="Drag and Drop the Views">
+			Drag and Drop the Views</div>
+ 			<div style="display:inline-block; position:relative; width:98%; height:25px;overflow:hidden;margin-top:10px;">
+				<div  id="ZRNavSearch"  class="searchBox">
+					<div  id="ZDBSearchButton" style="position:absolute;top:0px;" onclick="ZDBNavigation.showSearchByOpts(this,event);">
+					    			<svg class="svgIconsCommonCls" style="width: 21px;height: 10px;margin-top: 3px;">
+    								<use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-search"></use>
+								</svg>
+                               <span class="downArrow " style="position: absolute;top:9px;left:15px;"></span>
+                     </div>
+                     <div id="ZDBObjSearchClearFld" class="ZRSSearchClearIcon" onmousedown="ZDBNavigation.dashClearSrch($('dashEditDesignSrchSpace'), this);" style="display:none;margin-top: 6px;float: right;height: 12px;width: 12px;margin-right: 4px;cursor:pointer;background-image:none;cursor:pointer;">
+                     	<svg class="svgIcons" style="height: 8px;width: 8px;"><use xlink:href="#ZR-close"></use></svg>                  
+                     </div>
+					<input type="text" searchempty="true" name="textfield" id="ZDBObjSearchTxtFld" class="fieldsSearchEl" elname="ZRSSearchInput" 
+						style="color: rgb(136, 136, 136); padding-bottom: 2px; width:75%; margin-left: 30px;vertical-align:top;" placeHolder='Search Tables/Reports'  tipValue="Search Tables/Reports" 
+						tipShown="true"  onkeyup="ZDBNavigation.dashEditDesignSrchkeyUp(event);"  onfocus="ZDBSearchUtil.handleSearchBoxFocus(this);" onblur="ZDBSearchUtil.handleSearchBoxBlur(this);"  autocomplete="off">
+				</div>
+				<div class="zr_menu" style="display:inline-block;vertical-align:middle;width:45px;">
+					<ul class="zr_menuItemFlatGroup_right">
+					<li>
+					<a id="ZR_Nav_Refresh" style="cursor: pointer;" class="navViewsRefreshIcon"  tip ='Refresh'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                    		<svg class="svgIcons"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-refresh"></use></svg>
+               		 </a>
+					</li>
+					<li style="float:left;" onclick="ZDBNavigation.showViewByOpts(this,event);" simpleDropDown="true" tip="View by" onmousemove="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this,event);">
+                        <a value="" style="cursor: pointer;">
+                           <span id="ZRViewMenu" class="tIconbg viewByTypesIcon" style="margin-top: 1px;margin-left:4px;"></span>                                                
+                        </a>
+                     </li>
+					</ul>
+				</div>
+       </div>
+       </td>
+ 
+                    </tr>
+                    <tr valign="top">
+                        <td colspan="3">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody id="ZDBSwipeBar">
+                                    <tr style="display:none;">
+                                        <td class="leftpaneplainbg" style="padding-top:0px;">
+                                            <table width="100%"  border="0" cellspacing="0" cellpadding="0" class="normalFont12" style="display:none;">
+                                                <tr id="ZDBNavTabsCont">
+                                                    <td colspan="2">
+                                                        <span class=""><strong>View by:</strong></span>
+                                                        <select id="ZDBSELECTEXPVIEW" class="selectExpView" style="width:auto;" onchange="ZDBNavigation.setNavigationType(this.value,true);">
+                                                            <option value="All">Types</option>
+                                                            <option value="Related">Related Views</option>
+                                                            <option value="Folder">Folder</option>
+                                                        </select>
+                                                    </td>
+                                                    <td style="padding:0px 0px 2px 0px;"><span class="divLink font11" style="font-weight:normal; margin-right:2px;" onclick="ZDBNavigation.refreshExplorer();">Refresh</span></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr id="ZDBNAVIGLINK">
+                                        <td colspan="2" class="showNavLink">
+
+
+                                            <span onClick="ZDBDashboardAPI.showViewList(this);" class="backToViewList">Views List</span>
+                                        </td>
+                                    </tr>
+                                    <tr listtype="swipearea">
+
+                                        <td colspan="2" class="normalFont12" valign="top" id="ZDBSWIPETD" >
+                                            <div id="ZDBSWIPE" style="overflow-y:auto; overflow-x:hidden; position: relative;width:248px;" class="bgwhite">
+                                            <div id="ZDBNEWFOLDERLNK" style="display:none; height:0px;">
+
+                                                
+                                    		</div>
+                                      		</div>
+                                            
+                                      		
+                                      		<div id= "ZRSTrash" style ="height:30px;border-top: 1px solid #dfdfdf;" onclick="ZDBNavigation.openTrash();">
+                                      		<div class="NavFontHeader" style="width:100%;">
+											<a value="" style = "margin-top: 7px;cursor:pointer;" onclick="javascript:void(0);">
+											<div style="float: left;width: 21px;height: 18px;margin-top:6px;margin-left:3px;padding-right: 2px;">
+												<svg class="svgIconsCommonCls svgStrokeCls" style="width: 14px;margin-left: 3px;">
+											    	<use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-trash"></use>
+												</svg>
+											</div>
+											<div style="float:left;padding-top:9px;padding-left:3px;font-weight: bold;">Trash</div> 
+											</a>
+											</div>
+											</div>
+											
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    <div style="position:absolute; top:-2000px; left:-2000px;">
+    <div id="ZROpenedTabList" style="position:absolute; top:30%; left:45%; z-index:50000; display:none;">
+    
+    </div>
+    <div id="ZRSampleTabListItem" class="AnalysisViewObj pointed">
+    <i style="padding-left:20px; height:100%;" class="tabIcon">&nbsp;</i><span elname="tabName"></span>
+    </div>
+    </div>
+
+
+                        </td>
+                    
+                    <td colspan="3" valign="top" class="tablebgtop" id="ZDBViewEl">
+                        
+
+
+
+
+
+
+
+
+
+<div id="ZDBToolBarTblBG" class="toolbarTableBG">
+    <div id="ZDBSheetActions" class="standAlone" style="display:none;position: relative;">
+        
+            
+
+
+
+
+
+
+
+<div class="toolbarPadding"  style="display:none;">
+    <div class="firstRow">
+        <ul class="fLeft">
+            <li id="setViewTitle" class="viewTitle ellipsis" elname="viewTitleEl" onmouseover="ZDBTabHandler.viewTitleEditEvtHandler(this, event);" onmouseout="ZDBTabHandler.viewTitleEditEvtHandler(this, event);" onclick="ZDBTabHandler.editViewTitle(this);"></li>
+            <li disableOnNew="true">
+                <a id="ZDBRefreshMI" class="expToolbarIcons" onclick='ZDBEmbed.refreshView(this, event);'  default=true  tip ='Refresh'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                    <svg class="svgIcons">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-refresh"></use>
+                    </svg>
+                </a>
+            </li>
+            <li isSystemTable="true" isSaveAllowed="true" notStandAlone="true">
+                <a id="ZDBSAVE_TITEM" class="expToolbarIcons"  default=true elname='ZRSave'
+                   onclick='ZDBMenu.save(this, event);'  tip ='Save'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                    <svg class="svgIcons">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-save"></use>
+                    </svg>
+                    <span class="saveViewText" elname="ZRSaveText" style="display:none;">Save</span> 
+                </a>   
+            </li>
+            
+            <li isSystemTable="true" zdbModPermReq='true' notStandAlone="true">
+                <a id="ZDBMoreOpts" elname="moreOpts" class="expToolbarIcons" default=true onclick=' ZDBNavigation.showViewSpecificMoreOption(event);'  tip ='More Actions'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                    <svg class="svgIcons">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-more"></use>
+                    </svg>
+                </a>
+            </li>
+            
+            <li>
+                <a class="fetchData ZRSLink" style="display:none; padding-top:7px;" default=true elname='FetchData'
+                   onclick='ZDBUtil.SendForceRefreshRequest(ZDBClientUI.selectedTab.view.type);'  tip ='Click to refresh the report with latest data'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                </a>
+            </li> 
+        </ul>
+        <div mode="showMode">
+            <div class="fRight">
+                <ul>
+                    
+                    <li zdbModPermReq='true' notStandAlone="true">
+                        <a id="ZDBANAL_SETTING_TIP" class="newBtn" onclick="ZDBLoadJsAlone.loadSnippet(this);" lazyLoad="true" lzOper="APPENDTODOC" func="settings.showDialog" lzUrl="/ZDBChartSettings.cc" lzJs="ZDBChartSetting,legend/js/ZDBColorPalette.js" lzName="ZDBChartSetting"
+                            tip ='Settings'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' >
+                            <svg class="svgIcons" style="height:25px;width: 19px; stroke-width: 0.3;">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-settings"></use>
+                            </svg>
+                        </a>
+                        <a id="ZDBDASH_SETTING_TIP" class="newBtn" onclick="ZDBDashboardAPI.modifySettings(this, event);"
+                            tip ='Settings'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' >
+                            <svg class="svgIcons" style="height:25px;width: 19px; stroke-width: 0.3;">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-settings"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+                <div class="fRight grpDiv" grpdiv="true">
+                    <ul>
+                        <li isExportPermReq="true" disableOnNew="true" notStandAlone="true">
+                          <a id="ZDBExportButton" class="newGrpTextBtn" type="button" 
+                             onClick='ZDBNavigation.showExportMenu(this, event, "Export_Menu", "GridMenu");'
+                              tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                                <svg class="svgIcons" style="height:25px;">
+                                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                                </svg>
+                          </a>
+                        </li>
+                        <li isEmailReportPermReq="true" disableOnNew="true" notStandAlone="true">
+                          <a id="ZDBEmailButton" class="newGrpTextBtn" type="button"
+                             onClick='ZDBNavigation.showExportPopup(this, event, "Email_Menu", "GridMenu");'
+                              tip ='Email'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                                <svg class="svgIcons" style="height:25px;">
+                                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-mail"></use>
+                                </svg>
+                          </a>
+                        </li>
+                        <li isSharePermReq="true" disableOnNew="true" notStandAlone="true" notStandAlone="true">
+                          <a id="ZDBShareOptions_Anal_MI" class="newGrpTextBtn" type="button"
+                             onclick='ZDBSecurityMenu.showShareMenu(this, event, "Share_Menu", "GridMenu");'
+                              tip ='Share'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                                <svg class="svgIcons" style="height:25px;">
+                                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-share"></use>
+                                </svg>
+                          </a>
+                        </li>
+                        <li isPublishPermReq="true" isDBOwnerReq="true" disableOnNew="true" notStandAlone="true" elname="publishToolbar">
+                          <a class="newGrpTextBtn" type="button"
+                             onclick='ZDBSecurityMenu.showMenu(this, event, "Publish_Menu", "GridMenu");'
+                              tip ='Publish'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                                <svg class="svgIcons" style="height:25px;width: 20px;">
+                                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-publish"></use>
+                                </svg>
+                          </a>
+                        </li>
+                                                    
+                     
+                        <li isAlertPermReq="true" isDBOwnerReq="true" disableOnNew="true" elname="alertToolbar">
+                          <a id="dataAlert" class="newGrpTextBtn" type="button"
+                             onclick='ZDBNavigation.showExportMenu(this, event, "Alert_Menu", "GridMenu");'
+                              tip ='Alert'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                                <svg class="svgIcons" style="height:25px;width: 20px;">
+                                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-alert"></use>
+                                </svg>
+                          </a>
+                        </li>
+                        
+                                                  
+                    </ul>
+            </div>
+            
+            <div class="fRight">
+                <ul>
+                    
+                    <li  zdbModPermReq='true' isSystemTable="true" notStandAlone="true">
+                        <a id="ZDBAnalysisEdit" class="newBtn editViewBtn" onClick="ZDBClientUI.goToEditDesign(this, event);" modeType="view" action="show">
+                            Edit Design</a>
+                    </li>
+                    
+                    <li  createNewPermitted = "true">
+                        <a id="ZDBNEW_TITEM" class="newBtn" tip="Create New" onmouseenter="ZDBToolTip.show(this,event);" onmouseleave="ZDBToolTip.hide(this,event);" onclick='ZDBMenu.showNewObjectsPopup(this, event);' style="line-height: 30px;">
+                            <span class="createNew">
+                                <svg class="svgIcons">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-createNew"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li zdbModPermReq='true' notStandAlone="true">
+                        <a id="ZDBDashboardThemeBtn" class="newBtn font12" onClick="ZDBDashboardAPI.editTheme(this, event);" hideOnDisable="true" disableOnLoadingView="true">Themes</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fRight" mode="hideMode" style="display:none;">
+            <ul>
+                
+                <li zdbModPermReq='true' isSystemTable="true" notStandAlone="true">
+                    <a id="ZDBAnalysisPreview" class="newBtn editViewBtn" onClick="ZDBAnalysisEditViewMode.hideOrShowEl(this, event);" modeType="edit" action="hide">
+                        View Mode</a>
+                </li>
+                
+                <li zdbModPermReq='true' notStandAlone="true">
+                    <a id="ZDBANAL_SETTING_TIP_EDIT" style="display:none;" class="newBtn" onclick="ZDBLoadJsAlone.loadSnippet(this);" lazyLoad="true" lzOper="APPENDTODOC" func="settings.showDialog" lzUrl="/ZDBChartSettings.cc" lzJs="ZDBChartSetting,legend/js/ZDBColorPalette.js" lzName="ZDBChartSetting"
+                        tip ='Settings'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' >
+                        <svg class="svgIcons" style="height:25px;width: 19px; stroke-width: 0.3;">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-settings"></use>
+                        </svg>
+                    </a>
+
+                    <a id="ZDBDASH_SETTING_TIP_EDIT" class="newBtn" style="display:none;" onclick="ZDBDashboardAPI.modifySettings(this, event);"
+                        tip ='Settings'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' >
+                        <svg class="svgIcons" style="height:25px;width: 19px; stroke-width: 0.3;">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-settings"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div id='ZRViewDesc' class="viewDesc ellipsis" elname="viewDescEl" style="display:inline-block;"></div>
+        <div class="expToolbarIcons closeIcon hide" onclick='ZDBClientUI.removeTab(ZDBClientUI.selectedTab);'><svg class="svgIcons"><use class="gr" xlink:href="#ZR-close"></use></svg></div>
+    </div>
+    <div class="secondRow" TableObj="true" style="display:none;">
+        <ul>
+            <li isImportPermReq="true" isSystemTable="true" notStandAlone="true">
+                <a id="ZDBIMPORTMENU" class="newBtn"
+                   onclick="ZDBNavigation.showImportPopup(this, event);">
+                    <svg class="svgIcons" style="display:inline-block; height: 22px;">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-import"></use>
+                    </svg>
+                    <span style="padding-left:5px;vertical-align: top;">Import Data</span>
+                </a>
+            </li>
+            
+            <li isExportPermReq="true" disableOnNew="true" style="float:left;margin-right: 5px;">
+                <a id="ZDBExportButton" class="newBtn" type="button" 
+                   func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                   onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                    tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                    <svg class="svgIcons" style="height:25px;">
+                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                    </svg>
+                </a>
+            </li>
+            
+            <li>
+                <div id="filterGrp" class='grpDiv' grpdiv="true">
+                    <ul>
+                        <li>
+                            <a id="ZDBFILTER_TITEM" enableForIOS=true class="newGrpTextBtn"
+                               onclick='ZDBFilterAux.filterData(this);' relid="ZDBFILTEROPTIONS_TITEM">
+                                <span>Filter</span>
+                            </a>
+                        </li>
+                        <li notStandAlone="true" isWritePermReq="true">
+                            <a id="ZDBFILTEROPTIONS_TITEM" enableForIOS=true class="newGrpTextBtn dropDownPadding"
+                               onclick='ZDBFilterAux.showFilterList(this, event);' relid="ZDBFILTER_TITEM">
+                                <span class="downArrow"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a id="ZDBSortMenu_Table" class="newBtn" 
+                   onclick='ZDBMenu.showModuleMenu(this, event, "Sort_Menu", "GridMenu");'>
+                    <span>Sort</span>
+                </a>
+            </li>
+            <li notStandAlone="true">
+                <div id="addgroup" class='grpDiv' grpdiv="true">
+                    <ul> 
+                        <li isAddPermReq="true">
+                            <a id="ZDBAddRowColMItem" class="newGrpTextBtn"
+                               onclick='ZDBDerivedField.showDerivedFunctionMenu(this, event);'>
+                                <span>Add</span>
+                            </a> 
+                        </li>
+                        <li deleteordeleteallneeded="true">
+                            <a id="ZDBDeleteRowColMI" class="newGrpTextBtn" onclick='ZDBMenu.showModuleMenu(this, event, "Delete_All_Menu", "GridMenu");'>
+                                <span>Delete</span>
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li disableOnNew="true"  isDBOwnerReq="true">
+                <a id="ZDBMoreActions" class="newBtn"
+                   onclick='ZDBMenu.showModuleMenu(this, event, "Table_ClmNMore_Menu", "GridMenu");'>
+                    <span>More</span>
+                </a> 
+            </li>
+        </ul>
+        <ul class="fRight"> 
+            <li disableOnNew="true" style="margin-right: 6px;">
+                <a elname="SearchBoxEl" disableChild="true">
+                    <div class="ZRSSrchField" elname="searchComp">
+                        <div id="ZDBSearchButton" class="srchIcon" elname="srchIcon" onmousedown="ZRSSearchComponent.srchOnClear(this, event);" >
+                            <svg class="svgIcons" elname="svgTag">
+                            <use xlink:href="#ZR-search" elname="useTag"></use>
+                            </svg>
+                        </div>
+                        <input id="ZDBSearchBox" class="font12" elname="ZRSSearchInput" placeholder="Search Data" tipValue="Search Data" 
+                               searchempty="false" tipShown="true" 
+                               onfocus="ZRSSearchComponent.srchOnBlurOrFocus(this, event);" 
+                               onblur="ZRSSearchComponent.srchOnBlurOrFocus(this, event);"
+                               onkeyup="ZRSSearchComponent.tableDataSearch(this, event, ZRSSearchComponent.searchInTable, ZRSSearchComponent.searchValueClearFun)" size="15">
+                    </div>
+                </a> 
+            </li>
+        </ul>
+    </div>
+    <div class="secondRow" QueryTableObj="true">
+        <div>
+            <ul>
+                <li>
+                    <div class='grpDiv' grpdiv="true">
+                        <ul>
+                            
+                            <li isDBOwnerReq="true" disableOnNew="true">
+                                <a id="ZDBQTDependencyListDia" class="newBtn"
+                                   onclick="ZDBNavigation.showDepListForQT(this, event)"  tip ='Provides the list of Tables/Query Tables on which this Query Table is dependent upon.'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);' modeType="edit" >
+                                    <span style="padding-left:5px;">Dependency List</span>
+                                </a>
+                            </li>
+                            
+                            <li isExportPermReq="true" disableOnNew="true" style="float:left;margin-right: 4px;">
+                                <a id="ZDBExportButton" class="newBtn" type="button" 
+                                   func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                                   onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                                    tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                                    <svg class="svgIcons" style="height:25px;">
+                                    <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a id="QUERY_ZDBFILTER_TITEM" enableForIOS=true class="newGrpTextBtn"
+                                   onclick='ZDBFilterAux.filterData(this);' relid="QUERY_ZDBFILTEROPTIONS_TITEM" modeType="view">
+                                    <span>Filter</span>
+                                </a>
+                            </li>
+                            <li notStandAlone="true">
+                                <a id="QUERY_ZDBFILTEROPTIONS_TITEM" enableForIOS=true class="newGrpTextBtn dropDownPadding"
+                                   onclick='ZDBFilterAux.showFilterList(this, event);' relid="QUERY_ZDBFILTER_TITEM" modeType="view">
+                                    <span class="downArrow"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li> 
+                    <a id="ZDBSortMenu_Table" class="newBtn"
+                       onclick='ZDBMenu.showModuleMenu(this, event, "Sort_Menu", "GridMenu");' modeType="view">
+                        <span>Sort</span>
+                    </a>
+                </li> 
+                <li isDBOwnerReq="true" notStandAlone="true">
+                    <a id="ZDBAddMenu_QT" class="newBtn"
+                       onclick='ZDBMenu.showModuleMenu(this, event, "Add_QT_Menu", "GridMenu");' modeType="view">
+                        <span>Add</span>
+                    </a> 
+                </li>
+                <li> 
+                    <a id="ZDBColNMoreActions_QT" class="newBtn" 
+                       onclick='ZDBMenu.showModuleMenu(this, event, "More_Actions_Menu_TV", "GridMenu");' modeType="view"> 
+                        <span>More</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="fRight"> 
+                <li disableOnNew="true" style="margin-right: 6px;">
+                    <a elname="SearchBoxEl" modeType="view">
+                        <div class="ZRSSrchField" elname="searchComp">
+                            <div id="Query_ZDBSearchButton" class="srchIcon" elname="srchIcon" onmousedown="ZRSSearchComponent.srchOnClear(this, event);">
+                                <svg class="svgIcons" elname="svgTag">
+                                <use xlink:href="#ZR-search" elname="useTag"></use>
+                                </svg>
+                            </div>
+                            <input id="Query_ZDBSearchBox" class="font12" elname="ZRSSearchInput" placeholder='Search Data' tipValue="Search Data"  searchempty="false" tipShown="true" 
+                                   onfocus="ZRSSearchComponent.srchOnBlurOrFocus(this, event);" 
+                                   onblur="ZRSSearchComponent.srchOnBlurOrFocus(this, event);"
+                                   onkeyup="ZRSSearchComponent.tableDataSearch(this, event, ZRSSearchComponent.searchInTable, ZRSSearchComponent.searchValueClearFun)" size="15">
+                        </div>
+                    </a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secondRow" AnalysisViewObj="true" style="display:none">
+        <div id="ZDBChartActionToolBar">
+            <ul>
+            
+                <li class='fRight'>  
+                    <a id="ZASort" class="newBtn" onClick='ZDBChartSort.displaySortMenu(this, event, null, null);' style='margin-right: 5px;'>
+                        <span>Sort</span>
+                    </a>
+                </li>
+                
+                <li style="float:right;clear:none;">  
+                    <a id="splitYAxis" class="newBtn" style="display:none"
+                       onClick="switchFunction.changeProperties(this, event, 'mergeYAxis', 'GraphToolbarIcon', 'ZDBAnalysisEditViewMode.mergeOrSplit()');">
+                        Split Axis
+                    </a>
+                </li>
+                <li style="float:right;clear:none;">  
+                    <a id="mergeYAxis" class="newBtn" style="display:none"
+                       onClick="switchFunction.changeProperties(this, event, 'splitYAxis', 'GraphToolbarIcon', 'ZDBAnalysisEditViewMode.mergeOrSplit()');">
+                        Merge Axis
+                    </a>
+                </li>
+                
+                <li isExportPermReq="true" disableOnNew="true" style="float:right;clear:none;">
+                    <a id="ZDBExportButton" class="newBtn" type="button" 
+                       func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                       onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                        tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                        <svg class="svgIcons" style="height:25px;">
+                        <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+                
+                <li isVUDPermReq="true" notStandAlone="true">  
+                    <a id="chartVUDQa" class="newBtn"
+                       onClick="ZDBVUDataAPI.viewUDEl(this, event);">
+                        Underlying Data
+                    </a>
+                </li>
+                
+                
+                <li>
+                    <a class='newGrpTextBtn iconPadding first last' onClick='ZDBAnalysisUtil.showChartDlg(this);' 
+                       tip='Change Chart type'
+                       onMouseEnter="ZDBToolTip.show(this,event);" onMouseLeave="ZDBToolTip.hide();" notLoggedInOrStandAlone="true">
+                        <svg class="svgIcons">
+                        <use xlink:href="#ZR-chartChooser"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+            </ul>
+
+        </div>
+    </div>
+    <div class="secondRow" PivotObj="true" style="display:none">
+        <div id="ZDBPivotActionToolBar">
+            <ul>
+            
+                <li style="margin-right: 15px;">
+                    <a id="ZAPvtSort" class="newBtn" onClick='ZDBPivotView.displaySortMenu(this, event);'>
+                        <span>Sort</span>
+                    </a>
+                </li>
+                
+                
+                <li isExportPermReq="true" disableOnNew="true" style="float:left;margin-right: 5px;">
+                    <a id="ZDBExportButton" class="newBtn" type="button" 
+                       func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                       onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                        tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                        <svg class="svgIcons" style="height:25px;">
+                        <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+                
+                <li zdbModPermReq='true' notStandAlone="true">  
+                    <a id="PivotShowhideSubTotal" class="newBtn"
+                       onclick='ZDBPivotSumSettings.pvtSumSubMenuFrmMenu(this, event, "Pivot_Subtotal_Menu", "GridMenu");'>
+                        <span>Show/Hide Totals</span>
+                    </a>
+                </li>
+                
+                <li isVUDPermReq="true" notStandAlone="true">  
+                    <a id="ZDBVUDMenuItemPivot" class="newBtn"
+                       onClick="ZDBVUDataAPI.viewUDEl(this, event);">
+                        Underlying Data
+                    </a>
+                </li>
+                
+                <li zdbModPermReq='true' notStandAlone="true">  
+                    <a elname="Themes" class="newBtn" id="pvtThemesBtn"
+                       onclick="ThemeComponent.themesClick(this, event);" noHide=true>
+                        Themes
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secondRow" SummaryViewObj="true" style="display:none">
+        <div id="ZDBSummaryActionToolBar">
+            <ul>
+                
+                <li isExportPermReq="true" disableOnNew="true" style="float:left;margin-right: 15px;">
+                    <a id="ZDBExportButton" class="newBtn" type="button" 
+                       func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                       onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                        tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                        <svg class="svgIcons" style="height:25px;">
+                        <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+                <li zdbModPermReq='true' notStandAlone="true">
+                    <a id="SummaryShowhideSubTotal" class="newBtn"
+                       onclick='ZDBPivotSumSettings.pvtSumSubMenuFrmMenu(this, event, "Pivot_Subtotal_Menu", "GridMenu");'>
+                        <span>Show/Hide Totals</span>
+                    </a>
+                </li>
+                
+                <li isVUDPermReq="true" notStandAlone="true">
+                    <a id="ZDBVUDMenuItemSummary" class="newBtn"
+                       onClick="ZDBVUDataAPI.viewUDEl(this, event);">
+                        <span>Underlying Data</span>
+                    </a>
+                </li>
+                
+                <li zdbModPermReq='true' notStandAlone="true">  
+                    <a elname="Themes" class="newBtn" id="sumThemesBtn"
+                       onclick="ThemeComponent.themesClick(this, event);" noHide=true >
+                        Themes
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secondRow" ReportObj="true" style="display:none;">
+        <div>
+            <ul>
+                
+                <li isExportPermReq="true" disableOnNew="true" style="float:left;margin-right: 5px;">
+                    <a id="ZDBExportButton" class="newBtn" type="button" 
+                       func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                       onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                        tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                        <svg class="svgIcons" style="height:25px;">
+                        <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                        </svg>
+                    </a>
+                </li>
+                
+                <li>
+                    <div id="filterGrp" class='grpDiv' grpdiv="true">
+                        <ul>
+                            <li disableOnNew="true">
+                                <a id="REP_ZDBFILTER_TITEM" enableForIOS=true class="newGrpTextBtn"
+                                   onclick='ZDBFilterAux.filterData(this);' relid="REP_ZDBFILTEROPTIONS_TITEM">
+                                    <span >Filter</span>
+                                </a>
+                            </li>
+                            <li disableOnNew="true" notStandAlone="true">  
+                                <a id="REP_ZDBFILTEROPTIONS_TITEM" enableForIOS=true class="newGrpTextBtn dropDownPadding"
+                                   onclick='ZDBFilterAux.showFilterList(this, event);'
+                                   relid="REP_ZDBFILTER_TITEM">
+                                    <span class="downArrow"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a id="ZDBSortMenu_Report" class="newBtn"
+                       onclick='ZDBMenu.showModuleMenu(this, event, "Sort_Menu", "GridMenu");'>
+                        <span>Sort</span>
+                    </a>
+                </li>
+                <li notStandAlone="true">
+                    <div class='grpDiv' grpdiv="true">
+                        <ul> 
+                            <li zdbModPermReq='true' notStandAlone="true">
+                                <a id="ZDBGrpColumnMItem" class="newGrpTextBtn"
+                                   onclick='ZDBMenu.showModuleMenu(this, event, "Group_Menu", "GridMenu");'>
+                                    <span>Group</span>
+                                </a> 
+                            </li>
+                            <li zdbModPermReq='true' notStandAlone="true">
+                                <a id="ZDBREPORTFNTOOLBARITEM" class="newGrpTextBtn"
+                                   onClick="ZDBReportFunctions.showReportFunctions(this, event);">
+                                    <span>Summary</span>
+                                </a> 
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li notStandAlone="true">
+                    <div class='grpDiv' grpdiv="true">
+                        <ul>
+                            <li disableOnNew="true" isDBOwnerReq="true" notStandAlone="true">
+                                <a id="ZDBAddRowColMItem_TV" class="newGrpTextBtn"
+                                   onclick='ZDBDerivedField.showDerivedFunctionMenu(this, event, true);'>
+                                    <span>Add</span>
+                                </a> 
+                            </li>
+                            <li isDBOwnerReq="true"  disableOnNew="true" notStandAlone="true">
+                                <a id="ZDBColPropMenuRpt" class="newGrpTextBtn"
+                                   onclick='ZDBMenu.showModuleMenu(this, event, "Rpt_Format_Column_Menu", "GridMenu");'>
+                                    <span>Format</span>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>  
+                    <a id="ZDBMoreActions_TV" class="newBtn" 
+                       onclick='ZDBMenu.showModuleMenu(this, event, "More_Actions_Menu_TV", "GridMenu");'> 
+                        <span>More</span>
+                    </a>
+                </li>
+                <li disableOnNew="true" isDBOwnerReq="true" notStandAlone="true">  
+                    <a elname="Themes" class="newBtn" id="tabThemesBtn"
+                       onclick="ThemeComponent.themesClick(this, event);" noHide=true>
+                        Themes
+                    </a>
+                </li>
+            </ul>
+            <ul class="fRight"> 
+                <li disableOnNew="true" style="margin-right: 6px;">
+                    <a elname="SearchBoxEl" disableChild="true">
+                    <div class="ZRSSrchField" elname="searchComp">
+                        <div id="Report_ZDBSearchButton" class="srchIcon" elname="srchIcon" onmousedown="ZRSSearchComponent.srchOnClear(this, event);">
+                            <svg class="svgIcons" elname="svgTag">
+                            <use xlink:href="#ZR-search" elname="useTag"></use>
+                            </svg>
+                        </div>
+                        <input id="Report_ZDBSearchBox" class="font12" elname="ZRSSearchInput" placeholder='Search Data' tipValue="Search Data" 
+                               searchempty="false" tipShown="true" 
+                               onfocus="ZRSSearchComponent.srchOnBlurOrFocus(this, event);" 
+                               onblur="ZRSSearchComponent.srchOnBlurOrFocus(this, event);"
+                               onkeyup="ZRSSearchComponent.tableDataSearch(this, event, ZRSSearchComponent.searchInTable, ZRSSearchComponent.searchValueClearFun)" size="15">
+                    </div>
+                    </a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="secondRow" DashboardObj="true">
+        <div>
+          <ul>
+            
+                <li isExportPermReq="true" disableOnNew="true" style="float:left;margin-right: 5px;">
+                    <a id="ZDBExportButton" class="newBtn" type="button"
+                    func="ZDBExport.showExportMenuForEmbed" lzjs="ZDBExportNShare"
+                    onClick='ZDBLoadJsAlone.loadJs(this,event);'
+                     tip ='Export'  onmouseenter ='ZDBToolTip.show(this,event);' onmouseleave ='ZDBToolTip.hide(this,event);'>
+                        <svg class="svgIcons" style="height:25px;">
+                            <use  xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#ZR-export"></use>
+                        </svg>
+                    </a>
+                </li>
+            
+            <li notStandAlone="true">
+              <a class="newBtn" viewtype="text" modeType="edit"
+                 onclick="ZDBDashEdit.newWidget(this,event);">
+                  <span class="iconbg addWidgetIcon fLeft"></span>
+                Add Widget
+              </a>
+            </li>
+            <li notStandAlone="true">
+              <a class="newBtn" viewtype="text" modeType="edit"
+                 onclick="ZDBDHtmlImgEditor.showTextEditor(this, 'Insert',null,null);">
+                  <span class="iconbg addTextIcon" style="margin-top:3px;"></span>
+                Add Text
+              </a>
+            </li>
+            <li notStandAlone="true">
+              <a class="newBtn" viewtype="text" modeType="edit"
+                 onclick="ZDBDHtmlImgEditor.showImageEditor(this, 'Insert');">
+                 <span class="iconbg addImgIcon" style="margin-top:3px;"></span>
+                Add Image
+              </a>
+            </li>
+            <li style="float: right; margin-right: 10px; height: 31px; " notStandAlone="true">
+            		<div style="display : none; height : 100%;" id="showGridArea">
+	            		<a modetype="edit" style="display : inline-block; height 100%;">
+	            			<div style="height: 100%; width: 0px; display : inline-block; vertical-align: middle;"></div> 
+	            			<div style="font-size: 12px; display : inline-block; vertical-align: middle;">Show Grid: </div> 
+	            			<div style="width : 50px; height : 22px; transform : scale(0.78); transform-origin: 0 50% 0; display : inline-block; vertical-align: middle;"><input id="_showGrid"> </div>
+	            		</a>
+            		</div>
+			</li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+        
+        
+    </div>
+</div>
+           
+                        <div class="placeHolder" style="overflow:visible;">
+                            <div id="ZDBPLACEHOLDER" style="width:100%; padding:0px;margin-left:2px; margin-top:2px;display:none; overflow:visible; display:none; "></div>
+                            
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>    
+    </tr>
+
+    <tr>
+        
+        
+        
+        
+        
+        <td colspan="5" align="right">
+            
+
+            <div id="ZDBPoweredByEl" class="poweredby" style="position:relative;height:25px;margin-right:15px;"  >
+               
+                
+                    
+                    <span style="position:absolute; left:-3px; top:2px;padding-top:5px">Powered by</span>
+                    
+                    <a href="https://lamfirm.com" class="defAnchor" target="_blank" rel="noreferrer" style="padding-top:3px;">   
+                    
+                    		<img height="25px;" max-width="35px;" src="/rebrand/UserLogo.img?ZDBFILEID=4000261894548&ZRZUID=675534165" title="https://lamfirm.com" />
+                    
+                    </a>
+                
+            </div>
+
+        </td>
+    </tr>
+
+</table> 
+
+<div class="navShownLeft  switchVisible">
+    <div id="LeftNavalSwitch" class="toggleSwitch"  style="display:none" ishidden="true">
+        <div class="singleLayoutComp navbar-colors" style="cursor:pointer;"">
+            <svg class="navMenuIcon navbar-icon icontoggle" style="margin-top: 8px;">
+            <use class="gr" xlink:href="#ZR-collapse"></use>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<div id="ZDBListObjectsForDB_CT" class="leftPanel" style="display:block; ">
+    <div id="ZDBSearchResults"  style="display:none;" class="emptySearchSpace" >
+        <span id="ZDBSearchCount">'No' </span>  
+        <span id="ZDBSearchCountInDBEdit">'No' </span> 
+        matches found.
+        
+    </div>
+    <div id="Objects_TBODY" class="navigFolderType" navigType="Folder"> 
+    </div> 
+    <div id="dashEditDesignSrchSpace" class="navigFolderType" onmouseover="ZDBExpViewHandler.dashEditEvntHandler(event);" onmouseout="ZDBExpViewHandler.dashEditEvntHandler(event);" onmousedown="ZDBExpViewHandler.dashbrdDragEventHanlder(event);"></div>
+</div>
+
+
+<div style="position: absolute;left: -5000px;top:-5000px;"><textarea id="ZDBPasteArea"></textarea></div>
+</div>
+<div style="overflow:hidden;display:none; width:1px;height:1px;visibility:hidden;position:absolute;left:0px;top:0px;z-index:100">
+  <div id="ZDBTPLGRIDAREA" style="overflow:scroll;width:70px;height:70px">aa</div>
+</div>
+<div id="ZDBGRIDSTORE" style="display:none"></div>
+<div  class="gsiframeholder" style="display:none; z-index: 1200;">
+    <div class="iconbg closeDlg"  style="position: relative; left:795px; top:5px;" onclick="ZDBClientUI.closeVideoDialog(false);"></div>  
+    <iframe class="gsiframe" frameborder="0" allowfullscreen="1"></iframe>
+</div>
+
+<script crossorigin='anonymous' src="https://js.zohostatic.com/db/v2_zr/zdbjs/i18nJsKeys/messages_en.e2164f8f25062409aee7de1683df3ca3.js"> </script>
+<script crossorigin='anonymous' src='https://js.zohostatic.com/db/v2_zr/compressed/ZRVendors.7a6dd8eaeac8b7204f48a1f2c4b31cc0.js' type='text/javascript'></script>
+
+
+
+<script crossorigin='anonymous' src='https://js.zohostatic.com/db/v2_zr/compressed/ZDBInitialLoadNewUI_New.0c78c2551173448c449d54d9292c64ee.js' type='text/javascript'></script>
+ 
+
+
+
+<!--Filter_List_User_Start-->
+<div style="display: none">
+<!--Filter_List_User_Inter-->
+<div id="tmpLstCntr" class="dComboListStyle singleSelMinWidth" optionList="true" style="overflow-x: hidden; z-index: 5000;visibility: visible;" next="-1" length="0">
+    <div class="" userfiltersearch="true" style="display:none;">
+        <div class="UFSearchBox">
+            <div class="searchBox" style="display: inline-block;width: 100%;padding-right: 0px;" elname="searchElHolder">
+              <input class="fieldsSearchEl" onfocus="ZAVMFilterSearch.hideTipString(this);" onblur="ZAVMFilterSearch.showTipString(this);" tipshown="true" tipvalue="Search" type="text" searchbox="true" value="Search" style="width: 76%;height:16px;line-height: 16px;">
+              <span style="position: relative;float:right">
+                    <svg style="width: 12px;height:24px;" class="searchAndClearSvgs svgIconsCommonCls" elname="svgTag" onmousedown="ZDBSearchUtil.clearSearch(this,ZAVMFilterSearch.clearTheList);">
+                        <use class="or" xmlns:xlink="http://www.w3.org/2000/svg" xlink:href="#ZR-search" elname="useTag"></use>
+                    </svg>
+		</span>
+            </div>
+        </div>
+    </div>
+    <div elname="optionDiv" onscroll="ZAVMFilterSearch.scrollingList(this,event);" maxhgt="300px">
+        <ul class="VMFilterValue VMFilterValueNew" elname="selectListEl" style="line-height:1;">      
+        <ul class="VMFilterValue" elname="mainList"> 
+        </ul>
+        </ul>
+        <div style="display:none;" class="nextElsLoading" classprefix="nextEls" elname="filterLoading">Loading . . .</div>
+    </div>
+    <div class="ShowAllVals" showalldiv="true" onclick="ZAVMFilter.fetchAllCriteria(this,'Customer Name',event);" style="display: none;">Show All Values</div>
+</div>
+<!--Filter_List_User_Inter-->
+
+<!--User_Filter_Apply_Div-->
+    <div id="MApplydiv" class="comboOptionBtnsDiv" elname="applyDiv" style="text-align:center; padding:4px;">
+        <input elname="multiSelOk" type="button" value="OK" valfunc="applyMultiSel" class="glossyButton">
+        <input elname="multiSelCancel" type="button" style="margin-left:4px;" value="Cancel" valfunc="applyMultiSel" class="glossyButton">
+    </div>
+<!--User_Filter_Apply_Div-->
+
+<!--User_Filter_Slc_MAll_Option-->
+
+    <ul id="MAllSlcOp" class="VMFilterValue VMFilterValueNew VMFilterValueMulti">
+        <li valfunc="selOrDeselAll" elname="selAllLi" selectedAll="false" class="dComboDeselectOption" filteredvalue="All" onmouseover="ZDBToolTip.show(this,event);" onmouseout="ZDBToolTip.hide(this, event);" displayvalue="All" filterdispvalue="All" data-tip="All" value="All" origclass="dComboDeselectOption"><span elname="likeCheckBoxEl" class="likeCheckBoxEl"></span><span>All</span></li>
+    </ul>
+<!--User_Filter_Slc_MAll_Option-->
+
+<!--User_Filter_SSel_Option-->
+    <li id="SSLiopt" class="dComboSSelectOption" origclass="dComboSSelectOption" elname="selAllLi" onmouseover="ZDBToolTip.show(this, event);" onmouseout=" ZDBToolTip.hide(this, event);" data-tip="Click to select" value="Click to select" displayvalue="--- Select ---" filterdispvalue="--- Select ---" valfunc="singleSelectChange" filteredvalue="All" filtered="true" criteria="">--- Select ---</li>
+<!--User_Filter_SSel_Option-->
+
+<!--User_Filter_Search-->
+<div id="tmpLstCntrForSrch" fetchedDiv="true"  next="-1" length="25" vmSearch="true">
+    <ul class="VMFilterValue" elname="mainList">
+        
+    </ul>
+</div>
+
+<!--User_Filter_Search-->
+
+<!--Resizable_Option_For_Filter_List-->
+<div id="resizableOptTmp">
+    <div elname="resizeRgt" qaName="resizeRgt" class="resizeDlg" style="z-index: 1000; bottom:0px; right: 0px; cursor: e-resize;display: none;" onmousedown="ZAVMFilterUtil.attachResizeEvent(this,'right');"></div>
+    <div elname="resizeLft" qaName="resizeLft" class="resizeDlg" style="z-index: 1000; bottom:0px; left: 0px; cursor: w-resize; -ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);display: none;" onmousedown="ZAVMFilterUtil.attachResizeEvent(this,'left');"></div>
+</div>
+<!--Resizable_Option_For_Filter_List-->
+
+<!--Include_Relative_List-->
+<ul id="IncRelLstUl" class="VMFilterValue" elname="subList">
+    
+</ul>
+<!--Include_Relative_List-->
+</div>
+<!--Filter_List_User_End-->
+     
+<script defer>
+
+
+ZDBGlobal.CONN_ALLOWEDDOMAINS = '["https://reports.zoho.com","https://analytics.zoho.com","https://prereports.zoho.com","https://preanalytics.zoho.com"]';
+ZDBGlobal.USERFULLNAME = 'info';
+ZDBGlobal.IS_APLUS_BUILD=false;
+ZDBGlobal.IS_APLUS_BUILD=false;
+ZDBGlobal.isUserPhotoPresent = false;
+ZDBGlobal.isQAEnabled = false; 
+ZDBGlobal.REPORTS_CONTEXT_NAME = '';
+ZDBGlobal.CONTEXTPATH = '';
+ZDBGlobal.FROMSERVICE ='null';
+
+ZDBGlobal.isNewLayoutNCreatorCheck = true;
+ZDBGlobal.TIMELINE_MINRANGE='01 Jan 1000';
+ZDBGlobal.TIMELINE_MAXRANGE='30 Dec 2999';
+ZDBGlobal.LANDINGPAGE = "ZDBDataSheetView"; //NO I18N
+ZDBClientUI.readOnlyMode = false;
+ZDBGlobal.ISNEWLAYOUT=true;
+ZDBGlobal.bannerVersionJSON = 'null';  
+ZDBGlobal.isWhitelabelNewLayout =false;
+if(ZDBGlobal.ISNEWLAYOUT) {
+    ZDBGlobal.currentTheme = 'dark_theme3';
+    ZDBGlobal.tabLayer = '1';
+}
+else {
+   ZDBGlobal.ISBAIHUIDOMAIN = false;
+   ZDBGlobal.ISDATEASDATEENABLE = true;
+   ZDBGlobal.ISDMADMIN = false;
+}
+ZDBGlobal.ISVIEWFORMULAENABLED = 'true';
+ZDBGlobal.supportMailID = 'support@zohoanalytics.com';
+
+    ZDBGlobal.explorerPageTourImgs = ["https://css.zohostatic.com/db/v2_zr/themes/common/images/pageTour/create_new_report.2b52d170109283afb9fc98fc1bfb7c09.jpg"]; 
+
+
+ZDBClientUI.showZContacts=true;
+ZDBClientUI.showGoogleContacts=true;
+ZDBClientUI.showOffice365Contacts=true;
+ZDBClientUI.showShareToSupport=true;
+ZDBClientUI.showMakeDBPublic=true;
+ZDBClientUI.showExistingOPUsers=false;
+ZDBClientUI.showInvokeOptionDlg=true;
+ZDBGlobal.IS_ONPREMISE_BUILD= false;
+ZDBGlobal.IS_POSTGRES_BUILD= false;
+ZDBGlobal.IS_OP_OEM= false;
+ZDBGlobal.IS_VECTORWISE_USER= false;
+ZDBGlobal.IS_CSTORE_USER= false;
+ZDBGlobal.IS_FREE_EDITION=false;
+ZDBGlobal.IS_SAS_BUILD= true;
+ZDBGlobal.enableZIA=true;
+ZDBGlobal.TimeZone= 'GMT';
+ZDBGlobal.JSPATH='https://js.zohostatic.com/db/v2_zr/';
+var mjs = ZDBLazyLoadUtil.moduleJSURLs;
+mjs['ZDBDashEdit']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBDashEditCompressed.8e334a9f19ee9cd94b87effa7ff6e72f.js';
+mjs['ZRDashboardEdit']='https://js.zohostatic.com/db/v2_zr/compressed/ZRDashEditCompressed.64250a778b7a83c6b85ad2c51c765de6.js';
+mjs['ZDBSeondaryLoad']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBSecondaryLoad.2e0574ba1b0049ac0a7f8e4e85798957.js';
+mjs['ZDBGridList']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBGridView.82ac94067894ee415e04723138957d19.js';
+mjs['ZDBAnalysisViewList']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBAnalysisViewMode.0a7038e0ad52091903d695d4e0dffebd.js';
+mjs['ZDBExportNShare']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBExportNShare.554eb78ee15aeb03203abe0264cb0212.js';
+mjs['ZRScreenGrabber']='https://js.zohostatic.com/db/v2_zr/compressed/ZRScreenGrabber.91096203ec72eee9f013213012564f2a.js';
+mjs['ZDBChartSetting']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBChartSettings.771ce4e65aaa30d7d4318e083ce33c60.js';
+mjs['ZDBAnalysisEditList']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBAnalysisEditMode.379cff2a4a87affdab3d3e27f400082d.js';
+mjs['ZDBEmbedFeedback']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBEmbedFeedback.69e8e4a8378f81822388fdfb5f339687.js';
+mjs['ZAVMFilterList']='https://js.zohostatic.com/db/v2_zr/compressed/ZAVMFilterCompressed.c889ad9c246bac112c8dbb85cff29499.js';
+mjs['ZRAjaxAPIList']='https://js.zohostatic.com/db/v2_zr/compressed/ZRAjaxAPI.0f4d6b699cc31519d8c575e5d4ef3b76.js';
+mjs['ZRPricingList']='https://js.zohostatic.com/db/v2_zr/compressed/ZRPricingCompressed.2630238dd8130a945860be83c4dd4b26.js';
+mjs['ZRPricingList_New']='https://js.zohostatic.com/db/v2_zr/compressed/ZRPricing_New.js';
+mjs['WidgetEditList']='https://js.zohostatic.com/db/v2_zr/compressed/WidgetEdit.db70c2f839a0b8fd84530644bcf311d4.js';
+mjs['WidgetViewList']='https://js.zohostatic.com/db/v2_zr/compressed/WidgetView.c71efef868a2addf7d1c13cdeb309335.js';
+mjs['ZAAnalysisFields']='https://js.zohostatic.com/db/v2_zr/compressed/ZAAnalysisFields.717503529e07a92dd7de19d90e7a2f21.js';
+mjs['ZRQueryEditor']='https://js.zohostatic.com/db/v2_zr/compressed/ZRQueryEditor.019b4dbc1b4b0a734f6953c257ac4233.js';
+mjs['ERDGJS']='https://js.zohostatic.com/db/v2_zr/compressed/ZRErdg.5192dcf332ad936e20e75d54498dd279.js';
+mjs['ZRJSChartsList']='https://js.zohostatic.com/db/v2_zr/compressed/ZRJSCharts.b91a8e10fdecd3b17381cab7d0c14b7a.js';
+mjs['ZRDashboardView']='https://js.zohostatic.com/db/v2_zr/compressed/ZRDashboardViewStyles.3564618385cb0c5c115ab8e0a0f30162.js';
+mjs['ZRDashboardViewNEW']='https://js.zohostatic.com/db/v2_zr/compressed/ZRDashboardViewNEW.425b6ec1a905e88909814a5ef633f81f.js';
+mjs['ZRCustomSort']='https://js.zohostatic.com/db/v2_zr/compressed/ZRCustomSort.cf4ec34b36127c0d29b2929b5faf8032.js';
+mjs['ZDBFormulaSuggestion']='https://js.zohostatic.com/db/v2_zr/compressed/ZDBFormulaSuggestion.f6a7d88d1ea406eab7b91adf4b10001a.js';
+mjs['ZRRemoteDB']='https://js.zohostatic.com/db/v2_zr/compressed/ZRRemoteDB.da00f2393d1353b29561a76ac342e453.js';
+mjs['ZRIntegConnectors']='https://js.zohostatic.com/db/v2_zr/compressed/ZRIntegConnectors.602094fd51fd804254e7a9c949f03b93.js';
+mjs['ZRSImport_NEW']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSImport_NEW.8fd93103d0a7549ebe2069d529fc6f18.js';
+mjs['ZRSHome_TEMPLATE']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSHome_TEMPLATE.6af1d3498ec757c51c2b0582d5da1c1a.js';
+mjs['ZROPSettings_TEMPLATE']='https://js.zohostatic.com/db/v2_zr/compressed/ZROPSettings_TEMPLATE.054166ae18c1fb73badf7f796deff6dd.js';
+mjs['ZRSGSDlg']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSGSDlg.d531b32cb7749243409cc5df1e6dcc74.js';
+mjs['ZRSDatasheet_TEMPLATE']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSDatasheet_TEMPLATE.d38526b1db79a7511e57db98b832996a.js';
+mjs['ChartTPVendors']='https://js.zohostatic.com/db/v2_zr/compressed/ZRChartVendors.c4cbc28d4f4cfd27d9eb5122fa9ea2f2.js';
+mjs['TPVendors']='https://js.zohostatic.com/db/v2_zr/compressed/ZRVendors.7a6dd8eaeac8b7204f48a1f2c4b31cc0.js';
+mjs['ZRSZIA']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSZia.5f6a12bc3c54978e0a445329313bfff4.js';
+mjs['ZRProductTour']='https://js.zohostatic.com/db/v2_zr/compressed/ZRProductTour.423ff01363635bf1886d0ef606529c95.js';
+mjs['JS_SHARING_MODULE']='https://js.zohostatic.com/db/v2_zr/compressed/SharingModule.36faa73aac3bca7b83f3d40a6c79c5a5.js';
+mjs['Alert']='https://js.zohostatic.com/db/v2_zr/compressed/Alert.ac13a03114865aaa39d547a5ad1372a2.js';
+mjs['ZRCustomGeocodeList']='https://js.zohostatic.com/db/v2_zr/compressed/ZRCustomGeocode.d5953b850c21a42de92585058e83cbb6.js';
+mjs['ZRSHomeDashboard']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSHomeDashboard.6672217c644a7869933dc0f789986f70.js';
+mjs['ZDBDashSetting']='https://js.zohostatic.com/db/v2_zr/compressed/DashSettings.b71c0e397f0ac83b79f19d47feb1234c.js';
+mjs['ZRSHomeDashboard_TEMPLATE']='https://js.zohostatic.com/db/v2_zr/compressed/ZRSHomeDashboard_TEMPLATE.39b6ae3d5960e8bcd7ea096b438375e9.js';
+mjs['ZRCommenting']='https://js.zohostatic.com/db/v2_zr/compressed/ZRCommenting.bd46b12c294b649d6c56c00fb9b6ecca.js';
+mjs['ViewFormula']='https://js.zohostatic.com/db/v2_zr/compressed/ViewFormula.ed0967f92fb0a4a7fc54e80c80b993a3.js';
+mjs['legend/js/ZDBColorPalette.js']='https://js.zohostatic.com/db/v2_zr/legend/js/ZDBColorPalette.0a2d781d558db509ed477c00e373bf80.js';mjs['zdbjs/analysisedit/ZDBFieldsView.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/analysisedit/ZDBFieldsView.3563857ef4499a7d8ae553ab0ba13df9.js';mjs['zdbjs/analysisedit/ZDBAnalysisFilter.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/analysisedit/ZDBAnalysisFilter.1df2bea06c0813e8d5c078cb982cbcc3.js';mjs['zdbjs/gridcore/ZRScroller.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/gridcore/ZRScroller.65f9c825d46a21b688d7f67e03b5b85a.js';mjs['backup/js/ZDBBackupUtil.js']='https://js.zohostatic.com/db/v2_zr/backup/js/ZDBBackupUtil.97751071b552602264f83b4468fdade2.js';mjs['connector/admin/js/ZRConnectorAdmin.js']='https://js.zohostatic.com/db/v2_zr/connector/admin/js/ZRConnectorAdmin.f4fc342b382ebc8d1fb087117d0a1179.js';mjs['dashboard/js/ZDBDashboardEdit.js']='https://js.zohostatic.com/db/v2_zr/dashboard/js/ZDBDashboardEdit.d41d8cd98f00b204e9800998ecf8427e.js';mjs['dashboard/js/ZDBTextEditor.js']='https://js.zohostatic.com/db/v2_zr/dashboard/js/ZDBTextEditor.0b334c7c6c8cea7c87764c158cbf801f.js';mjs['dashboard/theme/js/ZDBDThemeEditor.js']='https://js.zohostatic.com/db/v2_zr/dashboard/theme/js/ZDBDThemeEditor.bb559186704b59c1880e5c330f453bfb.js';mjs['zdbjs/react/ZRDashThemePalette.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRDashThemePalette.c3bd20384a6e2937ab17faab70de0844.js';mjs['data/ZDBPromptEdit.js']='https://js.zohostatic.com/db/v2_zr/data/ZDBPromptEdit.d41d8cd98f00b204e9800998ecf8427e.js';mjs['data/ZDBPromptUI.js']='https://js.zohostatic.com/db/v2_zr/data/ZDBPromptUI.d41d8cd98f00b204e9800998ecf8427e.js';mjs['domain/js/DomainAdminActions.js']='https://js.zohostatic.com/db/v2_zr/domain/js/DomainAdminActions.6950040d2cdff76e56391fbbc22069bd.js';mjs['domain/js/ZDBDMMultiUserSignUp.js']='https://js.zohostatic.com/db/v2_zr/domain/js/ZDBDMMultiUserSignUp.5d64c396395bdb13da83668075139e5a.js';mjs['domain/js/ZDBDomainRebrand.js']='https://js.zohostatic.com/db/v2_zr/domain/js/ZDBDomainRebrand.c396c470833f9b3fb02662acf3bd614b.js';mjs['find/js/ZDBFindAndReplace.js']='https://js.zohostatic.com/db/v2_zr/find/js/ZDBFindAndReplace.3b305db1db0ce812117638559183ff30.js';mjs['format/js/ZDBConditionalFmt.js']='https://js.zohostatic.com/db/v2_zr/format/js/ZDBConditionalFmt.a9f580d554cfd192e889da9281feabb7.js';mjs['format/js/ZDBSheetFormatExtn.js']='https://js.zohostatic.com/db/v2_zr/format/js/ZDBSheetFormatExtn.65db011ead0e3c7ad9543b519711b536.js';mjs['framework/javascript/IncludeJS.js']='https://js.zohostatic.com/db/v2_zr/framework/javascript/IncludeJS.807ddb859157bd4274713d067f71daae.js';mjs['import/js/ZDBImport.js']='https://js.zohostatic.com/db/v2_zr/import/js/ZDBImport.a5b415eebf568d33fac3360a494086a8.js';mjs['import/js/ZDBImportSchedule.js']='https://js.zohostatic.com/db/v2_zr/import/js/ZDBImportSchedule.488e8f48d10be3b9349b464db4c7366d.js';mjs['integ/js/ZDBExtInteg.js']='https://js.zohostatic.com/db/v2_zr/integ/js/ZDBExtInteg.18dcf67a6a2f77565f24e41e7b591aee.js';mjs['integ/js/ZDBSheetInteg.js']='https://js.zohostatic.com/db/v2_zr/integ/js/ZDBSheetInteg.3b6d3f83a9d40259730b47502448949a.js';mjs['integ/ReportInteg.js']='https://js.zohostatic.com/db/v2_zr/integ/ReportInteg.d41d8cd98f00b204e9800998ecf8427e.js';mjs['main/ZRSampleDatabases.js']='https://js.zohostatic.com/db/v2_zr/main/ZRSampleDatabases.409423b6e1f5600a6be5391d2f6990d6.js';mjs['main/js/ZRPublicDB.js']='https://js.zohostatic.com/db/v2_zr/main/js/ZRPublicDB.c46ea34456a85b87299e91f13b674f26.js';mjs['pricing/js/ZDBPaymentsAdmin.js']='https://js.zohostatic.com/db/v2_zr/pricing/js/ZDBPaymentsAdmin.adb9cb8cd0ee7b0e9c4086ed1efad6fa.js';mjs['projects/js/ZDBProjectsAdmin.js']='https://js.zohostatic.com/db/v2_zr/projects/js/ZDBProjectsAdmin.fdb93638aca83fafb112afb0b89e3807.js';mjs['publish/js/ZDBPublish.js']='https://js.zohostatic.com/db/v2_zr/publish/js/ZDBPublish.3e769a1feca0d13f9573cb314b73d2fb.js';mjs['salesforce/js/ZDBSFAdmin.js']='https://js.zohostatic.com/db/v2_zr/salesforce/js/ZDBSFAdmin.fce53ed059d9c09eb90bc49516f6e855.js';mjs['slideshow/js/ZDBSlideshow.js']='https://js.zohostatic.com/db/v2_zr/slideshow/js/ZDBSlideshow.0f36cedb702d5cb1d07f7d1705032212.js';mjs['split/js/ZDBSplit.js']='https://js.zohostatic.com/db/v2_zr/split/js/ZDBSplit.6c4224ac405a47689003ad21b09e009c.js';mjs['sqltable/js/ZDBQTDependencyList.js']='https://js.zohostatic.com/db/v2_zr/sqltable/js/ZDBQTDependencyList.438d4d3b8f296a6dbd9c067176e6143c.js';mjs['sqltable/js/ZDBSQLMetaDataChange.js']='https://js.zohostatic.com/db/v2_zr/sqltable/js/ZDBSQLMetaDataChange.670e2089fb795ddc8183b4b01be3c443.js';mjs['template/js/ZDBTemplate.js']='https://js.zohostatic.com/db/v2_zr/template/js/ZDBTemplate.092d1fb595305fc4cae873d70abe2522.js';mjs['userfixes/js/ZDBIPConfig.js']='https://js.zohostatic.com/db/v2_zr/userfixes/js/ZDBIPConfig.7a6d57d90fd4012172c2d4c8b84b6f03.js';mjs['zdbjs/analysisedit/ZDBCustomProp.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/analysisedit/ZDBCustomProp.d41d8cd98f00b204e9800998ecf8427e.js';mjs['zdbjs/autogen/ZDBSampleViews.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/autogen/ZDBSampleViews.7859e71d4463615155cc9a4de25c5af8.js';mjs['zdbjs/customsort/ZACustSortDefunctData.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/customsort/ZACustSortDefunctData.9d7ada7acb27e3194ce1a3ce4e204ff6.js';mjs['zdbjs/db/ZDBListDB.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/db/ZDBListDB.43b992389816380f33837b7a4e8f224f.js';mjs['zdbjs/dbconnectivity/ZDBDBConnection.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/dbconnectivity/ZDBDBConnection.a14f7cf935a877e2a981d32345efe6ff.js';mjs['zdbjs/ios/touchbutton.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/ios/touchbutton.45df1082a50100aa7ded2a657a6efd49.js';mjs['zdbjs/lazyload/ZDBLazyLoadFuncMap.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/lazyload/ZDBLazyLoadFuncMap.5950577fd49ffa3a87413a7122842fb4.js';mjs['zdbjs/menu/ZRMenu.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/menu/ZRMenu.0baa064f843f39e19b1cab71ede85b2d.js';mjs['zdbjs/rangesettings/ZARangeEdit.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/rangesettings/ZARangeEdit.24d2eed27cbf0f4d6a9c706439a1b416.js';mjs['zdbjs/redis/RedisPage.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/redis/RedisPage.15587c5b0db3d83341e4facd6d2c9663.js';mjs['zdbjs/sort/ZAChartSortMenu.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/sort/ZAChartSortMenu.a4502fb28f1750f3dbdee8a2559bfc97.js';mjs['zdbjs/tabledesign/ZDBDesignGrid.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/tabledesign/ZDBDesignGrid.0945547b3ba4f0544b416567a039b59f.js';mjs['zdbjs/tabledesign/ZDBGridOper.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/tabledesign/ZDBGridOper.17076c22fc682c427b79920e91e687a7.js';mjs['zdbjs/ui/ZDBTrash.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/ui/ZDBTrash.84bfc43c5fb14ac72d8e30f5e70976e7.js';mjs['zdbjs/vmfilter/ZAVMFilterEdit.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/vmfilter/ZAVMFilterEdit.f05aefa390d738bf62f5ab4e279f777d.js';mjs['zdbjs/vmfilter/ZAVMFilterEditUI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/vmfilter/ZAVMFilterEditUI.be0cf53167e8bece3b3590b0e3e03977.js';mjs['mobile/iphone/ZRSIphone.js']='https://js.zohostatic.com/db/v2_zr/mobile/iphone/ZRSIphone.c6c8bd2be188f8979aadb932ba1769a0.js';mjs['dashboard/js/ZDBDashboardMobile.js']='https://js.zohostatic.com/db/v2_zr/dashboard/js/ZDBDashboardMobile.e290948f4d030eafdacd383058a2d763.js';mjs['zdbjs/react/ZRDBSettings.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRDBSettings.c4d56d53c8ecf6d1622fa9747e5e9b20.js';mjs['zdbjs/react/ZRCopyAndRenameDialog.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRCopyAndRenameDialog.6ca99437245f53d5e760618a9bcc5580.js';mjs['zdbjs/react/ZRBackupDialog.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRBackupDialog.1eb3cdeefc19642c737a21cd82ec97d6.js';mjs['zdbjs/ui/ZRSalesIq.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/ui/ZRSalesIq.58ca850cd320635ffd430488da1260ca.js';mjs['zdbjs/react/ZRDBVariables.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRDBVariables.a285435734b2aca838cbafb43a98ee8b.js';mjs['zdbjs/react/ZRDBColorModel.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRDBColorModel.cab1878ad18a4e4477e9f76aded4bdae.js';mjs['zdbjs/react/ZRDBGridTheme.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRDBGridTheme.8f1051f6db5a1aa216a2c4b5fdc484af.js';mjs['zdbjs/analysisview/ZDBOtherChart.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/analysisview/ZDBOtherChart.a40acf7844f8582767d43f8fd5cf3c51.js';mjs['zdbjs/react/ZRUsersSettings.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRUsersSettings.78e8bfc81823245cbd18b7df7c42cd7e.js';mjs['zdbjs/react/ZRResourcesSettings.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRResourcesSettings.357dae5d909c298c5d818a0d0b1d6e3c.js';mjs['zdbjs/react/ZRSlideshow.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRSlideshow.3e5027d0352956eeb23b52c1e4d461c9.js';mjs['zdbjs/clouddbjs/CloudDBPage.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/clouddbjs/CloudDBPage.6d60f6a96f72aeb32327f4736660062d.js';mjs['zdbjs/home/ZRSHomeUtil.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/home/ZRSHomeUtil.b3352fd29a7371a60df63dde853d9b06.js';mjs['zdbjs/db/ImportSample.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/db/ImportSample.3103e780132530bd1f3043ed23a734b2.js';mjs['thirdparty/js/intuit.ipp.anywhere-1.3.5.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/intuit.ipp.anywhere-1.3.5.2e4c1eacc19f7600f9bc2370825cce86.js';mjs['thirdparty/js/react-with-addons.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/react-with-addons.eebffb53001e7c27161a999a5dd7f0a6.js';mjs['thirdparty/js/react-with-addons.min.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/react-with-addons.min.04b1b7a697fca3a515133f30a8c57aa1.js';mjs['thirdparty/js/react.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/react.01d24546f105bf491378241a256f5937.js';mjs['thirdparty/js/react.min.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/react.min.c729daecb8c864a0108d0af778bb24a1.js';mjs['thirdparty/js/react-dom.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/react-dom.749a9cf5de4f43f56872dc790bf3809f.js';mjs['thirdparty/js/react-dom.min.js']='https://js.zohostatic.com/db/v2_zr/thirdparty/js/react-dom.min.26c85b89a466eab1c48b998293176f11.js';mjs['zdbjs/react/ZRBaseComponents.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/react/ZRBaseComponents.afee4b9fc71af1b4121950c5cba3fe62.js';mjs['zdbjs/grid/ZDBCommunication.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/grid/ZDBCommunication.e6f5be55e56f482ed5fe0c11f85c1fcf.js';mjs['pricing/js/ZDBPricingAPILogs.js']='https://js.zohostatic.com/db/v2_zr/pricing/js/ZDBPricingAPILogs.3b177e73c3c21c588183ef6a376d29e4.js';mjs['zdbjs/odatajs/ODataPage.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/odatajs/ODataPage.e8a4f9841e34c0231ee82d3c72b5106a.js';mjs['zdbjs/ui/GlobalNotification.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/ui/GlobalNotification.7363389397dccbd53c0184487b250416.js';mjs['import/js/ZDBImportMailAttachment.js']='https://js.zohostatic.com/db/v2_zr/import/js/ZDBImportMailAttachment.a22165cdf71acc5f7255b732c9cfeba9.js';mjs['security/js/ZDBAutoFillContacts.js']='https://js.zohostatic.com/db/v2_zr/security/js/ZDBAutoFillContacts.c954c709392d6f56aaeec3ec35d2211a.js';mjs['security/js/ZDBSecuritySettings.js']='https://js.zohostatic.com/db/v2_zr/security/js/ZDBSecuritySettings.bc5bae503f4be6b3058ac0bae1f33af0.js';mjs['dashboard/js/DashboardAdapterUtils.js']='https://js.zohostatic.com/db/v2_zr/dashboard/js/DashboardAdapterUtils.ba6cd21552bf906ba6fd689614e6c633.js';mjs['dashboard/js/ZRDashboardAPI.js']='https://js.zohostatic.com/db/v2_zr/dashboard/js/ZRDashboardAPI.8abbaed73762383f4e57a9f62826166e.js';mjs['dashboard/js/ZRDashboard.js']='https://js.zohostatic.com/db/v2_zr/dashboard/js/ZRDashboard.7852ac1c36fc3cb08a3360954bb3e3ac.js';mjs['main/js/ZRGettingStarted_new.js']='https://js.zohostatic.com/db/v2_zr/main/js/ZRGettingStarted_new.56491cb7b161ad2c835bc6c51502aa29.js';mjs['zdbjs/header/ZRFeedbackDlg.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/header/ZRFeedbackDlg.48b2488ccf82e8ddcb9b1ed7ca4e0bb6.js';mjs['zdbjs/header/ZRSFeedbackHandler.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/header/ZRSFeedbackHandler.16979df492dbaa7b8c85dff5a521a51c.js';mjs['zdbjs/threshold/TholdRelTables.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/threshold/TholdRelTables.496ae423430cdaa2f9ad48cd5fbefbe7.js';mjs['zdbjs/oauth/OAuthInteg.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/oauth/OAuthInteg.a6077257f7ba72f748b52fbf93fefb61.js';mjs['zdbjs/threshold/TholdRelTables.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/threshold/TholdRelTables.496ae423430cdaa2f9ad48cd5fbefbe7.js';mjs['zdbjs/jschart/mapbox-gl.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/jschart/mapbox-gl.7e6ed06d765a5ce03e2d71e1b7437d15.js';mjs['zdbjs/jschart/turf.min.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/jschart/turf.min.ff97241aab7a6a17e4488aaad8b5fbc7.js';mjs['zdbjs/jschart/topojson.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/jschart/topojson.f7c5aca58ef497b7839d6d2da7b7fb8a.js';mjs['zdbjs/jschart/leaflet.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/jschart/leaflet.644f518fe6b53fb93f7a6e2c3c85f911.js';mjs['zdbjs/zomoji/zomoji.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/zomoji/zomoji.c72216892812ee51a268a98d00d2e7ec.js';mjs['userfixes/js/ZDBPathConfig.js']='https://js.zohostatic.com/db/v2_zr/userfixes/js/ZDBPathConfig.d266998e6423d0aabad6950130820de5.js';mjs['zdbjs/ZRSCommonConnListing.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/ZRSCommonConnListing.e4080e849cbc5aec7865624337afa344.js';mjs['zdbjs/analysisview/ZDBAddLookup.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/analysisview/ZDBAddLookup.d7b7570a586017dfb734c8085153c223.js';
+mjs['zdbjs/geojsofiles/WORLD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/WORLD.9ac01fd1d33bea27e398d8c73c1c25ac.js';mjs['zdbjs/geojsofiles/WORLD_IND.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/WORLD_IND.2bd05162abad8db204b0328bc9152c4c.js';mjs['zdbjs/geojsofiles/WORLD_STATES.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/WORLD_STATES.5be099ba954e1557987624b4408745fa.js';mjs['zdbjs/geojsofiles/country_BN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BN.7833101c06fa847fa6fc7a3c7951236b.js';mjs['zdbjs/geojsofiles/country_CZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CZ.7946f8b42a5da0799a2197f682a45b67.js';mjs['zdbjs/geojsofiles/country_GM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GM.87a80741848b6966aa5992617c635f76.js';mjs['zdbjs/geojsofiles/country_JP.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_JP.bd1b6df9ea9592ca4872496c32edb694.js';mjs['zdbjs/geojsofiles/country_MD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MD.85ef562b1275d055abc680acc27b2703.js';mjs['zdbjs/geojsofiles/country_NR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NR.30d5cc61479d701caae8957aef3a587f.js';mjs['zdbjs/geojsofiles/country_SG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SG.fe7dac5e19c639a6596fa20c0c18c776.js';mjs['zdbjs/geojsofiles/country_TW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TW.5df540cb148690b8d2b7c489d51ff68f.js';mjs['zdbjs/geojsofiles/country_BO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BO.12f1c7d204b3b1d7f695457fccc7d718.js';mjs['zdbjs/geojsofiles/country_DE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_DE.b520dca6a750120f0cd30dcf727d5beb.js';mjs['zdbjs/geojsofiles/country_GN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GN.31323e1c09978f95353d054a3980e1ad.js';mjs['zdbjs/geojsofiles/country_KE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KE.1236fba113caf394107c9b25fe389aa2.js';mjs['zdbjs/geojsofiles/country_ME.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ME.9dd1ea495a92e46a45f92dce379cffb7.js';mjs['zdbjs/geojsofiles/country_NZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NZ.b946ca6c7fd4203287cccfbeafbb6f50.js';mjs['zdbjs/geojsofiles/country_SI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SI.cfadc125b6b8f00035858fcb2a0544be.js';mjs['zdbjs/geojsofiles/country_TZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TZ.705db4c149cda8be5e2af902073582fb.js';mjs['zdbjs/geojsofiles/country_BR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BR.368e3695cf86e6625df37f4d172e7be3.js';mjs['zdbjs/geojsofiles/country_DJ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_DJ.7fa19045aae6f29a7222a1cfcee01593.js';mjs['zdbjs/geojsofiles/country_GQ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GQ.ac6ac190b9a24a314302601b679faa2f.js';mjs['zdbjs/geojsofiles/country_KG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KG.52644ecd3322f309ef913d1c10882339.js';mjs['zdbjs/geojsofiles/country_MG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MG.ad6b37ea3afe315190b2ef899ae8eabb.js';mjs['zdbjs/geojsofiles/country_OM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_OM.0ba8e0ec166def391a3832af4c3e09f4.js';mjs['zdbjs/geojsofiles/country_SK.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SK.fc6713af06159f885111ec6a86f59341.js';mjs['zdbjs/geojsofiles/country_UA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_UA.3f281f894211066df5fc924aec8da157.js';mjs['zdbjs/geojsofiles/country_AD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AD.f6fe39ac6ebd0f767b218556be022baa.js';mjs['zdbjs/geojsofiles/country_BS.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BS.b3e18a9d7a3f6175a0a8469e4298a90e.js';mjs['zdbjs/geojsofiles/country_DK.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_DK.fdd03f75214a81200057e8c6908e7fc1.js';mjs['zdbjs/geojsofiles/country_GR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GR.07f646852ccc6456f8ebf03e0fb24d41.js';mjs['zdbjs/geojsofiles/country_KH.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KH.61dbc72ff57075b3e835fa077c79f6fd.js';mjs['zdbjs/geojsofiles/country_MK.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MK.5cbd3b318fa78def59af8a956ca27965.js';mjs['zdbjs/geojsofiles/country_PA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PA.fd33cf57fecd399b00d4721fae44067e.js';mjs['zdbjs/geojsofiles/country_SL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SL.cc4760799cd4121169d7f73f6c55ebca.js';mjs['zdbjs/geojsofiles/country_UG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_UG.6fe1808cb5b1ac6e14a1d2fee2d3a665.js';mjs['zdbjs/geojsofiles/country_AE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AE.2a5ef843825233f01872d2d1b2803b84.js';mjs['zdbjs/geojsofiles/country_BT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BT.90db4552ce658c181b0f82c28554a63f.js';mjs['zdbjs/geojsofiles/country_DM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_DM.fc871a9814edfb23d21eca4d658a6fcd.js';mjs['zdbjs/geojsofiles/country_GT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GT.74b58f2fa0c23e4d3488e63cdd0d332a.js';mjs['zdbjs/geojsofiles/country_KM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KM.6d2d2cbfa95a736d973610972cd1d9fc.js';mjs['zdbjs/geojsofiles/country_ML.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ML.c99ff1e323ac7f973fe499813c60a211.js';mjs['zdbjs/geojsofiles/country_PE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PE.99a7501e42ca029fc2ce484e5f89334b.js';mjs['zdbjs/geojsofiles/country_SM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SM.138f3ab0264465e9d906b7f20d3f7959.js';mjs['zdbjs/geojsofiles/country_US.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_US.98eaebca2af45a77b0a7c094cf83c6a2.js';mjs['zdbjs/geojsofiles/country_AF.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AF.8bdcda8cee0ab1efe1bbe4be8a7c6d87.js';mjs['zdbjs/geojsofiles/country_BW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BW.c4979e43376b73624086938f5bb4feeb.js';mjs['zdbjs/geojsofiles/country_DO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_DO.d11b67db1484159ab4a959425401dabb.js';mjs['zdbjs/geojsofiles/country_GW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GW.00e4e93804ee9e4dc9b6ceeeca27c176.js';mjs['zdbjs/geojsofiles/country_KN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KN.1a37d58530d4420f488d64daf0d22dca.js';mjs['zdbjs/geojsofiles/country_MM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MM.f6456a544bcd740739a3c372ef2b3ef7.js';mjs['zdbjs/geojsofiles/country_PG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PG.3a6e981375c4a75490ac1b0b3f6b4200.js';mjs['zdbjs/geojsofiles/country_SN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SN.478733434dff6dda4509c88b751ccad1.js';mjs['zdbjs/geojsofiles/country_UY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_UY.b9a178f21e47e2d9ac440150a2199350.js';mjs['zdbjs/geojsofiles/country_AG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AG.6ce0c397704238c9642abd97bf7f87bf.js';mjs['zdbjs/geojsofiles/country_BY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BY.105ac53f829892c3eebfb4083b4c1887.js';mjs['zdbjs/geojsofiles/country_DZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_DZ.cd68a116decd454769bdacf21902dee3.js';mjs['zdbjs/geojsofiles/country_GY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GY.daa86bd843018bc6a97668d3e08542b5.js';mjs['zdbjs/geojsofiles/country_KP.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KP.dc83cccdf54afa0daa395d7582ce55b0.js';mjs['zdbjs/geojsofiles/country_MN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MN.48d4266b7946c1da8412a4485d88f565.js';mjs['zdbjs/geojsofiles/country_PH.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PH.76d5ba50a5acf0bdf041775b3d0158d2.js';mjs['zdbjs/geojsofiles/country_SO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SO.9f5b32bf2d42ddcba8581303287866a5.js';mjs['zdbjs/geojsofiles/country_UZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_UZ.e439ef72188bd6ff312c59190caaf6aa.js';mjs['zdbjs/geojsofiles/country_AL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AL.b9eade73b24651c06407ceaf4d29b37a.js';mjs['zdbjs/geojsofiles/country_BZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BZ.91664f1f15b03c19aae7b4e26b77fe2d.js';mjs['zdbjs/geojsofiles/country_EC.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_EC.a3fc7a69c2492b7b37ca1272b6aaafd9.js';mjs['zdbjs/geojsofiles/country_HN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_HN.f9dc249cd6d80f3e635e78e6dc57ceae.js';mjs['zdbjs/geojsofiles/country_KR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KR.109fcdef3ffa6db98ec96fc4c40ffcfc.js';mjs['zdbjs/geojsofiles/country_MR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MR.ac6a68f7e33444edeb474366faa94d45.js';mjs['zdbjs/geojsofiles/country_PK.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PK.2d409dc772b741203e762d7c12afb701.js';mjs['zdbjs/geojsofiles/country_SR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SR.312b6f583c13b9870141b7b50dfbcd98.js';mjs['zdbjs/geojsofiles/country_VC.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_VC.90591f95c8f5f3ab98c1d6789fc6ff57.js';mjs['zdbjs/geojsofiles/country_AM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AM.d54407642a64fc77906a12ef27a07a99.js';mjs['zdbjs/geojsofiles/country_CA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CA.2c9a9211f587fbfb306dcd6b4bb225a8.js';mjs['zdbjs/geojsofiles/country_EE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_EE.b7ce54ec37012ae81838e73c2849d664.js';mjs['zdbjs/geojsofiles/country_HR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_HR.06c8be231239d24f244bfb7dd518a571.js';mjs['zdbjs/geojsofiles/country_KW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KW.a629fd5a0dd5caa1a924d3a2805d066d.js';mjs['zdbjs/geojsofiles/country_MT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MT.0b08ddaefba0d8511d23a7df95544c77.js';mjs['zdbjs/geojsofiles/country_PL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PL.9d294de71158dc12e5e45b402839717a.js';mjs['zdbjs/geojsofiles/country_ST.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ST.0fdd274c91a1d291af9abbab0a786667.js';mjs['zdbjs/geojsofiles/country_VE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_VE.0a23c7c0c8568f55f3dd2f24645cb768.js';mjs['zdbjs/geojsofiles/country_AO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AO.922181b7eb515bfb882bede3ac49ebcb.js';mjs['zdbjs/geojsofiles/country_CD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CD.4c0fa32a85c1fdd49edd2b97c59ed7d9.js';mjs['zdbjs/geojsofiles/country_EG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_EG.8b17c98f45d2d9448cded38bb83ae035.js';mjs['zdbjs/geojsofiles/country_HT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_HT.053783703d49a82f3f683d5f1d3cbb43.js';mjs['zdbjs/geojsofiles/country_KZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_KZ.98861e98614cbae62ebfaa55c38f409a.js';mjs['zdbjs/geojsofiles/country_MU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MU.e3ee5dd3bf29f5cfd5884b79a9be6c03.js';mjs['zdbjs/geojsofiles/country_PT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PT.4cdd0568a74d5b72e1bf359fc3e507fc.js';mjs['zdbjs/geojsofiles/country_SV.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SV.7a125d6ed4bea14a14c02ae2fab1156d.js';mjs['zdbjs/geojsofiles/country_VN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_VN.1ca016918f0b936dad1483ec7978cf95.js';mjs['zdbjs/geojsofiles/country_AR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AR.fa1b25691a73a19e531b2fb9df107357.js';mjs['zdbjs/geojsofiles/country_CF.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CF.0ce630d8096f1b20b02c9e478a4d3cd4.js';mjs['zdbjs/geojsofiles/country_ER.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ER.0abd2623f7795a669341a8137429359d.js';mjs['zdbjs/geojsofiles/country_HU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_HU.9b71a808b809fc32c1b5b3fdc0989588.js';mjs['zdbjs/geojsofiles/country_LA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LA.ffdcedacae5a2da2af1a75641017215a.js';mjs['zdbjs/geojsofiles/country_MV.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MV.436bd0de498df8c3b3bbdf8b0f4026c8.js';mjs['zdbjs/geojsofiles/country_PW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PW.68fef9ddf033cc38e40c021ee3fea584.js';mjs['zdbjs/geojsofiles/country_SY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SY.29b838e79f3cede1cf276b1bee712df5.js';mjs['zdbjs/geojsofiles/country_VU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_VU.f3bd06ecd471f1bf53957e12339c99a2.js';mjs['zdbjs/geojsofiles/country_AT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AT.28f17d24ff8c30c62d7ca166e13ed9a2.js';mjs['zdbjs/geojsofiles/country_CG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CG.8e7bf52eebaf5740877689bcc2944cab.js';mjs['zdbjs/geojsofiles/country_ES.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ES.f1f93c4b507256b8391a5b0d42eb23c5.js';mjs['zdbjs/geojsofiles/country_ID.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ID.1bb341bfcf2283e92fa98e2162154744.js';mjs['zdbjs/geojsofiles/country_LB.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LB.29f39e791d09b328bae64628eed14fcd.js';mjs['zdbjs/geojsofiles/country_MW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MW.1bd18a136713987937691524a6ef2a2d.js';mjs['zdbjs/geojsofiles/country_PY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_PY.e21fa5a2ed07aef6b3edfb97fe6ff1bb.js';mjs['zdbjs/geojsofiles/country_SZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SZ.e89eb0a760d37d82928ccf96b67201ae.js';mjs['zdbjs/geojsofiles/country_WS.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_WS.34a28b169cf4aa907bdaa5d24b06a896.js';mjs['zdbjs/geojsofiles/country_AU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AU.0357866381c12e9c6cc4b7d9abce6547.js';mjs['zdbjs/geojsofiles/country_CH.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CH.cc44d107a491cf328ac2cf066cf35d32.js';mjs['zdbjs/geojsofiles/country_ET.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ET.f2e2efc66104afd69bd55c461805b9a1.js';mjs['zdbjs/geojsofiles/country_IE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IE.36a4389af1268d4526fdb935514e1548.js';mjs['zdbjs/geojsofiles/country_LC.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LC.7f8e40513dab9f98b5c477d12c409a3e.js';mjs['zdbjs/geojsofiles/country_MX.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MX.ced8e2e34318a9bf04cc9256bae8c6eb.js';mjs['zdbjs/geojsofiles/country_QA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_QA.95dd534b5ddff4b9dc2e6b238ff6c49b.js';mjs['zdbjs/geojsofiles/country_TD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TD.39d883fc862f4812609ea1201744d6b0.js';mjs['zdbjs/geojsofiles/country_YE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_YE.e0a56c010ec18058836dc54f5dacbdb9.js';mjs['zdbjs/geojsofiles/country_AZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_AZ.79f539f38dff920a735868f052ecd4c7.js';mjs['zdbjs/geojsofiles/country_CI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CI.fd0844f583cf8c7462c8b5cccafeda0e.js';mjs['zdbjs/geojsofiles/country_FI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_FI.614791c7a7b28777a38cd7f3d78206e0.js';mjs['zdbjs/geojsofiles/country_IL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IL.0e2c58534486dd45684ee03b025100fc.js';mjs['zdbjs/geojsofiles/country_LI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LI.12d2b2002a218c7beae5a2a5820ab350.js';mjs['zdbjs/geojsofiles/country_MY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MY.b5235692237006f08b9a550a47b4f8b9.js';mjs['zdbjs/geojsofiles/country_RO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_RO.c6f7078e3fbef5407672e84843f594af.js';mjs['zdbjs/geojsofiles/country_TG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TG.88a3f0f2d134cfadc6d7608c23f69572.js';mjs['zdbjs/geojsofiles/country_ZA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ZA.d03c4b50bed57b03d0a4d452c0834dc0.js';mjs['zdbjs/geojsofiles/country_BA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BA.a2f76592e315c3ce8bacd0d52c5c5133.js';mjs['zdbjs/geojsofiles/country_CL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CL.b721905484ca78d732195566be2500b0.js';mjs['zdbjs/geojsofiles/country_FJ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_FJ.4edf66b36c78f330a07e51ccf8326036.js';mjs['zdbjs/geojsofiles/country_IN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IN.08561dc92788f9e84b03f57e17a6e78e.js';mjs['zdbjs/geojsofiles/country_LK.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LK.8a84d3d2d9a8ef6f0cee96e15f964787.js';mjs['zdbjs/geojsofiles/country_MZ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MZ.2184c1af5e446a5566f3857e48da3f33.js';mjs['zdbjs/geojsofiles/country_RS.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_RS.e4fb65d28c09c565d45b57a086dae804.js';mjs['zdbjs/geojsofiles/country_TH.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TH.8739d2733a05739b0f18252121af67ce.js';mjs['zdbjs/geojsofiles/country_ZM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ZM.c2028a0c881898eb6e9d5c0b44326ac3.js';mjs['zdbjs/geojsofiles/country_BB.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BB.50fbcb329fde5f048f26dd4c0a5dbde0.js';mjs['zdbjs/geojsofiles/country_CM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CM.9b6498dba8e8d3bf311282382ac99a8f.js';mjs['zdbjs/geojsofiles/country_FM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_FM.b37536dfb3159f261b72414966b18348.js';mjs['zdbjs/geojsofiles/country_IN_IND.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IN_IND.5e968895723bc0415aad1e50de22c1bc.js';mjs['zdbjs/geojsofiles/country_LR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LR.9ccd105512e7ae5ebe77fedd39178411.js';mjs['zdbjs/geojsofiles/country_NA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NA.7cac5cd543b161a169bc09179d5b0690.js';mjs['zdbjs/geojsofiles/country_RU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_RU.e7dd085c38969f684988203baae6119f.js';mjs['zdbjs/geojsofiles/country_TJ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TJ.d87ddf9f69330028fd04fa0c4cdbcf11.js';mjs['zdbjs/geojsofiles/country_ZW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_ZW.c03ed17976f557c8e9cac4f89251c004.js';mjs['zdbjs/geojsofiles/country_BD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BD.c902ddcf50b27c47744f5b24342b4bab.js';mjs['zdbjs/geojsofiles/country_CN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CN.a9b7e7182488e62643e3ff5ba7f6618c.js';mjs['zdbjs/geojsofiles/country_FR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_FR.52c45ccb5ebca2c0bd23b69c0ea2fdfa.js';mjs['zdbjs/geojsofiles/country_IQ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IQ.82bbdc94ac8cc07d49e67a79e4465c54.js';mjs['zdbjs/geojsofiles/country_LS.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LS.3614ee77e5a8075e8693037142a09dbe.js';mjs['zdbjs/geojsofiles/country_NE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NE.fdd2582d97b6821b9752371862704586.js';mjs['zdbjs/geojsofiles/country_RW.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_RW.ee8f34ddb2873b5275991a1d6c635f8d.js';mjs['zdbjs/geojsofiles/country_TL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TL.fcca8d6e3e8fc7312300bdd85ec06eea.js';mjs['zdbjs/geojsofiles/country_BE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BE.b302758a298b3a649b757b9a39cdfbaa.js';mjs['zdbjs/geojsofiles/country_CO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CO.229be21ff733232a4659ddb99a198087.js';mjs['zdbjs/geojsofiles/country_GA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GA.3b910baf133bcb02268743cdb31482cd.js';mjs['zdbjs/geojsofiles/country_IR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IR.f88cef4e57145999aa1435b9352bab84.js';mjs['zdbjs/geojsofiles/country_LT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LT.a6b666d0b6dac81d4560ea02010f208d.js';mjs['zdbjs/geojsofiles/country_NG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NG.a971422bf8f55d363af66be9c9f2c186.js';mjs['zdbjs/geojsofiles/country_SA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SA.6e2b098b467f72ed4ae3853bde75f43b.js';mjs['zdbjs/geojsofiles/country_TM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TM.8165c3f67a4bd2cc78c931ac7652e549.js';mjs['zdbjs/geojsofiles/country_BG.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BG.96c1256ae0532e55426eaa2ed9d80c86.js';mjs['zdbjs/geojsofiles/country_CR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CR.8294a0a0aca04dc4c5df66152c1340f4.js';mjs['zdbjs/geojsofiles/country_GB.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GB.7da8355fc0ff078e506b3561ea97d702.js';mjs['zdbjs/geojsofiles/country_IS.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IS.9b247a72932a4655f58129c5043931f2.js';mjs['zdbjs/geojsofiles/country_LU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LU.e0249cddfb5fc60b062702bf45d0efa5.js';mjs['zdbjs/geojsofiles/country_NI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NI.54df575ee9cb450d1d64183873b1f077.js';mjs['zdbjs/geojsofiles/country_SB.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SB.eb05d26f729b1397c4edd9e8e316a414.js';mjs['zdbjs/geojsofiles/country_TN.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TN.a7756fc8296007ad29d29e6f7e72dc8b.js';mjs['zdbjs/geojsofiles/country_BH.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BH.a3f442820d61e456b10a23d5f413ae48.js';mjs['zdbjs/geojsofiles/country_CU.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CU.42cdc6604dfa0b9f9a64390d1e6535f5.js';mjs['zdbjs/geojsofiles/country_GD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GD.cd0f9dee405fa0caa05dee5a5e4ad5d1.js';mjs['zdbjs/geojsofiles/country_IT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_IT.d1e2907491fe15c13f998537e00e9b33.js';mjs['zdbjs/geojsofiles/country_LV.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LV.31ad389d559204de1445ee9d99470d28.js';mjs['zdbjs/geojsofiles/country_NL.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NL.4e9e0b91bfe56e65f29833f1dea544d2.js';mjs['zdbjs/geojsofiles/country_SC.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SC.2d47003b60ce9eb0b86a9d3385acd6e6.js';mjs['zdbjs/geojsofiles/country_TO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TO.600df3f0e5e09675c1cdd493c39f4305.js';mjs['zdbjs/geojsofiles/country_BI.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BI.147d6c98d077c78b0ffa8b79b5becec7.js';mjs['zdbjs/geojsofiles/country_CV.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CV.bf3050c50de5380e395d8b971cab8d33.js';mjs['zdbjs/geojsofiles/country_GE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GE.f3e40a8522b21af7dfeaa44e13031053.js';mjs['zdbjs/geojsofiles/country_JM.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_JM.4e0031489ae0eafaebebeecaf86d4c8d.js';mjs['zdbjs/geojsofiles/country_LY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_LY.dc72a0524791ae29a0cdfb9cd54aa3d5.js';mjs['zdbjs/geojsofiles/country_NO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NO.8f3f994e5fc579aea35b5d33a6ecbe72.js';mjs['zdbjs/geojsofiles/country_SD.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SD.9fea3e2a7fc298ca047de8a88ff3df70.js';mjs['zdbjs/geojsofiles/country_TR.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TR.4c7e778a453aae7c93ea1b7c02645904.js';mjs['zdbjs/geojsofiles/country_BJ.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_BJ.34a0a7a0090e4737d68ee372adb770b3.js';mjs['zdbjs/geojsofiles/country_CY.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_CY.122f9c792ed51ee38806ac4e4302c8ba.js';mjs['zdbjs/geojsofiles/country_GH.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_GH.f4b0ff403642de51841ae300fb4e13ca.js';mjs['zdbjs/geojsofiles/country_JO.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_JO.268d88cb9640804f2615168fb78681ef.js';mjs['zdbjs/geojsofiles/country_MA.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_MA.234bad427636aad23f56cd2ab1267369.js';mjs['zdbjs/geojsofiles/country_NP.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_NP.8a5e79a683ea3a916c412836889ef6ae.js';mjs['zdbjs/geojsofiles/country_SE.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_SE.ac8118f528dd7c1e2c383d213724a17c.js';mjs['zdbjs/geojsofiles/country_TT.js']='https://js.zohostatic.com/db/v2_zr/zdbjs/geojsofiles/country_TT.c4d4a5ab8ccebeff4f8039639ca0e739.js';
+mjs['Snapshot']='https://js.zohostatic.com/db/v2_zr/compressed/Snapshot.1ea23269a10b5fb0d23292b290d04c4b.js';
+mjs = null;
+var mcss = ZDBLazyLoadUtil.moduleCSSURLs;
+mcss['CSSLIST_HOME_IMPORT_NEW']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/home_new2.2ca52b6cd587a0fa7af5052f8730fbe5.css'
+mcss['CSSLIST_QUERYEDITOR']='https://css.zohostatic.com/db/v2_zr/themes/common/queryeditor_style/ZRQueryEditor.4a4020213ce4cb3b573ddca643eead16.css'
+mcss['CSSLIST_GRIDSTYLES']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/DB_ZDBGridStyles.6d4dbb541c7f6f374e6408ed03138d64.css'
+mcss['CSSLIST_ANALYSISVIEWSTYLES']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/DB_ZDBAnalysisViewStyles.f165fe7e91a64096b5ab35d69f42b3ae.css'
+mcss['CSSLIST_DASHBOARDSTYLES']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/DB_ZDBDashboardStyles.1e1ec997383615cee3b08c07d4c956e0.css'
+mcss['CSSLIST_VMFILTERSTYLES']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/DB_ZDBVMFilterStyles.a5ac9dcd76fff8510f984237e59ed754.css'
+mcss['CSSLIST_FORMULASUGGESTION']='https://css.zohostatic.com/db/v2_zr/themes/common/formulaSuggestion/ZDBFormulaSuggestion.3b1e798aa0bf5878f70d6aab865139bf.css'
+mcss['gettingstarted_NEW.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/gettingstarted_NEW.8c77a5235749f0fc7114d396eed4a320.css';mcss['ZRGettingStarted_new.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRGettingStarted_new.5c29ddb302dc54eee1ca5b1515df2a41.css';mcss['ERDStyle.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ERDStyle.f531ee5bdbf231e0bf36244761a893b3.css';mcss['ZDBSlideshowDialog.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZDBSlideshowDialog.4cea904583ba78ebbec778addcb677f8.css';mcss['ZRMultipleGroup.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRMultipleGroup.9a83c161f88bf3e1d2be756886ba6220.css';mcss['ZDBAnalysis_NEW.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZDBAnalysis_NEW.5bc0cda1ef90c208a1c54a3c9d81979d.css';mcss['ui.zscreengrabber.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ui.zscreengrabber.b990b89df08884d0581f777fbf5016fe.css';mcss['ZRDBSettings.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRDBSettings.e3c01fbfa916bfc843ab60fdc086e0a5.css';mcss['ZDBSlideshow.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZDBSlideshow.775dcd5b680049367a88dad1c63dc271.css';mcss['nlp2.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/nlp2.2cb7d209f6b36cd9d50b89ab024aca7d.css';mcss['crmplus-modifyui.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/crmplus-modifyui.9072606f507744bd21af2f4cf743ab80.css';mcss['crmplus-modifyui_NEW.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/crmplus-modifyui_NEW.76abef3e8fae60963cf7d640bdc3d228.css';mcss['ZRSZia.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRSZia.81ea03b0d5d8df7d980ccf9c7a98af23.css';mcss['ZRCustomGeocoding.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRCustomGeocoding.876d397a682af4322dad1fff1cedba5a.css';mcss['ZRSNewLayout.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRSNewLayout.42d67a2e12041171512c7d6754347c27.css';mcss['CreatorCss.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/CreatorCss.0bd4839bfbf589936984acf56cdc310d.css';mcss['SharingModule.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/SharingModule.9b90046ac2e5117bfebedbbf684089ef.css';mcss['ZRAlert.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRAlert.1fd7cd051d567d8092c3849abda75efe.css';mcss['ZRSnapshot.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRSnapshot.1e853172c5bf37deb0a39429834bf780.css';mcss['leaflet.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/leaflet.deaae8069b8a05342ae06465f828191f.css';mcss['mapbox-gl.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/mapbox-gl.85760fb4657a93da59ad99ea1b235417.css';mcss['ZDBSearchBox.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZDBSearchBox.98b0cb66169377df8def68a4c1c42916.css';mcss['ZRMap.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRMap.52a9c95ff4c9dc20e67fecefe8f0ce33.css';mcss['agent-style.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/agent-style.66cf3fbf5b746f3c1a3900d924b5374d.css';mcss['CollaborativeAnalytics.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/CollaborativeAnalytics.9a4565e5240a44e3debd858e7da4fbe4.css';mcss['fcomponents_screengrabber.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/fcomponents_screengrabber.191ed4edf9ab47452657d296b30278df.css';mcss['fcomponents_annotator_editor.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/fcomponents_annotator_editor.ce5086427761ef00cd13dbefc91e387a.css';mcss['zomoji24.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/zomoji24.927c7d117be4353c0e5ce12e56c3964e.css';mcss['Components.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/Components.610d30c80ebd8e5d08d702a0382f5a96.css';mcss['formulaColumn.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/formulaColumn.c47f9deb92ab6a41e2f198e2ae3ccf12.css';mcss['pathConfig.css']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/pathConfig.f812e993c48d258b902e48e2f73a729a.css';mcss['FormulaSuggestion_new.css']='https://css.zohostatic.com/db/v2_zr/themes/common/domainstyles/f2/FormulaSuggestion_new.8f0d378ca82baae87a5d81398fefacef.css';mcss['light_theme1.css']='https://css.zohostatic.com/db/v2_zr/themes/colors/styles/light_theme1.c949121147fc16fb7349f4e53c9d351d.css';mcss['light_theme2.css']='https://css.zohostatic.com/db/v2_zr/themes/colors/styles/light_theme2.700f6d9cb24eea75461edab0e7ffb95c.css';mcss['light_theme3.css']='https://css.zohostatic.com/db/v2_zr/themes/colors/styles/light_theme3.6e566a0fd5b8ff24b53b7584bdaeb52f.css';mcss['dark_theme1.css']='https://css.zohostatic.com/db/v2_zr/themes/colors/styles/dark_theme1.3c278ea4f0767c981f97d357f9a76c67.css';mcss['dark_theme2.css']='https://css.zohostatic.com/db/v2_zr/themes/colors/styles/dark_theme2.1d11ef848dfaee4544c3c4aab311e171.css';mcss['dark_theme3.css']='https://css.zohostatic.com/db/v2_zr/themes/colors/styles/dark_theme3.455798ce46c7816832a4c2126f7e810c.css';
+mcss['CSSLIST_DASHBOARDLAYOUTSTYLES']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/dashboardLayout.caa14efd4d1fd1e3517d8972bfe06808.css'
+mcss['CSSLIST_ZCOMPONENTS']='https://css.zohostatic.com/db/v2_zr/themes/common/zcomponents/zcomponents.81d5a753b54497eb0f854473f3438d64.css'
+mcss['CSSLIST_TOUR']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/ZRProductTour.0d5385aacd2f1e6f9aaf67dd3f72c352.css'
+mcss['CSSLIST_COMMENTING']='https://css.zohostatic.com/db/v2_zr/themes/common/styles/f2/commenting.17d98a7b5662e671d6ec8135a9959ca9.css'
+mcss = null;
+msvg=ZDBLazyLoadUtil.moduleSVGImages;msvg['themes/common/svgimages/baseIcons.svg']='https://css.zohostatic.com/db/v2_zr/themes/common/svgimages/baseIcons.0c130b897480b62e570bfddcd4794422.svg';msvg['themes/common/svgimages/chartchooser.svg']='https://css.zohostatic.com/db/v2_zr/themes/common/svgimages/chartchooser.c983828decf2b4e4fb27fa6343e7761c.svg';msvg['themes/common/svgimages/datatype.svg']='https://css.zohostatic.com/db/v2_zr/themes/common/svgimages/datatype.26a425cd9f8314f2ef7977c5d8e6d931.svg';msvg['themes/common/svgimages/dialogueIcons.svg']='https://css.zohostatic.com/db/v2_zr/themes/common/svgimages/dialogueIcons.d70f71efe735765701f537272ad722b1.svg';msvg['themes/common/svgimages/logo.svg']='https://css.zohostatic.com/db/v2_zr/themes/common/svgimages/logo.6ec6ee752c723f204bffd4afd08dfee7.svg';
+ZDBGlobal._ZVER_='69';
+ZDBGlobal.PRODUCTNAME='Zoho Analytics';
+ZDBGlobal.EXPBROWSERTXT='Zoho Analytics';
+ZDBGlobal.checkForVersion=false;
+ZDBGlobal.MAPFONT_STATICURL='https://css.zohostatic.com/maps/v8_1_8/fonts/{fontstack}/{range}.pbf'; 
+ZDBGlobal.fontFolder = 'f2';
+ZDBGlobal.oldURL="/ZDBDataSheetView.cc?OBJID=1813156000000843305&STANDALONE=true&INTERVAL=-1&DATATYPESYMBOL=false&REMTOOLBAR=true&SEARCHBOX=true&INCLUDETITLE=true&INCLUDEDESC=true&SHOWHIDEOPT=true&LP=RIGHT"; 
+ZDBGlobal.CONTENTPATH='/staticcontent/v2_zr';
+ZDBClientUI.setImportOptions(true, true, true, false);
+ZDBGlobal.isDevelopmentMode = false;
+ZDBGlobal.REPORTS_SERVER_URL='https://analytics.zoho.com';
+ZDBGlobal.REPORTS_SERVER_ALIAS_URL='https://analytics.zoho.com';
+ZDBGlobal.ZAID=null;
+ZDBGlobal.zuID = 675534165; 
+ZDBGlobal.emailID = 'info@lamfirm.com';
+ZDBGlobal.isUserAnalyticsEnabled = true; 
+ZDBGlobal.showTLSWarning = false;
+
+ZDBGlobal.salesIqChatURL = 'https://salesiq.zoho.com/zohocares/float.ls?embedname=zohoreports';
+ZDBGlobal.workspaceReadMoreLink = 'https://help.zoho.com/portal/community/topic/important-terminology-change';
+ZDBGlobal.CONTACTSSERVERURL = 'https://contacts.zoho.com'; 
+ZDBGlobal.GAPP_EMBED_GADGET_URL='https://gadgets.zoho.com';    
+
+   ZDBGlobal.userPlanName = 'Zoho One';
+   ZDBInitializeUserAnalytics(6099802,ZDBGlobal.emailID, 'datasheetview', 5); 
+
+ZDBGlobal.upgradeLink = 'https://admin.zoho.com/sredirect?zaaid=677026603&action=subscription&servicename=ZohoReports';
+ZDBGlobal.IP_HELP_DOC='https://www.zoho.com/analytics/help/zohoanalytics-ip-address.html'; 
+ZDBGlobal.GAPP_ZSERVICE='zreports';
+ZDBGlobal.EXT_LIST_URL='https://gadgets.zoho.com/CloudPicker';
+ZDBGlobal.EXT_DRIVE_SERVICE='zreports';
+ZDBGlobal.ALLOWED_GDRIVE_FILETYPES='gcsv,gsheet,csv,htm,html,xls,xlsx,zip,txt,dat,xml,json';
+ZDBGlobal.ALLOWED_CLOUD_FILETYPES='html,xml,json,csv,xls,xlsx,zwriter,zsheet,txt,zip,xlsm,ods,accdb,mdb,CSV,XLS,XLSX,TXT,ZIP,XLSM';
+
+ZDBGlobal.USERAGENT = navigator.userAgent;
+ZDBGlobal.IS_IOS = false;
+ZDBGlobal.IS_ANDROID = false;
+ZDBGlobal.IS_MOBILE = false;
+ZDBGlobal.IS_APP_REQ = false;
+ZDBGlobal.IS_APP = false;
+ZDBGlobal.IOSVERGRT7_0 = false; 
+
+ZDBClientUI.isNewRequest=true;
+
+ZDBGlobal.isPaidCustomer = true;
+ZDBGlobal.isDynDrillEnabled =true;
+ZDBGlobal.isdashRpFilEnabled =false;
+ZDBGlobal.ISSFDB = false;
+ZDBGlobal.isRemoteDB = false; 
+ZDBGlobal.isDbOwner = false; 
+ZDBGlobal.isDBOwnerNotAdmin = false; 
+ZDBGlobal.isCRMEditSetupEnable= false;  
+ZDBGlobal.SHOW_ZR_LINKS=true;
+ZDBGlobal.useUTC= true;  
+ZDBGlobal.isCRMPlusUser = false;    
+ZDBGlobal.canRedirectZOneOrgPage = true;
+ZDBGlobal.SHOWLIVECHAT = false;
+ZDBGlobal.haveFormulaSuggestionFeature = true 
+ZDBGlobal.enableAllValVar = false
+ZDBGlobal.enableUsersSett = true
+ZDBGlobal.sortPieDesc = false
+ZDBGlobal.CSSURL= 'null';
+
+ZDBGlobal.enablePosFormatting = true; 
+ZDBGlobal.sortOnFilterEnabled = false; 
+
+    ZDBEmbed.removeToolbar = true 
+    ZDBEmbed.viewTitle = true
+    ZDBEmbed.viewDesc = true
+    ZDBEmbed.searchBox = true
+    ZDBEmbed.isFCPreview = false
+
+ZDBGlobal.isZDomain = true; //NO OUTPUTENCODING
+ZDBGlobal.isFujiDomain = false; 
+ZDBGlobal.isSampleDbPopulated = true; 
+ZDBGlobal.newPivotFuncEnabled = true;
+ZDBGlobal.isODataOAuthEnabled = false; 
+
+
+  ZDBGlobal.zohoSuiteManageUsersLink = 'https://admin.zoho.com/sredirect?zaaid=677026603&action=newuser&servicename=ZohoReports';
+  ZDBGlobal.isZohoBundleOrgObjPresent = false;
+
+
+
+
+ZDBGlobal.isNewDashboardLayout = true;
+ZRDashboardAdapterAPI.enableNewDashboard();
+
+
+
+
+ZDBGlobal.canShowCreateSchemaOpt = false;
+ZDBGlobal.currentZsoId = null;
+ZDBGlobal.newShareEnabled = true;
+ZDBGlobal.ISALERTENABLED = true;
+ZDBGlobal.ZRFROMEMAIL = "notifications@zohoanalytics.com";
+ZDBClientUI.setUpDBView(null,"1813156000000843047","1813156000000843305","Clix\x20Tournament\x20Dashboard","Dashboard",true,true,false,false,true,false,null,null,null,null,null,true,null,false,false,null,null,null,"__en__US__null__",null,true,false,null,null,true,true,true,true,{},"false",null,null,null,null,false,false,'');
+</script>
+
+<iframe class='responseframe' src='/framework/html/blank.html'  name='ZDBDataSheetView_RESPONSEFRAME' onsuccessfunc='updateView' onLoad='AjaxAPI.handleIframeResponse(this)'></iframe>
+</div>
+<script>
+ZDBMsgBox.handleZPMsgBox();
+jQuery(document).ready(function(){
+  ZDBClientUI.hideSubscriptionLink(false); //NO OUTPUTENCODING
+});
+</script>
+
+
+
+
+    <link rel="stylesheet" type="text/css" id="ZRThemeCss" href="https://css.zohostatic.com/db/v2_zr/themes/colors/styles/dark_theme3.455798ce46c7816832a4c2126f7e810c.css"> 
+
+
+
+
+  
+  
+</body>
+</html>
+
+
